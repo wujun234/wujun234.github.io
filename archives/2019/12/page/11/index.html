@@ -4681,19 +4681,13 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/3%20%E7%BA%BF%E6%80%A7%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE/">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/0%20%E6%8E%92%E5%BA%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%88%86%E7%B1%BB/">
 				<h2 class="index-title">
-					3 线性索引查找
+					0 排序的基本概念与分类
 				</h2>
 				<div class="index-brief">
-					
-索引：就是把一个关键字与它对应的记录相关联的过程。
-索引按照结构可以分为线性索引、树形索引和多级索引。
-线性索引：就是将索引项集合组织为线性结构，也称为索引表。
-
-1 稠密索引
-稠密索引：在线性索引中，将数据集中的每个记录对应一个索引项，索引项按照关键码有序排列。
-但数据量大时，可能由于内存有限，
+					1 排序的基本概念
+假设含有 n 个记录的序列为{r1,r2,…,rn} ，其相应的关键字分别为{k1,k2,…,kn} ，需确定 1,2,…,n 的一种排列 p1,p2,…,pn，使其相应的关键字满足 kpl&lt;=kp2&lt;=…&lt;=kpn (非递减或非递增) 关系，即使得序列成为一个
 					...
 				</div>
 			</a>
@@ -4724,7 +4718,7 @@ var _hmt = _hmt || [];
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/04-排序/">04 排序</a>
 										
                                     </span>
                                 
@@ -4784,17 +4778,15 @@ var _hmt = _hmt || [];
 		</div>	
 	
 		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/4%20%E5%A4%9A%E8%B7%AF%E6%9F%A5%E6%89%BE%E6%A0%91(B%20%E6%A0%91)/">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/6%20%E5%A4%96%E9%83%A8%E6%8E%92%E5%BA%8F/">
 				<h2 class="index-title">
-					4 多路查找树(B 树)
+					6 外部排序
 				</h2>
 				<div class="index-brief">
-					多路查找树：每一个结点的孩子数可以多于两个，且每一个结点处可以存储多个元素。
-1、2-3 树
+					外部排序的基本思想就是归并排序。
+1 二路平衡归并
 
-2-3 树：每一个结点都具有两个孩子 (2 结点) 或三个孩子 (3 结点) 的多路查找树
-2 结点：包含一个元素和两个孩子(或没有孩子) ，左小右大。
-3 结点：包含一小一大两个元素和三个孩子(或没有孩
+按照内存大小，将大文件分成若干长度为 l 的子文件（l 应小于内存的可使用容量），然后将各个子文件依次读入内存，使用适当的内部排序算法对其进行排序（排好序的子文件统称为“归并段”或者“顺段”），将排好序的归并段重新写入外存，为下一个子文件排序腾出
 					...
 				</div>
 			</a>
@@ -4825,7 +4817,7 @@ var _hmt = _hmt || [];
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/04-排序/">04 排序</a>
 										
                                     </span>
                                 
@@ -4939,19 +4931,17 @@ namespace java com.xxxx.auto.
 		</div>	
 	
 		<div class="index-li">
-			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/01%20MyBatis+Spring%20Boot/">
+			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/02%20MyBatis%20Generator/">
 				<h2 class="index-title">
-					01 MyBatis+Spring Boot
+					02 MyBatis Generator
 				</h2>
 				<div class="index-brief">
-					简介
+					MyBatis Generator
 
-
-MyBatis
-传统方法使用 MyBatis ，有  MyBatis 官网中文文档 。
-Generator
-传统方法比较繁琐，因而 MyBatis 推出了 MyBatis Generator 工具，可自动生成实体类、配置文件和dao层代码，以减轻一部分开发量。
-Spring Boot + 
+一、在pom.xml中添加plugin
+      &lt;plugin&gt;
+        &lt;groupId&gt;org.mybatis.generator&lt;/groupId&gt;
+        &lt;artifactId&gt;myb
 					...
 				</div>
 			</a>
@@ -4982,17 +4972,19 @@ Spring Boot +
 		</div>	
 	
 		<div class="index-li">
-			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/02%20MyBatis%20Generator/">
+			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/01%20MyBatis+Spring%20Boot/">
 				<h2 class="index-title">
-					02 MyBatis Generator
+					01 MyBatis+Spring Boot
 				</h2>
 				<div class="index-brief">
-					MyBatis Generator
+					简介
 
-一、在pom.xml中添加plugin
-      &lt;plugin&gt;
-        &lt;groupId&gt;org.mybatis.generator&lt;/groupId&gt;
-        &lt;artifactId&gt;myb
+
+MyBatis
+传统方法使用 MyBatis ，有  MyBatis 官网中文文档 。
+Generator
+传统方法比较繁琐，因而 MyBatis 推出了 MyBatis Generator 工具，可自动生成实体类、配置文件和dao层代码，以减轻一部分开发量。
+Spring Boot + 
 					...
 				</div>
 			</a>

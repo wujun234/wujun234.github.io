@@ -4838,19 +4838,29 @@ getBundle 方法试图匹配当前 locale 定义的语言和国家的包，直
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/3%20%E6%8E%92%E5%BA%8F%E5%92%8C%E8%8C%83%E5%8C%96/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/4%20%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/">
 				<h2 class="index-title">
-					3 排序和范化
+					4 消息格式化
 				</h2>
 				<div class="index-brief">
-					Collator 类实现了 Comparator 接口，Locale 敏感，可以设置不同语言的排序
-Collator coll = Collator.getInstance(Locale.US);
+					MessageFormat 格式化类似 printf，支持 Locale，可格式化数字和日期
+1 格式化数字和日期
+1.1 模式化字符串与占位符
+占位符索引后面可跟一个类型和一个风格
+1）类型
 
-1 字符差别强度
-排序器有字符差别强度设置：
+number
+风格
 
-Collator.PRIMARY：首要的
-Colla
+intger
+currency
+percent
+数字格式模式
+
+
+time
+风格
+
 					...
 				</div>
 			</a>
@@ -4891,29 +4901,19 @@ Colla
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/4%20%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/3%20%E6%8E%92%E5%BA%8F%E5%92%8C%E8%8C%83%E5%8C%96/">
 				<h2 class="index-title">
-					4 消息格式化
+					3 排序和范化
 				</h2>
 				<div class="index-brief">
-					MessageFormat 格式化类似 printf，支持 Locale，可格式化数字和日期
-1 格式化数字和日期
-1.1 模式化字符串与占位符
-占位符索引后面可跟一个类型和一个风格
-1）类型
+					Collator 类实现了 Comparator 接口，Locale 敏感，可以设置不同语言的排序
+Collator coll = Collator.getInstance(Locale.US);
 
-number
-风格
+1 字符差别强度
+排序器有字符差别强度设置：
 
-intger
-currency
-percent
-数字格式模式
-
-
-time
-风格
-
+Collator.PRIMARY：首要的
+Colla
 					...
 				</div>
 			</a>

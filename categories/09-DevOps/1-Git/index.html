@@ -4681,27 +4681,22 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/1%20Git/2%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+			<a href="/09%20DevOps/1%20Git/0%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
 				<h2 class="index-title">
-					2 版本管理
+					0 搭建Git服务器
 				</h2>
 				<div class="index-brief">
-					状态查看
+					原文
 
-git status：查看状态
-git diff：查看修改内容
+搭建Git服务器非常简单，通常10分钟即可完成；
+要方便管理公钥，用Gitosis；
+要像SVN那样变态地控制权限，用Gitolite。
 
-版本回退
+假设你已经有sudo权限的用户账号，下面，正式开始安装。
+第一步，安装git：
+$ sudo apt-get install git
 
-HEAD：指向当前版本
-
-上一个版本就是HEAD^
-上上一个版本就是HEAD^^
-版本数多就写成HEAD~100
-
-
-git reset --hard commit_id：跳转到指定版本
-git log：可以查
+第二步，创建一个
 					...
 				</div>
 			</a>
@@ -4774,22 +4769,72 @@ cd exist
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/1%20Git/0%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+			<a href="/09%20DevOps/1%20Git/4%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
 				<h2 class="index-title">
-					0 搭建Git服务器
+					4 分支管理
 				</h2>
 				<div class="index-brief">
-					原文
+					创建与合并分支
+Git鼓励大量使用分支：
 
-搭建Git服务器非常简单，通常10分钟即可完成；
-要方便管理公钥，用Gitosis；
-要像SVN那样变态地控制权限，用Gitolite。
+git branch：查看分支
+git branch ：创建分支
+git checkout ：切换分支
+git checkout -b ：创建+切换分支
+git branch -d ：删除本地分支
+git merge ：合并某分支到当前分支
+git reb
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/09%20DevOps/1%20Git/2%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+				<h2 class="index-title">
+					2 版本管理
+				</h2>
+				<div class="index-brief">
+					状态查看
 
-假设你已经有sudo权限的用户账号，下面，正式开始安装。
-第一步，安装git：
-$ sudo apt-get install git
+git status：查看状态
+git diff：查看修改内容
 
-第二步，创建一个
+版本回退
+
+HEAD：指向当前版本
+
+上一个版本就是HEAD^
+上上一个版本就是HEAD^^
+版本数多就写成HEAD~100
+
+
+git reset --hard commit_id：跳转到指定版本
+git log：可以查
 					...
 				</div>
 			</a>
@@ -4912,51 +4957,6 @@ GitHub已经为我们准备了各种.gitignore配置文件：https://github.com/
 git tag ：新建一个标签，默认为HEAD，也可以指定一个commit id
 git tag -a  -m “blablabla…”：指定标签信息
 git tag -s  -m “blablabla…”：用PG
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/09%20DevOps/1%20Git/4%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
-				<h2 class="index-title">
-					4 分支管理
-				</h2>
-				<div class="index-brief">
-					创建与合并分支
-Git鼓励大量使用分支：
-
-git branch：查看分支
-git branch ：创建分支
-git checkout ：切换分支
-git checkout -b ：创建+切换分支
-git branch -d ：删除本地分支
-git merge ：合并某分支到当前分支
-git reb
 					...
 				</div>
 			</a>

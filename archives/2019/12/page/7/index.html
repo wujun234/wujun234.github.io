@@ -4681,45 +4681,6 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/7%20Zabbix/3%20zabbix%E4%B8%BB%E5%8A%A8%E6%A8%A1%E5%BC%8F%E3%80%81%E8%A2%AB%E5%8A%A8%E6%A8%A1%E5%BC%8F/">
-				<h2 class="index-title">
-					3 zabbix主动模式、被动模式
-				</h2>
-				<div class="index-brief">
-					zabbix agent检测分为主动（agent active）和被动（agent）两种形式，主动与被动的说法均是相对于agent来讨论的。
-
-主动：agent请求server获取主动的监控项列表，并主动将监控项内需要检测的数据提交给server/proxy
-被动：server向agent请求获取监
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/7-Zabbix/">7 Zabbix</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/09%20DevOps/7%20Zabbix/4%20Zabbix%E8%BF%81%E7%A7%BB/">
 				<h2 class="index-title">
 					4 Zabbix迁移
@@ -4762,16 +4723,14 @@ var _hmt = _hmt || [];
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/8%20ELK/1%20ElasticStack/">
+			<a href="/09%20DevOps/6%20Linux/1%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
 				<h2 class="index-title">
-					1 ElasticStack
+					1 Centos 7 配置 LAMP
 				</h2>
 				<div class="index-brief">
-					ElasticStack 最初的核心是 ELK (Elasticsearch, Logstash, Kibana) ，后又新增了一个FileBeat。
-ELK架构
-
-Elasticsearch ：分布式搜索引擎。基于 Lucene，可用于全文检索、结构化检索和分析。
-Logstash ：数据收集处理
+					LAMP是Linux、Apache HTTP，MySQL（或MariaDB）和PHP（或Perl、Python）的首字母缩写，下面讨论如何在RHEL/CentOS/Scientific Linux 7上搭建LAMP环境。
+一、Install Apache HTTP Server
+在终端以root权限
 					...
 				</div>
 			</a>
@@ -4792,7 +4751,55 @@ Logstash ：数据收集处理
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/8-ELK/">8 ELK</a>
+                                        <a href="/categories/09-DevOps/6-Linux/">6 Linux</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/09%20DevOps/6%20Linux/2%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+				<h2 class="index-title">
+					2 Linux 常用命令
+				</h2>
+				<div class="index-brief">
+					1、文件相关
+1.1文件跳转
+
+pwd：打印当前目录名
+ls：列出目录内容
+-a：列出所有文件，包括“.”开头的隐藏文件
+-d：通常，指定目录名
+-F：名字后面加指示符
+-h：以人们可读的格式而非字节数，显示文件大小
+-l：以长格式显示结果
+-r：反序显示
+-S：按文件大小排序
+-t： 按修改时间排
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/6-Linux/">6 Linux</a>
 										
                                     </span>
                                 
@@ -4967,20 +4974,26 @@ m
 		</div>	
 	
 		<div class="index-li">
-			<a href="/12%20%E6%B5%8B%E8%AF%95/5%20MockMvc/1%20MockMvc/">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/02%20%E9%87%8D%E6%9E%84%E7%9A%84%E5%8E%9F%E5%88%99/">
 				<h2 class="index-title">
-					1 MockMvc
+					02 重构的原则
 				</h2>
 				<div class="index-brief">
-					测试controller
-初始化
-SpringBoot 中很方便
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@AutoConfigureMockMvc
-public class HelloWorldControlerTests {
+					1 何为重构
+重构: 在不改变软件可观察行为的前提下改善其内部结构
+2 为何重构
+重构可以提高代码质量
+3 何时重构
+事不过三，三则重构。
+重构应该是在开发过程中实时的、渐进的演化过程：
 
-    @Auto
+添加新功能时重构
+修补错误时重构
+复审代码时重构
+
+4 怎么对经理说
+为了质量 or 不要告诉
+5 重构的难题
 					...
 				</div>
 			</a>
@@ -4991,7 +5004,7 @@ public class HelloWorldControlerTests {
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/">12 测试</a>
+                                        <a href="/categories/13-重构/">13 重构</a>
 										
 											>
 										
@@ -5001,7 +5014,7 @@ public class HelloWorldControlerTests {
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/5-MockMvc/">5 MockMvc</a>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
 										
                                     </span>
                                 
@@ -5064,25 +5077,20 @@ public class HelloWorldControlerTests {
 		</div>	
 	
 		<div class="index-li">
-			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/01%20%E9%87%8D%E6%9E%84%EF%BC%8C%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%A1%88%E4%BE%8B/">
+			<a href="/12%20%E6%B5%8B%E8%AF%95/5%20MockMvc/1%20MockMvc/">
 				<h2 class="index-title">
-					01 重构，第一个案例
+					1 MockMvc
 				</h2>
 				<div class="index-brief">
-					1 起点
-重构前的程序
+					测试controller
+初始化
+SpringBoot 中很方便
+@RunWith(SpringRunner.class)
+@SpringBootTest
+@AutoConfigureMockMvc
+public class HelloWorldControlerTests {
 
-无法复用
-很难扩展
-很难修改
-很容易引入bug
-
-2 重构的第一步
-重构前，先检查自己是否有一套可靠的测试环境。这些测试环境必须有自我检验能力。
-3 分解并重组statement()
-
-代码块愈小，代码的功能就愈容易管理，代码的处理和移动也就愈轻松。
-任何不会被修改的变量都
+    @Auto
 					...
 				</div>
 			</a>
@@ -5093,7 +5101,7 @@ public class HelloWorldControlerTests {
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/">13 重构</a>
+                                        <a href="/categories/12-测试/">12 测试</a>
 										
 											>
 										
@@ -5103,7 +5111,7 @@ public class HelloWorldControlerTests {
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
+                                        <a href="/categories/12-测试/5-MockMvc/">5 MockMvc</a>
 										
                                     </span>
                                 

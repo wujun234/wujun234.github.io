@@ -4724,17 +4724,17 @@ pom依赖
 		</div>	
 	
 		<div class="index-li">
-			<a href="/06%20Spring/02%20IoC/2%20%E9%AB%98%E7%BA%A7%E8%A3%85%E9%85%8D/">
+			<a href="/06%20Spring/02%20IoC/3%20%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C%20Bean/">
 				<h2 class="index-title">
-					2 高级装配
+					3 动态注册 Bean
 				</h2>
 				<div class="index-brief">
-					1 环境与 profile
-1.1 配置 profile
-@Profile 注解
-指定某个 bean 属于哪一个 profile，运行时做出环境决策。
-没有指定 profile 的 bean 始终都会被创建， 与激活哪个 profile 没有关系。
-@Profile(&quot;dev&quot;)
+					1 注册接口
+有两种接口可动态注册 bean
+
+BeanDefinitionRegistry
+注册 Bean 定义，使用BeanDefinitionRegistry 接口 registerBeanDefinition() 方法，根据BeanDefinition实例化 bean 实例
+Singleto
 					...
 				</div>
 			</a>
@@ -4765,17 +4765,17 @@ pom依赖
 		</div>	
 	
 		<div class="index-li">
-			<a href="/06%20Spring/02%20IoC/3%20%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C%20Bean/">
+			<a href="/06%20Spring/02%20IoC/2%20%E9%AB%98%E7%BA%A7%E8%A3%85%E9%85%8D/">
 				<h2 class="index-title">
-					3 动态注册 Bean
+					2 高级装配
 				</h2>
 				<div class="index-brief">
-					1 注册接口
-有两种接口可动态注册 bean
-
-BeanDefinitionRegistry
-注册 Bean 定义，使用BeanDefinitionRegistry 接口 registerBeanDefinition() 方法，根据BeanDefinition实例化 bean 实例
-Singleto
+					1 环境与 profile
+1.1 配置 profile
+@Profile 注解
+指定某个 bean 属于哪一个 profile，运行时做出环境决策。
+没有指定 profile 的 bean 始终都会被创建， 与激活哪个 profile 没有关系。
+@Profile(&quot;dev&quot;)
 					...
 				</div>
 			</a>

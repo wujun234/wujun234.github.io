@@ -4681,17 +4681,21 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/05%20MongoDB/02%20MongoDB%20%E6%93%8D%E4%BD%9C/">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/2%20Cassandra%20%E6%9E%B6%E6%9E%84/">
 				<h2 class="index-title">
-					02 MongoDB 操作
+					2 Cassandra 架构
 				</h2>
 				<div class="index-brief">
-					1 连接
-标准 URI 连接语法：
-mongodb://[username:password@]host1[:port1][,host2[:port2],...[,hostN[:portN]]][/[database][?options]]
+					1 核心架构
+1）Node
+节点，存放数据的地方，Cassandra的基础设施。
+2）datacenter
 
-mongodb:// 固定格式
-username:pas
+数据中心，关联节点的集合。可以是物理或虚拟的。
+复制策略由datacenter设置。数据通过复制因子决定，可写入到多个datacenter
+
+3）Cluster
+集群，包含一个或多个数据中心
 					...
 				</div>
 			</a>
@@ -4722,7 +4726,7 @@ username:pas
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/11-分布式/03-分布式存储/05-MongoDB/">05 MongoDB</a>
+                                        <a href="/categories/11-分布式/03-分布式存储/06-Cassandra/">06 Cassandra</a>
 										
                                     </span>
                                 

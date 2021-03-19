@@ -4681,16 +4681,18 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/6%20%E9%81%97%E7%95%99%E7%9A%84%E9%9B%86%E5%90%88/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/5%20%E7%AE%97%E6%B3%95/">
 				<h2 class="index-title">
-					6 遗留的集合
+					5 算法
 				</h2>
 				<div class="index-brief">
-					1 Hashtable
-与 HashMap 的作用是一样的，但是 Hashtable 是线程同步的。
-如果同步性没有要求，应该尽量使用 HashMap。
-2 枚举
-遗留集合使用 Enumeration 接口对元素序列进行遍历。 Enumeration 接口有两个方法，即 hasMoreElement
+					泛型集合接口有一个很大的优点，即算法只需要实现一次。
+1 排序与混排
+1.1 排序
+Collections.sort()
+底层使用了数组的归并排序。即先转化集合为数组，排好序以后在复制回以前的集合。
+归并排序相较于快速排序，速度慢，但是稳定，它不需要交换相同的元素。
+排序传递的列表必须是可修改的，不
 					...
 				</div>
 			</a>

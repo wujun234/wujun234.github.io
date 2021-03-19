@@ -4681,111 +4681,25 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/02%20%E9%87%8D%E6%9E%84%E7%9A%84%E5%8E%9F%E5%88%99/">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/01%20%E9%87%8D%E6%9E%84%EF%BC%8C%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%A1%88%E4%BE%8B/">
 				<h2 class="index-title">
-					02 重构的原则
+					01 重构，第一个案例
 				</h2>
 				<div class="index-brief">
-					1 何为重构
-重构: 在不改变软件可观察行为的前提下改善其内部结构
-2 为何重构
-重构可以提高代码质量
-3 何时重构
-事不过三，三则重构。
-重构应该是在开发过程中实时的、渐进的演化过程：
+					1 起点
+重构前的程序
 
-添加新功能时重构
-修补错误时重构
-复审代码时重构
+无法复用
+很难扩展
+很难修改
+很容易引入bug
 
-4 怎么对经理说
-为了质量 or 不要告诉
-5 重构的难题
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/">13 重构</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/04%20%E6%9E%84%E7%AD%91%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB/">
-				<h2 class="index-title">
-					04 构筑测试体系
-				</h2>
-				<div class="index-brief">
-					编写优良的测试程序，可以极大地提高变成速度，即使不进行重构也一样如此。
-1 自测试代码的价值
+2 重构的第一步
+重构前，先检查自己是否有一套可靠的测试环境。这些测试环境必须有自我检验能力。
+3 分解并重组statement()
 
-程序员时间消耗：编写代码占据很少一部分，大部分时间用来调试。
-确保所有测试都完全自动化，让它们检查自己的测试结果。
-撰写测试代码的最有用时机是在开始编程之前。当需要添加新特性得时候，先写测试代码。
-
-2 
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/">13 重构</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/06%20%E9%87%8D%E6%96%B0%E7%BB%84%E7%BB%87%E5%87%BD%E6%95%B0/">
-				<h2 class="index-title">
-					06 重新组织函数
-				</h2>
-				<div class="index-brief">
-					
-
-1 Extract Method （提炼函数）
-2 Inline Method （内联函数）
-3 Inline Temp （内联临时变量）
-4 Replace Temp with Query （以查询取代临时变量）
-5 Introduce Explaining Variable （引入解释性变量
+代码块愈小，代码的功能就愈容易管理，代码的处理和移动也就愈轻松。
+任何不会被修改的变量都
 					...
 				</div>
 			</a>
@@ -4868,6 +4782,49 @@ var _hmt = _hmt || [];
 		</div>	
 	
 		<div class="index-li">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/04%20%E6%9E%84%E7%AD%91%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB/">
+				<h2 class="index-title">
+					04 构筑测试体系
+				</h2>
+				<div class="index-brief">
+					编写优良的测试程序，可以极大地提高变成速度，即使不进行重构也一样如此。
+1 自测试代码的价值
+
+程序员时间消耗：编写代码占据很少一部分，大部分时间用来调试。
+确保所有测试都完全自动化，让它们检查自己的测试结果。
+撰写测试代码的最有用时机是在开始编程之前。当需要添加新特性得时候，先写测试代码。
+
+2 
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/">13 重构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/09%20%E7%AE%80%E5%8C%96%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
 				<h2 class="index-title">
 					09 简化条件表达式
@@ -4909,20 +4866,59 @@ var _hmt = _hmt || [];
 		</div>	
 	
 		<div class="index-li">
-			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/07%20%E5%9C%A8%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E6%90%AC%E7%A7%BB%E7%89%B9%E6%80%A7/">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/08%20%E9%87%8D%E6%96%B0%E7%BB%84%E7%BB%87%E6%95%B0%E6%8D%AE/">
 				<h2 class="index-title">
-					07 在对象之间搬移特性
+					08 重新组织数据
 				</h2>
 				<div class="index-brief">
 					
 
-1 Move Method （搬移函数）
-2 Move Field （搬移字段）
-3 Extract Class （提炼类）
-4 Inline Class （将类内联化）
-5 Hide Delegate （隐藏“委托关系”）
-6 Remove Middle Man （移除中间人）
-7 Intro
+1 Self Encapsulate Filed 自封装字段
+2 Replace Data Value with Object 以对象取代数据值
+3 Change Value to Reference 将值对象改为引用对象
+4 Change Reference to Value 将引用对象改为值
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/">13 重构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/06%20%E9%87%8D%E6%96%B0%E7%BB%84%E7%BB%87%E5%87%BD%E6%95%B0/">
+				<h2 class="index-title">
+					06 重新组织函数
+				</h2>
+				<div class="index-brief">
+					
+
+1 Extract Method （提炼函数）
+2 Inline Method （内联函数）
+3 Inline Temp （内联临时变量）
+4 Replace Temp with Query （以查询取代临时变量）
+5 Introduce Explaining Variable （引入解释性变量
 					...
 				</div>
 			</a>
@@ -5038,6 +5034,50 @@ var _hmt = _hmt || [];
 		</div>	
 	
 		<div class="index-li">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/07%20%E5%9C%A8%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E6%90%AC%E7%A7%BB%E7%89%B9%E6%80%A7/">
+				<h2 class="index-title">
+					07 在对象之间搬移特性
+				</h2>
+				<div class="index-brief">
+					
+
+1 Move Method （搬移函数）
+2 Move Field （搬移字段）
+3 Extract Class （提炼类）
+4 Inline Class （将类内联化）
+5 Hide Delegate （隐藏“委托关系”）
+6 Remove Middle Man （移除中间人）
+7 Intro
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/">13 重构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/1%20Apache%20Commons/1%20Apache%20Commons%20-%20%E6%80%BB%E8%A7%88/">
 				<h2 class="index-title">
 					1 Apache Commons - 总览
@@ -5070,47 +5110,6 @@ The Commons
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/16-辅助工具类/1-Apache-Commons/">1 Apache Commons</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/08%20%E9%87%8D%E6%96%B0%E7%BB%84%E7%BB%87%E6%95%B0%E6%8D%AE/">
-				<h2 class="index-title">
-					08 重新组织数据
-				</h2>
-				<div class="index-brief">
-					
-
-1 Self Encapsulate Filed 自封装字段
-2 Replace Data Value with Object 以对象取代数据值
-3 Change Value to Reference 将值对象改为引用对象
-4 Change Reference to Value 将引用对象改为值
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/">13 重构</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
 										
                                     </span>
                                 

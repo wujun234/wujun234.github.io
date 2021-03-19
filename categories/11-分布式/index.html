@@ -4765,15 +4765,19 @@ Hive的本质是将 SQL 语句转换为 MapReduce 任务运行
 		</div>	
 	
 		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/3%20Cassandra%20%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/1%20Cassandra%20%E7%AE%80%E4%BB%8B/">
 				<h2 class="index-title">
-					3 Cassandra 数据模型
+					1 Cassandra 简介
 				</h2>
 				<div class="index-brief">
-					Cassandra 的数据模型是基于列族（Column Family）的四维或五维模型。它借鉴了 Amazon 的 Dynamo 和 Google’s BigTable 的数据结构和功能特点，采用 Memtable 和 SSTable 的方式进行存储。
-1 KeySpace（键空间）
+					官方文档
+（不完整，很多todo）
+Datastax
+CQL语法
+1 Cassandra简介
 
-相当于dat
+Cassandra 是一种分布式非关系型数据库，具有高性能、可扩展、无中心化、高可用性、无单点故障等特征。
+以 Amazon 完全分布式的 Dynamo 数据库作为基础，结合 Google BigTabl
 					...
 				</div>
 			</a>
@@ -4814,19 +4818,15 @@ Hive的本质是将 SQL 语句转换为 MapReduce 任务运行
 		</div>	
 	
 		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/1%20Cassandra%20%E7%AE%80%E4%BB%8B/">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/3%20Cassandra%20%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/">
 				<h2 class="index-title">
-					1 Cassandra 简介
+					3 Cassandra 数据模型
 				</h2>
 				<div class="index-brief">
-					官方文档
-（不完整，很多todo）
-Datastax
-CQL语法
-1 Cassandra简介
+					Cassandra 的数据模型是基于列族（Column Family）的四维或五维模型。它借鉴了 Amazon 的 Dynamo 和 Google’s BigTable 的数据结构和功能特点，采用 Memtable 和 SSTable 的方式进行存储。
+1 KeySpace（键空间）
 
-Cassandra 是一种分布式非关系型数据库，具有高性能、可扩展、无中心化、高可用性、无单点故障等特征。
-以 Amazon 完全分布式的 Dynamo 数据库作为基础，结合 Google BigTabl
+相当于dat
 					...
 				</div>
 			</a>
@@ -4960,26 +4960,15 @@ HBase vs Cassandra – Which One Is Better (Infographics)[Feb 16, 20
 		</div>	
 	
 		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/5%20HBase/">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/2%20HDFS/">
 				<h2 class="index-title">
-					5 HBase
+					2 HDFS
 				</h2>
 				<div class="index-brief">
-					HBASE官网
-参考：
-HBase 深入浅出
-1 HBase 简介
-
-HBase（Hadoop Database）是Bigtable的开源实现
-稀疏的，面向列
-基于HDFS，高可靠，可伸缩
-利用Zookeeper进行协同服务
-适合大数据随机和实时读写
-
-2 HBASE架构
-
-1）Client
-可以通
+					HDFS官网
+1 简介
+HDFS 是 GFS（Google File System）的克隆版本。
+HDFS（Hadoop Distributed File System）是Hadoop项目的核心子项目，是分布式计算中数据存储管理的基础，是基于流数据模式访问和处理超大文件的需求而开发的，可以运行于廉价
 					...
 				</div>
 			</a>
@@ -5010,15 +4999,26 @@ HBase（Hadoop Database）是Bigtable的开源实现
 		</div>	
 	
 		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/2%20HDFS/">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/5%20HBase/">
 				<h2 class="index-title">
-					2 HDFS
+					5 HBase
 				</h2>
 				<div class="index-brief">
-					HDFS官网
-1 简介
-HDFS 是 GFS（Google File System）的克隆版本。
-HDFS（Hadoop Distributed File System）是Hadoop项目的核心子项目，是分布式计算中数据存储管理的基础，是基于流数据模式访问和处理超大文件的需求而开发的，可以运行于廉价
+					HBASE官网
+参考：
+HBase 深入浅出
+1 HBase 简介
+
+HBase（Hadoop Database）是Bigtable的开源实现
+稀疏的，面向列
+基于HDFS，高可靠，可伸缩
+利用Zookeeper进行协同服务
+适合大数据随机和实时读写
+
+2 HBASE架构
+
+1）Client
+可以通
 					...
 				</div>
 			</a>

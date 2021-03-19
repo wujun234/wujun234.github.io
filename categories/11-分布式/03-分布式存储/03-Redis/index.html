@@ -4785,21 +4785,16 @@ public class RedisTemplateConfig {
 		</div>	
 	
 		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/3%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BA%8F%E5%88%97%E5%8C%96/">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/2%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
 				<h2 class="index-title">
-					3 自定义序列化
+					2 分布式锁
 				</h2>
 				<div class="index-brief">
-					/**
- * @author wujun
- * @date 2018-10-30 16:25
- */
-@Configuration
-public class RedisConfig {
-    /**
-     * redisTemplate 自定义序列化类
-     *
-     * @param
+					1 Redisson
+直接上官方推荐Redisson
+&lt;!-- https://mvnrepository.com/artifact/org.redisson/redisson --&gt;
+&lt;dependency&gt;
+    &lt;groupId&gt;org.redisson&
 					...
 				</div>
 			</a>
@@ -4840,16 +4835,21 @@ public class RedisConfig {
 		</div>	
 	
 		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/2%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/3%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BA%8F%E5%88%97%E5%8C%96/">
 				<h2 class="index-title">
-					2 分布式锁
+					3 自定义序列化
 				</h2>
 				<div class="index-brief">
-					1 Redisson
-直接上官方推荐Redisson
-&lt;!-- https://mvnrepository.com/artifact/org.redisson/redisson --&gt;
-&lt;dependency&gt;
-    &lt;groupId&gt;org.redisson&
+					/**
+ * @author wujun
+ * @date 2018-10-30 16:25
+ */
+@Configuration
+public class RedisConfig {
+    /**
+     * redisTemplate 自定义序列化类
+     *
+     * @param
 					...
 				</div>
 			</a>

@@ -4681,16 +4681,20 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/1%20JDBC%20%E7%AE%80%E4%BB%8B/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/3%20javax.sql%20%E5%8C%85%E7%AE%80%E4%BB%8B/">
 				<h2 class="index-title">
-					1 JDBC 简介
+					3 javax.sql 包简介
 				</h2>
 				<div class="index-brief">
-					1 JDBC 简介
-Java数据库连接（JDBC）API 提供了来自 Java 的通用数据访问。该 API 包含一个框架，可以动态安装不同的驱动程序来访问不同的数据源。JDBC API 允许用户访问任何形式的表格数据，尤其是存储在关系数据库中的数据。
-JDBC API由两个包组成：
+					补充 java.sql 包，提供 Java 服务器端数据源访问和处理的 API。
+javax.sql 包提供了以下内容：
 
-java.sq
+DataSource 接口，DriverManager 的替代品，用于与数据源建立连接
+连接池和语句池
+分布式事务
+Rowsets
+
+应用程序可直接使用的 API 是 Data
 					...
 				</div>
 			</a>
@@ -4731,20 +4735,16 @@ java.sq
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/3%20javax.sql%20%E5%8C%85%E7%AE%80%E4%BB%8B/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/1%20JDBC%20%E7%AE%80%E4%BB%8B/">
 				<h2 class="index-title">
-					3 javax.sql 包简介
+					1 JDBC 简介
 				</h2>
 				<div class="index-brief">
-					补充 java.sql 包，提供 Java 服务器端数据源访问和处理的 API。
-javax.sql 包提供了以下内容：
+					1 JDBC 简介
+Java数据库连接（JDBC）API 提供了来自 Java 的通用数据访问。该 API 包含一个框架，可以动态安装不同的驱动程序来访问不同的数据源。JDBC API 允许用户访问任何形式的表格数据，尤其是存储在关系数据库中的数据。
+JDBC API由两个包组成：
 
-DataSource 接口，DriverManager 的替代品，用于与数据源建立连接
-连接池和语句池
-分布式事务
-Rowsets
-
-应用程序可直接使用的 API 是 Data
+java.sq
 					...
 				</div>
 			</a>

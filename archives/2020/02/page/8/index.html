@@ -5007,20 +5007,26 @@ MySQL 中最基本的开销最小的锁策略
 		</div>	
 	
 		<div class="index-li">
-			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/09%20%E6%9F%A5%E8%AF%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/08%20%E7%B4%A2%E5%BC%95/">
 				<h2 class="index-title">
-					09 查询性能优化
+					08 索引
 				</h2>
 				<div class="index-brief">
-					1 使用 Explain 进行分析
-Explain 用来分析 SELECT 查询语句，开发人员可以通过分析 Explain 结果来优化查询语句。
-比较重要的字段有：
+					1 索引类型
+索引是在存储引擎中实现的，并不是所有的存储引擎都支持所有的索引类型。
+大部分数据库系统及文件系统都采用 B-Tree 或其变种 B+Tree 作为索引结构
+1.1 存储引擎
 
-select_type : 查询类型，有简单查询、联合查询、子查询等
-key : 使用的索引
-rows : 扫描的行数
+InnoDB
 
-2 优化数
+聚簇索引
+
+聚簇(clustered)：数据行与叶子节点紧凑存储。
+
+
+辅助索引
+
+非聚簇索引
 					...
 				</div>
 			</a>
@@ -5051,26 +5057,16 @@ rows : 扫描的行数
 		</div>	
 	
 		<div class="index-li">
-			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/08%20%E7%B4%A2%E5%BC%95/">
+			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/09%20%E6%9F%A5%E8%AF%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
 				<h2 class="index-title">
-					08 索引
+					09 查询性能优化
 				</h2>
 				<div class="index-brief">
-					1 索引类型
-索引是在存储引擎中实现的，并不是所有的存储引擎都支持所有的索引类型。
-大部分数据库系统及文件系统都采用 B-Tree 或其变种 B+Tree 作为索引结构
-1.1 存储引擎
+					1 使用 Explain 进行分析
+https://dev.mysql.com/doc/refman/5.7/en/explain-output.html
 
-InnoDB
-
-聚簇索引
-
-聚簇(clustered)：数据行与叶子节点紧凑存储。
-
-
-辅助索引
-
-非聚簇索引
+EXPLAIN 只能解释SELECT操作，其他操作要重写为 SELECT 后查看执行计划。
+EXPLAIN 不会告诉你关于触发器、存储过程的信
 					...
 				</div>
 			</a>
