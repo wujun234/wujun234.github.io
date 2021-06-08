@@ -2512,12 +2512,12 @@ var _hmt = _hmt || [];
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
-										05 Data.md
+										05 Data
 									</a>
 									
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/1%20JdbcTemplate/">
+									<a href="/06%20Spring/05%20Data/1%20JdbcTemplate/">
 										1 JdbcTemplate
 									</a>
 								</li>
@@ -2526,7 +2526,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
+									<a href="/06%20Spring/05%20Data/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
 										10 Ehcache 3.8 简单持久化
 									</a>
 								</li>
@@ -2535,7 +2535,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/2%20Spring%20Data%20JPA/">
+									<a href="/06%20Spring/05%20Data/2%20Spring%20Data%20JPA/">
 										2 Spring Data JPA
 									</a>
 								</li>
@@ -2544,7 +2544,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/3%20Spring%20Data%20MongoDB/">
+									<a href="/06%20Spring/05%20Data/3%20Spring%20Data%20MongoDB/">
 										3 Spring Data MongoDB
 									</a>
 								</li>
@@ -2553,7 +2553,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/4%20Spring%20Data%20Neo4j/">
+									<a href="/06%20Spring/05%20Data/4%20Spring%20Data%20Neo4j/">
 										4 Spring Data Neo4j
 									</a>
 								</li>
@@ -2562,7 +2562,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/5%20Spring%20Data%20Redis/">
+									<a href="/06%20Spring/05%20Data/5%20Spring%20Data%20Redis/">
 										5 Spring Data Redis
 									</a>
 								</li>
@@ -2571,7 +2571,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/6%20Spring%20Cache/">
+									<a href="/06%20Spring/05%20Data/6%20Spring%20Cache/">
 										6 Spring Cache
 									</a>
 								</li>
@@ -2580,7 +2580,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/7%20Dynamic%20DataSource/">
+									<a href="/06%20Spring/05%20Data/7%20Dynamic%20DataSource/">
 										7 Dynamic DataSource
 									</a>
 								</li>
@@ -2589,7 +2589,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/8%20Transaction/">
+									<a href="/06%20Spring/05%20Data/8%20Transaction/">
 										8 Transaction
 									</a>
 								</li>
@@ -2598,7 +2598,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/9%20Spring%20Cache%20+%20Caffeine/">
+									<a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
 										9 Spring Cache + Caffeine
 									</a>
 								</li>
@@ -4681,32 +4681,15 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/06%20Spring/05%20Data.md/8%20Transaction/">
+			<a href="/06%20Spring/05%20Data/6%20Spring%20Cache/">
 				<h2 class="index-title">
-					8 Transaction
+					6 Spring Cache
 				</h2>
 				<div class="index-brief">
-					Spring 事务的本质是数据库对事务的支持。
-@EnableTransactionManagement 开启对事务注解的解析
-1 声明式事务
-1.1 @Transactional 注解
-
-
-
-属性
-类型
-描述
-
-
-
-
-value
-String
-事务管理器
-
-
-propagation
-Propaga
+					Spring 自身并没有实现缓存解决方案， 但是它对缓存功能提供了声明式的支持， 能够与多种流行的缓存实现进行集成。
+Spring 的缓存抽象在很大程度上是围绕切面构建的。 在 Spring 中启用缓存时，会创建一个切面， 它触发一个或更多的 Spring 的缓存注解。
+1 启用对缓存的支持
+配置类
 					...
 				</div>
 			</a>
@@ -4727,7 +4710,7 @@ Propaga
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/05-Data-md/">05 Data.md</a>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
 										
                                     </span>
                                 
@@ -4737,47 +4720,7 @@ Propaga
 		</div>	
 	
 		<div class="index-li">
-			<a href="/06%20Spring/05%20Data.md/9%20Spring%20Cache%20+%20Caffeine/">
-				<h2 class="index-title">
-					9 Spring Cache + Caffeine
-				</h2>
-				<div class="index-brief">
-					Caffeine 是使用 Java8 对 Guava 缓存的重写版本，在 Spring Boot 2.0 中取代 Guava。
-1 引入依赖
-&lt;dependency&gt;
-    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-01-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/05-Data-md/">05 Data.md</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/06%20Spring/05%20Data.md/7%20Dynamic%20DataSource/">
+			<a href="/06%20Spring/05%20Data/7%20Dynamic%20DataSource/">
 				<h2 class="index-title">
 					7 Dynamic DataSource
 				</h2>
@@ -4807,7 +4750,47 @@ dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/s
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/05-Data-md/">05 Data.md</a>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
+				<h2 class="index-title">
+					9 Spring Cache + Caffeine
+				</h2>
+				<div class="index-brief">
+					Caffeine 是使用 Java8 对 Guava 缓存的重写版本，在 Spring Boot 2.0 中取代 Guava。
+1 引入依赖
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-01-10</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
 										
                                     </span>
                                 

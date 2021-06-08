@@ -2512,12 +2512,12 @@ var _hmt = _hmt || [];
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
-										05 Data.md
+										05 Data
 									</a>
 									
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/1%20JdbcTemplate/">
+									<a href="/06%20Spring/05%20Data/1%20JdbcTemplate/">
 										1 JdbcTemplate
 									</a>
 								</li>
@@ -2526,7 +2526,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
+									<a href="/06%20Spring/05%20Data/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
 										10 Ehcache 3.8 简单持久化
 									</a>
 								</li>
@@ -2535,7 +2535,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/2%20Spring%20Data%20JPA/">
+									<a href="/06%20Spring/05%20Data/2%20Spring%20Data%20JPA/">
 										2 Spring Data JPA
 									</a>
 								</li>
@@ -2544,7 +2544,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/3%20Spring%20Data%20MongoDB/">
+									<a href="/06%20Spring/05%20Data/3%20Spring%20Data%20MongoDB/">
 										3 Spring Data MongoDB
 									</a>
 								</li>
@@ -2553,7 +2553,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/4%20Spring%20Data%20Neo4j/">
+									<a href="/06%20Spring/05%20Data/4%20Spring%20Data%20Neo4j/">
 										4 Spring Data Neo4j
 									</a>
 								</li>
@@ -2562,7 +2562,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/5%20Spring%20Data%20Redis/">
+									<a href="/06%20Spring/05%20Data/5%20Spring%20Data%20Redis/">
 										5 Spring Data Redis
 									</a>
 								</li>
@@ -2571,7 +2571,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/6%20Spring%20Cache/">
+									<a href="/06%20Spring/05%20Data/6%20Spring%20Cache/">
 										6 Spring Cache
 									</a>
 								</li>
@@ -2580,7 +2580,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/7%20Dynamic%20DataSource/">
+									<a href="/06%20Spring/05%20Data/7%20Dynamic%20DataSource/">
 										7 Dynamic DataSource
 									</a>
 								</li>
@@ -2589,7 +2589,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/8%20Transaction/">
+									<a href="/06%20Spring/05%20Data/8%20Transaction/">
 										8 Transaction
 									</a>
 								</li>
@@ -2598,7 +2598,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/9%20Spring%20Cache%20+%20Caffeine/">
+									<a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
 										9 Spring Cache + Caffeine
 									</a>
 								</li>
@@ -4862,19 +4862,16 @@ IPv6 数据报由两大部分组成，即基本首部和有效载荷（净负荷
 		</div>	
 	
 		<div class="index-li">
-			<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/1%20%E7%BD%91%E7%BB%9C%E5%B1%82%E6%8F%90%E4%BE%9B%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%9C%8D%E5%8A%A1/">
+			<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/9%20%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%A0%87%E8%AE%B0%E4%BA%A4%E6%8D%A2%20MPLS/">
 				<h2 class="index-title">
-					1 网络层提供的两种服务
+					9 多协议标记交换 MPLS
 				</h2>
 				<div class="index-brief">
-					
-虚电路服务：通信时先建立连接，以预留双方通信所需的一切网络资源。
-数据报服务：网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报（分组）服务。网络层不提供服务质量的承诺。
+					多协议标记交换MPLS，“多协议&quot;表示在MPLS的上层可以采用多种协议。
+MPLS利用面向连接技术，使每个分组携带一个叫做标记的小整数。当分组到达交换机时，交换机读取分组的标记，并用标记值来检索分组转发表。这样就比查找路由表来转发分组要快得多。
+MPLS具有以下三个方面的特点：
 
-TCP/IP 体系的网络层提供的是数据报服务。
-
-
-
+(1)支
 					...
 				</div>
 			</a>
@@ -4951,6 +4948,49 @@ IP地址 ::= {&lt;网络号&gt;, &lt
 		</div>	
 	
 		<div class="index-li">
+			<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/1%20%E7%BD%91%E7%BB%9C%E5%B1%82%E6%8F%90%E4%BE%9B%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%9C%8D%E5%8A%A1/">
+				<h2 class="index-title">
+					1 网络层提供的两种服务
+				</h2>
+				<div class="index-brief">
+					
+虚电路服务：通信时先建立连接，以预留双方通信所需的一切网络资源。
+数据报服务：网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报（分组）服务。网络层不提供服务质量的承诺。
+
+TCP/IP 体系的网络层提供的是数据报服务。
+
+
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/04-计算机网络/">04 计算机网络</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/04-计算机网络/4-网络层/">4 网络层</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/7%20IP%20%E5%A4%9A%E6%92%AD/">
 				<h2 class="index-title">
 					7 IP 多播
@@ -4964,6 +5004,44 @@ IP多播所传送的分组需要使用多播IP地址。
 在多播数据报的目的地址写入的是多播组的标识符，然后设法让加入到这个多播组的主机的IP地址与多播组的标识符关联起来；
 多播组的标识符就是IP地址中的D类地址。
 多播地址只能用于目的地址，而不能用
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/04-计算机网络/">04 计算机网络</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/04-计算机网络/4-网络层/">4 网络层</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%9A%84%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">
+				<h2 class="index-title">
+					网络层的重要概念
+				</h2>
+				<div class="index-brief">
+					
+TCP/IP 体系中的网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报服务。网络层不提供服务质量的承诺，不保证分组交付的时限，所传送的分组可能出错、丢失、重复和失序。进程之间通信的可靠性由运输层负责。
+IP 网是虚拟的，因为从网络层上看，IP网就是一个统一的、抽象的网络（实际上是异构的
 					...
 				</div>
 			</a>
@@ -5008,84 +5086,6 @@ IP多播所传送的分组需要使用多播IP地址。
 192.168.0.0 ~ 192.168.255.255
 
 如果专用网不同网点之
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/04-计算机网络/">04 计算机网络</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/04-计算机网络/4-网络层/">4 网络层</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/9%20%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%A0%87%E8%AE%B0%E4%BA%A4%E6%8D%A2%20MPLS/">
-				<h2 class="index-title">
-					9 多协议标记交换 MPLS
-				</h2>
-				<div class="index-brief">
-					多协议标记交换MPLS，“多协议&quot;表示在MPLS的上层可以采用多种协议。
-MPLS利用面向连接技术，使每个分组携带一个叫做标记的小整数。当分组到达交换机时，交换机读取分组的标记，并用标记值来检索分组转发表。这样就比查找路由表来转发分组要快得多。
-MPLS具有以下三个方面的特点：
-
-(1)支
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/04-计算机网络/">04 计算机网络</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/04-计算机网络/4-网络层/">4 网络层</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%9A%84%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">
-				<h2 class="index-title">
-					网络层的重要概念
-				</h2>
-				<div class="index-brief">
-					
-TCP/IP 体系中的网络层向上只提供简单灵活的、无连接的、尽最大努力交付的数据报服务。网络层不提供服务质量的承诺，不保证分组交付的时限，所传送的分组可能出错、丢失、重复和失序。进程之间通信的可靠性由运输层负责。
-IP 网是虚拟的，因为从网络层上看，IP网就是一个统一的、抽象的网络（实际上是异构的
 					...
 				</div>
 			</a>

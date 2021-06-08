@@ -1,0 +1,5072 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		7 Dynamic DataSource | 
+	 
+	吴俊笔记本
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="吴俊,wujun234,wujun,wu jun,java,技术,程序员,笔记,博客" />
+	 
+		<meta name="description" content="吴俊,wujun234,wujun,wu jun" />
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.github.io";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	<link rel="stylesheet" href="/css/main.css">
+	<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+	<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+	<script src="/js/main.js"></script>
+	
+		<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js"></script>
+	
+	
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+	
+</head>
+
+<body>
+	<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?3efe99c287df5a1d6f0d02d187e403c1";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+<header id="header">
+    <a id="title" href="/" class="logo">吴俊笔记本</a>
+
+	<ul id="menu">
+		<li class="menu-item">
+			<a href="/about" class="menu-item-link">ABOUT</a>
+		</li>
+	
+		<li class="menu-item">
+			<a href="/tags" class="menu-item-link">标签</a>
+		</li>
+	
+
+	
+		<li class="menu-item">
+			<a href="/categories" class="menu-item-link">分类</a>
+		</li>
+	
+
+		<li class="menu-item">
+			<a href="https://github.com/wujun234/uid-generator-spring-boot-starter" class="menu-item-link" target="_blank">
+				UidGenerator
+			</a>
+		</li>
+		<li class="menu-item">
+			<a href="https://github.com/wujun234" class="menu-item-link" target="_blank">
+				<i class="fa fa-github fa-2x"></i>
+			</a>
+		</li>
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="按回车全站搜索">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/Long.bitCount()%20%E8%A7%A3%E6%9E%90/">
+										Long.bitCount() 解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据结构
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 数据结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/0%20%E6%A6%82%E8%BF%B0/">
+										0 概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1%20%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88List%EF%BC%89/">
+										1 线性表（List）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/2%20%E6%A0%88%E4%B8%8E%E9%98%9F%E5%88%97/">
+										2 栈与队列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/3%20%E6%95%B0%E7%BB%84%E5%92%8C%E5%B9%BF%E4%B9%89%E8%A1%A8/">
+										3 数组和广义表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/4%20%E4%B8%B2%EF%BC%88string%EF%BC%89/">
+										4 串（string）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/5%20%E6%A0%91%E4%B8%8E%E4%BA%8C%E5%8F%89%E6%A0%91/">
+										5 树与二叉树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/6%20%E5%9B%BE/">
+										6 图
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/7%20%E7%BA%A2%E9%BB%91%E6%A0%91/">
+										7 红黑树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/8%20%E5%A0%86/">
+										8 堆
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 高级数据结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/02%20%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/4%20%E8%B7%B3%E8%B7%83%E8%A1%A8%EF%BC%88Skip%20List)/">
+										4 跳跃表（Skip List)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/02%20%E9%AB%98%E7%BA%A7%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/5%20%E5%88%92%E5%88%86%E6%A0%91/">
+										5 划分树
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 查找
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/0%20%E6%9F%A5%E6%89%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+										0 查找的基本概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/1%20%E9%A1%BA%E5%BA%8F%E8%A1%A8%E6%9F%A5%E6%89%BE/">
+										1 顺序表查找
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/2%20%E6%9C%89%E5%BA%8F%E8%A1%A8%E6%9F%A5%E6%89%BE/">
+										2 有序表查找
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/3%20%E7%BA%BF%E6%80%A7%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE/">
+										3 线性索引查找
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/4%20%E5%A4%9A%E8%B7%AF%E6%9F%A5%E6%89%BE%E6%A0%91(B%20%E6%A0%91)/">
+										4 多路查找树(B 树)
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/5%20%E6%95%A3%E5%88%97(Hash)%E8%A1%A8/">
+										5 散列(Hash)表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 排序
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/0%20%E6%8E%92%E5%BA%8F%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5%E4%B8%8E%E5%88%86%E7%B1%BB/">
+										0 排序的基本概念与分类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/1%20%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F/">
+										1 插入排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/2%20%E4%BA%A4%E6%8D%A2%E6%8E%92%E5%BA%8F/">
+										2 交换排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/3%20%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F/">
+										3 选择排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/4%20%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F/">
+										4 归并排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/5%20%E5%88%86%E9%85%8D%E6%8E%92%E5%BA%8F/">
+										5 分配排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/04%20%E6%8E%92%E5%BA%8F/6%20%E5%A4%96%E9%83%A8%E6%8E%92%E5%BA%8F/">
+										6 外部排序
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E5%8A%A8%E6%80%81%E5%AD%98%E5%82%A8%E7%AE%A1%E7%90%86/">
+										动态存储管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86/">
+										文件管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法题
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										回溯搜索
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%9B%9E%E6%BA%AF%E6%90%9C%E7%B4%A2/%E6%8E%92%E5%88%97/">
+										排列
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										字符串
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E6%8A%8A%E5%AD%97%E7%AC%A6%E4%B8%B2%E8%BD%AC%E6%8D%A2%E6%88%90%E6%95%B4%E6%95%B0/">
+										把字符串转换成整数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E5%AD%97%E7%AC%A6%E4%B8%B2/%E6%9B%BF%E6%8D%A2%E7%A9%BA%E6%A0%BC/">
+										替换空格
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数组
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%95%B0%E7%BB%84/%E4%BA%8C%E7%BB%B4%E6%95%B0%E7%BB%84%E4%B8%AD%E7%9A%84%E6%9F%A5%E6%89%BE/">
+										二维数组中的查找
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%95%B0%E7%BB%84/%E6%95%B0%E7%BB%84%E4%B8%AD%E9%87%8D%E5%A4%8D%E7%9A%84%E6%95%B0%E5%AD%97/">
+										数组中重复的数字
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										树
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E6%A0%91/%E4%BA%8C%E5%8F%89%E6%A0%91%E7%9A%84%E9%81%8D%E5%8E%86/">
+										二叉树的遍历
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										链表
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E9%93%BE%E8%A1%A8/%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E9%93%BE%E8%A1%A8/">
+										从尾到头打印链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E9%93%BE%E8%A1%A8/%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8%E5%8F%8D%E8%BD%AC/">
+										单向链表反转
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E9%93%BE%E8%A1%A8/%E5%8D%95%E9%93%BE%E8%A1%A8%E5%8A%A0%E6%B3%95/">
+										单链表加法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E7%AE%97%E6%B3%95%E9%A2%98/%E9%93%BE%E8%A1%A8/%E5%BD%92%E5%B9%B6%E9%93%BE%E8%A1%A8/">
+										归并链表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 计算机组成原理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/02%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%B3%BB%E7%BB%9F%E6%A6%82%E8%BF%B0/">
+										1 计算机系统概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/02%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BB%84%E6%88%90%E5%8E%9F%E7%90%86/2%20%E6%95%B0%E6%8D%AE%E7%9A%84%E8%A1%A8%E7%A4%BA%E5%92%8C%E8%BF%90%E7%AE%97/">
+										2 数据的表示和运算
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 操作系统
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 操作系统引论
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/03%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/01%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/01%20%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%95%E8%AE%BA/">
+										01 操作系统引论
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 计算机网络
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 计算机网络体系结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E6%A6%82%E8%BF%B0/">
+										1 计算机网络概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/2%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E7%9A%84%E6%80%A7%E8%83%BD/">
+										2 计算机网络的性能
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/3%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E4%B8%8E%E5%8F%82%E8%80%83%E6%A8%A1%E5%9E%8B/">
+										3 计算机网络体系结构与参考模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/1%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84/%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C%E4%BD%93%E7%B3%BB%E7%BB%93%E6%9E%84%E7%9A%84%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">
+										计算机网络体系结构的重要概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 物理层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2%20%E7%89%A9%E7%90%86%E5%B1%82/1%20%E7%89%A9%E7%90%86%E5%B1%82%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+										1 物理层的基本概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/2%20%E7%89%A9%E7%90%86%E5%B1%82/%E7%89%A9%E7%90%86%E5%B1%82%E7%9A%84%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">
+										物理层的重要概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 数据链路层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/3%20%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/1%20%E4%BD%BF%E7%94%A8%E7%82%B9%E5%AF%B9%E7%82%B9%E4%BF%A1%E9%81%93%E7%9A%84%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/">
+										1 使用点对点信道的数据链路层
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/3%20%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/2%20%E7%82%B9%E5%AF%B9%E7%82%B9%E5%8D%8F%E8%AE%AE%20PPP/">
+										2 点对点协议 PPP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/3%20%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/3%20%E4%BD%BF%E7%94%A8%E5%B9%BF%E6%92%AD%E4%BF%A1%E9%81%93%E7%9A%84%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/">
+										3 使用广播信道的数据链路层
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/3%20%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/4%20%E6%89%A9%E5%B1%95%E7%9A%84%E4%BB%A5%E5%A4%AA%E7%BD%91/">
+										4 扩展的以太网
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/3%20%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/5%20%E9%AB%98%E9%80%9F%E4%BB%A5%E5%A4%AA%E7%BD%91/">
+										5 高速以太网
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/3%20%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82/%E6%95%B0%E6%8D%AE%E9%93%BE%E8%B7%AF%E5%B1%82%E7%9A%84%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">
+										数据链路层的重要概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 网络层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/1%20%E7%BD%91%E7%BB%9C%E5%B1%82%E6%8F%90%E4%BE%9B%E7%9A%84%E4%B8%A4%E7%A7%8D%E6%9C%8D%E5%8A%A1/">
+										1 网络层提供的两种服务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/2%20%E7%BD%91%E9%99%85%E5%8D%8F%E8%AE%AE%20IP/">
+										2 网际协议 IP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/3%20%E5%88%92%E5%88%86%E5%AD%90%E7%BD%91%E5%92%8C%E6%9E%84%E9%80%A0%E8%B6%85%E7%BD%91/">
+										3 划分子网和构造超网
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/4%20%E7%BD%91%E9%99%85%E6%8E%A7%E5%88%B6%E6%8A%A5%E6%96%87%E5%8D%8F%E8%AE%AE%20ICMP/">
+										4 网际控制报文协议 ICMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/5%20%E4%BA%92%E8%81%94%E7%BD%91%E7%9A%84%E8%B7%AF%E7%94%B1%E9%80%89%E6%8B%A9%E5%8D%8F%E8%AE%AE/">
+										5 互联网的路由选择协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/6%20IPv6/">
+										6 IPv6
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/7%20IP%20%E5%A4%9A%E6%92%AD/">
+										7 IP 多播
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/8%20%E8%99%9A%E6%8B%9F%E4%B8%93%E7%94%A8%E7%BD%91%20VPN%20%E5%92%8C%E7%BD%91%E7%BB%9C%E5%9C%B0%E5%9D%80%E8%BD%AC%E6%8D%A2%20NAT/">
+										8 虚拟专用网 VPN 和网络地址转换 NAT
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/9%20%E5%A4%9A%E5%8D%8F%E8%AE%AE%E6%A0%87%E8%AE%B0%E4%BA%A4%E6%8D%A2%20MPLS/">
+										9 多协议标记交换 MPLS
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/4%20%E7%BD%91%E7%BB%9C%E5%B1%82/%E7%BD%91%E7%BB%9C%E5%B1%82%E7%9A%84%E9%87%8D%E8%A6%81%E6%A6%82%E5%BF%B5/">
+										网络层的重要概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5 传输层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%20%E4%BC%A0%E8%BE%93%E5%B1%82/1%20%E8%BF%90%E8%BE%93%E5%B1%82%E5%8D%8F%E8%AE%AE%E6%A6%82%E8%BF%B0/">
+										1 运输层协议概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%20%E4%BC%A0%E8%BE%93%E5%B1%82/2%20UDP%20%E7%94%A8%E6%88%B7%E6%95%B0%E6%8D%AE%E6%8A%A5%E5%8D%8F%E8%AE%AE/">
+										2 UDP 用户数据报协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%20%E4%BC%A0%E8%BE%93%E5%B1%82/3%20TCP%20%E6%A6%82%E8%BF%B0/">
+										3 TCP 概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%20%E4%BC%A0%E8%BE%93%E5%B1%82/4%20TCP%20%E5%8F%AF%E9%9D%A0%E4%BC%A0%E8%BE%93/">
+										4 TCP 可靠传输
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%20%E4%BC%A0%E8%BE%93%E5%B1%82/5%20TCP%20%E6%B5%81%E9%87%8F%E6%8E%A7%E5%88%B6/">
+										5 TCP 流量控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%20%E4%BC%A0%E8%BE%93%E5%B1%82/6%20TCP%20%E6%8B%A5%E5%A1%9E%E6%8E%A7%E5%88%B6/">
+										6 TCP 拥塞控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/5%20%E4%BC%A0%E8%BE%93%E5%B1%82/7%20TCP%20%E8%BF%9E%E6%8E%A5%E7%AE%A1%E7%90%86/">
+										7 TCP 连接管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										6 应用层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/1%20%E5%9F%9F%E5%90%8D%E7%B3%BB%E7%BB%9F%20DNS/">
+										1 域名系统 DNS
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/2%20%E6%96%87%E4%BB%B6%E4%BC%A0%E9%80%81%E5%8D%8F%E8%AE%AE%20FTP/">
+										2 文件传送协议 FTP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/3%20%E8%BF%9C%E7%A8%8B%E7%BB%88%E7%AB%AF%E5%8D%8F%E8%AE%AE%20TELNET/">
+										3 远程终端协议 TELNET
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/4%20%E4%B8%87%E7%BB%B4%E7%BD%91%20WWW/">
+										4 万维网 WWW
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/5%20%E7%94%B5%E5%AD%90%E9%82%AE%E4%BB%B6/">
+										5 电子邮件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/6%20%E5%8A%A8%E6%80%81%E4%B8%BB%E6%9C%BA%E9%85%8D%E7%BD%AE%E5%8D%8F%E8%AE%AE%20DHCP/">
+										6 动态主机配置协议 DHCP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/7%20%E7%AE%80%E5%8D%95%E7%BD%91%E7%BB%9C%E7%AE%A1%E7%90%86%E5%8D%8F%E8%AE%AE%20SNMP/">
+										7 简单网络管理协议 SNMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/8%20%E5%BA%94%E7%94%A8%E8%BF%9B%E7%A8%8B%E8%B7%A8%E8%B6%8A%E7%BD%91%E7%BB%9C%E7%9A%84%E9%80%9A%E4%BF%A1/">
+										8 应用进程跨越网络的通信
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/9%20P2P%20%E5%BA%94%E7%94%A8/">
+										9 P2P 应用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/6%20%E5%BA%94%E7%94%A8%E5%B1%82/%E5%BA%94%E7%94%A8%E5%B1%82%E6%A6%82%E8%BF%B0/">
+										应用层概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										7 网络安全
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/7%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/1%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%E9%97%AE%E9%A2%98%E6%A6%82%E8%BF%B0/">
+										1 网络安全问题概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/7%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/2%20%E4%B8%A4%E7%B1%BB%E5%AF%86%E7%A0%81%E4%BD%93%E5%88%B6/">
+										2 两类密码体制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/7%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/3%20%E6%95%B0%E5%AD%97%E7%AD%BE%E5%90%8D/">
+										3 数字签名
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/7%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/4%20%E9%89%B4%E5%88%AB/">
+										4 鉴别
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/7%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/5%20%E5%AF%86%E9%92%A5%E5%88%86%E9%85%8D/">
+										5 密钥分配
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/7%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/6%20%E4%BA%92%E8%81%94%E7%BD%91%E4%BD%BF%E7%94%A8%E7%9A%84%E5%AE%89%E5%85%A8%E5%8D%8F%E8%AE%AE/">
+										6 互联网使用的安全协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/04%20%E8%AE%A1%E7%AE%97%E6%9C%BA%E7%BD%91%E7%BB%9C/7%20%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8/7%20%E7%B3%BB%E7%BB%9F%E5%AE%89%E5%85%A8%EF%BC%9A%E9%98%B2%E7%81%AB%E5%A2%99%E4%B8%8E%E5%85%A5%E4%BE%B5%E6%A3%80%E6%B5%8B/">
+										7 系统安全：防火墙与入侵检测
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Java
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										00 Java 基础
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 基本设计
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/01%20%E5%9F%BA%E6%9C%AC%E8%AE%BE%E8%AE%A1/1%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+										1 数据类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/01%20%E5%9F%BA%E6%9C%AC%E8%AE%BE%E8%AE%A1/2%20%E5%AD%97%E7%AC%A6%E4%B8%B2/">
+										2 字符串
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/01%20%E5%9F%BA%E6%9C%AC%E8%AE%BE%E8%AE%A1/3%20%E6%95%B0%E7%BB%84/">
+										3 数组
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/01%20%E5%9F%BA%E6%9C%AC%E8%AE%BE%E8%AE%A1/4%20%E8%BF%90%E7%AE%97%E7%AC%A6/">
+										4 运算符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/01%20%E5%9F%BA%E6%9C%AC%E8%AE%BE%E8%AE%A1/5%20%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA/">
+										5 输入输出
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/01%20%E5%9F%BA%E6%9C%AC%E8%AE%BE%E8%AE%A1/6%20%E6%8E%A7%E5%88%B6%E6%B5%81%E7%A8%8B/">
+										6 控制流程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 对象与类
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/02%20%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/1%20%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1/">
+										1 面向对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/02%20%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/2%20%E4%BF%AE%E9%A5%B0%E7%AC%A6/">
+										2 修饰符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/02%20%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/3%20%E7%B1%BB/">
+										3 类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/02%20%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/4%20%E5%8F%8D%E5%B0%84/">
+										4 反射
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/02%20%E5%AF%B9%E8%B1%A1%E4%B8%8E%E7%B1%BB/5%20%E6%96%87%E6%A1%A3%E6%B3%A8%E9%87%8A/">
+										5 文档注释
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 接口、lambda、内部类、代理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/03%20%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E4%BB%A3%E7%90%86/1%20%E6%8E%A5%E5%8F%A3/">
+										1 接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/03%20%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E4%BB%A3%E7%90%86/2%20lambda/">
+										2 lambda
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/03%20%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E4%BB%A3%E7%90%86/3%20%E5%86%85%E9%83%A8%E7%B1%BB/">
+										3 内部类
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/03%20%E6%8E%A5%E5%8F%A3%E3%80%81lambda%E3%80%81%E5%86%85%E9%83%A8%E7%B1%BB%E3%80%81%E4%BB%A3%E7%90%86/4%20%E4%BB%A3%E7%90%86/">
+										4 代理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 异常、断言、日志
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/04%20%E5%BC%82%E5%B8%B8%E3%80%81%E6%96%AD%E8%A8%80%E3%80%81%E6%97%A5%E5%BF%97/1%20%E5%BC%82%E5%B8%B8/">
+										1 异常
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/04%20%E5%BC%82%E5%B8%B8%E3%80%81%E6%96%AD%E8%A8%80%E3%80%81%E6%97%A5%E5%BF%97/2%20%E6%96%AD%E8%A8%80/">
+										2 断言
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/04%20%E5%BC%82%E5%B8%B8%E3%80%81%E6%96%AD%E8%A8%80%E3%80%81%E6%97%A5%E5%BF%97/3%20%E6%97%A5%E5%BF%97/">
+										3 日志
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 泛型、事件
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/05%20%E6%B3%9B%E5%9E%8B%E3%80%81%E4%BA%8B%E4%BB%B6/1%20%E6%B3%9B%E5%9E%8B/">
+										1 泛型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/05%20%E6%B3%9B%E5%9E%8B%E3%80%81%E4%BA%8B%E4%BB%B6/2%20%E4%BA%8B%E4%BB%B6/">
+										2 事件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 集合
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/1%20%E9%9B%86%E5%90%88%E6%8E%A5%E5%8F%A3/">
+										1 集合接口
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.0%20%E5%85%B7%E4%BD%93%E7%9A%84%E9%9B%86%E5%90%88/">
+										2.0 具体的集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.1%20ArrayList%E3%80%81Vector/">
+										2.1 ArrayList、Vector
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.2%20LinkedList/">
+										2.2 LinkedList
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.3%20ArrayDeque/">
+										2.3 ArrayDeque
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.4%20TreeMap%E3%80%81TreeSet/">
+										2.4 TreeMap、TreeSet
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.5%20HashMap%E3%80%81HashSet%E3%80%81Hashtable/">
+										2.5 HashMap、HashSet、Hashtable
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.6%20LinkedHashMap%E3%80%81LinkedHashSet/">
+										2.6 LinkedHashMap、LinkedHashSet
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.7%20PriorityQueue/">
+										2.7 PriorityQueue
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/2.8%20ConcurrentHashMap/">
+										2.8 ConcurrentHashMap
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/3%20%E6%98%A0%E5%B0%84/">
+										3 映射
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/4%20%E8%A7%86%E5%9B%BE%E4%B8%8E%E5%8C%85%E8%A3%85%E5%99%A8/">
+										4 视图与包装器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/5%20%E7%AE%97%E6%B3%95/">
+										5 算法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/6%20%E9%81%97%E7%95%99%E7%9A%84%E9%9B%86%E5%90%88/">
+										6 遗留的集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/7%20%E7%BA%BF%E7%A8%8B%E5%AE%89%E5%85%A8%E7%9A%84%E9%9B%86%E5%90%88/">
+										7 线程安全的集合
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 并发
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/07%20%E5%B9%B6%E5%8F%91/1%20%E7%BA%BF%E7%A8%8B/">
+										1 线程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/07%20%E5%B9%B6%E5%8F%91/2%20%E7%BA%BF%E7%A8%8B%E6%B1%A0/">
+										2 线程池
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/07%20%E5%B9%B6%E5%8F%91/3%20%E9%94%81/">
+										3 锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/07%20%E5%B9%B6%E5%8F%91/4%20%E5%90%8C%E6%AD%A5%E5%99%A8/">
+										4 同步器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/07%20%E5%B9%B6%E5%8F%91/5%20%E9%9D%9E%E9%98%BB%E5%A1%9E%E5%90%8C%E6%AD%A5/">
+										5 非阻塞同步
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08 Java SE 8 的流库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/08%20Java%20SE%208%20%E7%9A%84%E6%B5%81%E5%BA%93/1%20Stream/">
+										1 Stream
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/08%20Java%20SE%208%20%E7%9A%84%E6%B5%81%E5%BA%93/2%20Optional/">
+										2 Optional
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 IO
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/1%20%E8%BE%93%E5%85%A5%E8%BE%93%E5%87%BA%E6%B5%81/">
+										1 输入输出流
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/2%20%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6/">
+										2 操作字符
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/3%20%E6%93%8D%E4%BD%9C%E5%AD%97%E8%8A%82/">
+										3 操作字节
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/4%20%E5%BA%8F%E5%88%97%E5%8C%96/">
+										4 序列化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/5%20%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6/">
+										5 操作文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/6%20NIO%EF%BC%88%E5%86%85%E5%AD%98%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%EF%BC%89/">
+										6 NIO（内存映射文件）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/7%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+										7 正则表达式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10 XML
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/1%20XML%20%E6%A6%82%E8%BF%B0/">
+										1 XML 概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/2%20XML%20%E8%A7%A3%E6%9E%90/">
+										2 XML 解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/3%20%E9%AA%8C%E8%AF%81%20XML%20%E6%96%87%E6%A1%A3/">
+										3 验证 XML 文档
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/4%20%E7%94%9F%E6%88%90%20XML%20%E6%96%87%E6%A1%A3/">
+										4 生成 XML 文档
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/5%20XSL%20%E8%BD%AC%E6%8D%A2/">
+										5 XSL 转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										11 网络
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/11%20%E7%BD%91%E7%BB%9C/1%20Socket%20%E8%BF%9E%E6%8E%A5/">
+										1 Socket 连接
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/11%20%E7%BD%91%E7%BB%9C/2%20%E8%8E%B7%E5%8F%96%20URL%20%E6%95%B0%E6%8D%AE/">
+										2 获取 URL 数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/11%20%E7%BD%91%E7%BB%9C/3%20%E5%8F%91%E9%80%81%20E-mail/">
+										3 发送 E-mail
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										12 JDBC
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/1%20JDBC%20%E7%AE%80%E4%BB%8B/">
+										1 JDBC 简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/2%20java.sql%20%E5%8C%85%E7%AE%80%E4%BB%8B/">
+										2 java.sql 包简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/3%20javax.sql%20%E5%8C%85%E7%AE%80%E4%BB%8B/">
+										3 javax.sql 包简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										13 日期和时间
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/13%20%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/1%20%E7%BB%9D%E5%AF%B9%E6%97%B6%E9%97%B4/">
+										1 绝对时间
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/13%20%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/2%20%E4%BA%BA%E7%B1%BB%E6%97%B6%E9%97%B4/">
+										2 人类时间
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/13%20%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/3%20%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%92%8C%E8%A7%A3%E6%9E%90/">
+										3 格式化和解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/13%20%E6%97%A5%E6%9C%9F%E5%92%8C%E6%97%B6%E9%97%B4/4%20%E4%B8%8E%E9%81%97%E7%95%99%E4%BB%A3%E7%A0%81%E7%9A%84%E4%BA%92%E6%93%8D%E4%BD%9C/">
+										4 与遗留代码的互操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										14 国际化
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/1%20Locale%20%E5%AF%B9%E8%B1%A1/">
+										1 Locale 对象
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/2%20%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%92%8C%E8%A7%A3%E6%9E%90/">
+										2 格式化和解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/3%20%E6%8E%92%E5%BA%8F%E5%92%8C%E8%8C%83%E5%8C%96/">
+										3 排序和范化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/4%20%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/">
+										4 消息格式化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/5%20%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%92%8C%E5%AD%97%E7%AC%A6%E9%9B%86/">
+										5 文本文件和字符集
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/6%20%E8%B5%84%E6%BA%90%E5%8C%85/">
+										6 资源包
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										15 脚本、编译、注解
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/1%20Java%20%E5%B9%B3%E5%8F%B0%E7%9A%84%E8%84%9A%E6%9C%AC/">
+										1 Java 平台的脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/2%20%E7%BC%96%E8%AF%91%E5%99%A8%20API/">
+										2 编译器 API
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/3%20%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3/">
+										3 使用注解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/4%20%E6%B3%A8%E8%A7%A3%E8%AF%AD%E6%B3%95/">
+										4 注解语法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/5%20%E6%A0%87%E5%87%86%E6%B3%A8%E8%A7%A3/">
+										5 标准注解
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/6%20%E6%BA%90%E7%A0%81%E7%BA%A7%E6%B3%A8%E8%A7%A3%E5%A4%84%E7%90%86/">
+										6 源码级注解处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/7%20%E5%AD%97%E8%8A%82%E7%A0%81%E5%B7%A5%E7%A8%8B/">
+										7 字节码工程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										16 安全
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/16%20%E5%AE%89%E5%85%A8/1%20%E7%B1%BB%E5%8A%A0%E8%BD%BD%E5%99%A8/">
+										1 类加载器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/16%20%E5%AE%89%E5%85%A8/2%20%E5%AE%89%E5%85%A8%E7%AE%A1%E7%90%86%E5%99%A8%E4%B8%8E%E8%AE%BF%E9%97%AE%E6%9D%83%E9%99%90/">
+										2 安全管理器与访问权限
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/16%20%E5%AE%89%E5%85%A8/3%20%E7%94%A8%E6%88%B7%E8%AE%A4%E8%AF%81/">
+										3 用户认证
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/16%20%E5%AE%89%E5%85%A8/4%20%E6%95%B0%E6%8D%AE%E7%AD%BE%E5%90%8D/">
+										4 数据签名
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/16%20%E5%AE%89%E5%85%A8/5%20%E5%8A%A0%E5%AF%86/">
+										5 加密
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										17 本地方法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/17%20%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95/1%20%E8%B0%83%E7%94%A8%20C%20%E5%87%BD%E6%95%B0/">
+										1 调用 C 函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/17%20%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95/2%20%E5%8F%82%E6%95%B0%E4%B8%8E%E8%BF%94%E5%9B%9E/">
+										2 参数与返回
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/17%20%E6%9C%AC%E5%9C%B0%E6%96%B9%E6%B3%95/3%20todo/">
+										3 todo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Java 虚拟机
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/01%20%E8%B5%B0%E8%BF%9B%20Java/">
+										01 走进 Java
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/02%20JVM%20%E5%86%85%E5%AD%98/">
+										02 JVM 内存
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/03%20GC%20%E4%B8%8E%E5%86%85%E5%AD%98%E5%88%86%E9%85%8D/">
+										03 GC 与内存分配
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/04%20%E6%80%A7%E8%83%BD%E7%9B%91%E6%8E%A7%20+%20%E6%95%85%E9%9A%9C%E5%A4%84%E7%90%86/">
+										04 性能监控 + 故障处理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/05%20%E8%B0%83%E4%BC%98%E6%A1%88%E4%BE%8B/">
+										05 调优案例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/06%20%E7%B1%BB%E6%96%87%E4%BB%B6%E7%BB%93%E6%9E%84/">
+										06 类文件结构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/07%20%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%9C%BA%E5%88%B6/">
+										07 类加载机制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/08%20%E5%AD%97%E8%8A%82%E7%A0%81%E6%89%A7%E8%A1%8C%E5%BC%95%E6%93%8E/">
+										08 字节码执行引擎
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/09%20%E7%B1%BB%E5%8A%A0%E8%BD%BD%E6%A1%88%E4%BE%8B%E4%B8%8E%E5%AE%9E%E6%88%98/">
+										09 类加载案例与实战
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/10%20%E6%97%A9%E6%9C%9F%EF%BC%88%E7%BC%96%E8%AF%91%E6%9C%9F%EF%BC%89%E4%BC%98%E5%8C%96/">
+										10 早期（编译期）优化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/11%20%E6%99%9A%E6%9C%9F%EF%BC%88%E8%BF%90%E8%A1%8C%E6%9C%9F%EF%BC%89%E4%BC%98%E5%8C%96/">
+										11 晚期（运行期）优化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/01%20Java%20%E8%99%9A%E6%8B%9F%E6%9C%BA/12%20Java%20%E5%86%85%E5%AD%98%E6%A8%A1%E5%9E%8B/">
+										12 Java 内存模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Effective Java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/01%20%E5%88%9B%E5%BB%BA%E5%92%8C%E9%94%80%E6%AF%81%E5%AF%B9%E8%B1%A1%EF%BC%881-9%EF%BC%89/">
+										01 创建和销毁对象（1-9）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/02%20%E5%AF%B9%E4%BA%8E%E6%89%80%E6%9C%89%E5%AF%B9%E8%B1%A1%E9%83%BD%E9%80%9A%E7%94%A8%E7%9A%84%E6%96%B9%E6%B3%95%EF%BC%8810-14%EF%BC%89/">
+										02 对于所有对象都通用的方法（10-14）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/03%20%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%EF%BC%8815-25%EF%BC%89/">
+										03 类和接口（15-25）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/04%20%E6%B3%9B%E5%9E%8B%EF%BC%8826-33%EF%BC%89/">
+										04 泛型（26-33）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/05%20%E6%9E%9A%E4%B8%BE%E5%92%8C%E6%B3%A8%E8%A7%A3%EF%BC%8834-41%EF%BC%89/">
+										05 枚举和注解（34-41）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/06%20Lambdas%20%E4%B8%8E%20Streams%EF%BC%8842-48%EF%BC%89/">
+										06 Lambdas 与 Streams（42-48）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/07%20%E6%96%B9%E6%B3%95%EF%BC%8849-56%EF%BC%89/">
+										07 方法（49-56）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/08%20%E9%80%9A%E7%94%A8%E7%A8%8B%E5%BA%8F%E8%AE%BE%E8%AE%A1%EF%BC%8857-68%EF%BC%89/">
+										08 通用程序设计（57-68）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/09%20%E5%BC%82%E5%B8%B8%EF%BC%8869-77%EF%BC%89/">
+										09 异常（69-77）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/10%20%E5%B9%B6%E5%8F%91%EF%BC%8878-84%EF%BC%89/">
+										10 并发（78-84）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/05%20Java/02%20Effective%20Java/11%20%E5%BA%8F%E5%88%97%E5%8C%96%EF%BC%8885-90%EF%BC%89/">
+										11 序列化（85-90）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 Spring
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Core
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/01%20Core/1%20Spring%20%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
+										1 Spring 基本概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/01%20Core/2%20IoC%20%E5%AE%B9%E5%99%A8%E4%B8%8E%20Bean/">
+										2 IoC 容器与 Bean
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/01%20Core/3%20SpringBoot%20%E5%90%AF%E5%8A%A8%E6%B5%81%E7%A8%8B/">
+										3 SpringBoot 启动流程
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 IoC
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/02%20IoC/1%20%E4%BE%9D%E8%B5%96%E6%B3%A8%E5%85%A5/">
+										1 依赖注入
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/02%20IoC/2%20%E9%AB%98%E7%BA%A7%E8%A3%85%E9%85%8D/">
+										2 高级装配
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/02%20IoC/3%20%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C%20Bean/">
+										3 动态注册 Bean
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 AOP
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/03%20AOP/1%20AOP%20%E7%AE%80%E4%BB%8B/">
+										1 AOP 简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/03%20AOP/2%20%E5%88%87%E7%82%B9/">
+										2 切点
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/03%20AOP/3%20%E5%88%87%E9%9D%A2/">
+										3 切面
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Web
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/04%20Web/1%20Spring%20MVC/">
+										1 Spring MVC
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/04%20Web/2%20Spring%20MVC%20%E8%BF%9B%E9%98%B6/">
+										2 Spring MVC 进阶
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/04%20Web/3%20Spring%20RestTemplate/">
+										3 Spring RestTemplate
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/04%20Web/4%20%E8%B7%A8%E5%9F%9F/">
+										4 跨域
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Data
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/1%20JdbcTemplate/">
+										1 JdbcTemplate
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
+										10 Ehcache 3.8 简单持久化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/2%20Spring%20Data%20JPA/">
+										2 Spring Data JPA
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/3%20Spring%20Data%20MongoDB/">
+										3 Spring Data MongoDB
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/4%20Spring%20Data%20Neo4j/">
+										4 Spring Data Neo4j
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/5%20Spring%20Data%20Redis/">
+										5 Spring Data Redis
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/6%20Spring%20Cache/">
+										6 Spring Cache
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/06%20Spring/05%20Data/7%20Dynamic%20DataSource/">
+										7 Dynamic DataSource
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/8%20Transaction/">
+										8 Transaction
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
+										9 Spring Cache + Caffeine
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 Security
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/06%20Security/1%20Spring%20Security/">
+										1 Spring Security
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 Async
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/07%20Async/1%20Scheduled/">
+										1 Scheduled
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/07%20Async/2%20Async/">
+										2 Async
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08 Log
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/08%20Log/1%20%E9%BB%98%E8%AE%A4%E6%97%A5%E5%BF%97/">
+										1 默认日志
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/08%20Log/2%20slf4j%20%E5%92%8C%20log4j%E3%80%81logback%20%E5%85%B3%E7%B3%BB/">
+										2 slf4j 和 log4j、logback 关系
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/08%20Log/3%20%E8%BE%93%E5%87%BA%20sout%20%E5%88%B0%E6%97%A5%E5%BF%97%E6%96%87%E4%BB%B6/">
+										3 输出 sout 到日志文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10 Retry
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/06%20Spring/10%20Retry/01%20Spring%20Retry/">
+										01 Spring Retry
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 数据库
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 MySQL
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/01%20%E5%85%B3%E7%B3%BB%E6%95%B0%E6%8D%AE%E5%BA%93/">
+										01 关系数据库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/02%20%E9%94%81/">
+										02 锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/03%20%E4%BA%8B%E5%8A%A1/">
+										03 事务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/04%20%E5%A4%9A%E7%89%88%E6%9C%AC%E5%B9%B6%E5%8F%91%E6%8E%A7%E5%88%B6/">
+										04 多版本并发控制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/05%20%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E/">
+										05 存储引擎
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/06%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">
+										06 数据类型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/07%20SQL/">
+										07 SQL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/08%20%E7%B4%A2%E5%BC%95/">
+										08 索引
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/09%20%E6%9F%A5%E8%AF%A2%E6%80%A7%E8%83%BD%E4%BC%98%E5%8C%96/">
+										09 查询性能优化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/10%20%E5%88%86%E5%BA%93%E5%88%86%E8%A1%A8/">
+										10 分库分表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/01%20MySQL/11%20%E5%A4%8D%E5%88%B6/">
+										11 复制
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 MyBatis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/01%20MyBatis+Spring%20Boot/">
+										01 MyBatis+Spring Boot
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/02%20MyBatis%20Generator/">
+										02 MyBatis Generator
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/03%20CDDATA%E5%9D%97/">
+										03 CDDATA块
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/04%20%E6%B3%A8%E8%A7%A3%E4%BD%BF%E7%94%A8/">
+										04 注解使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08 系统设计
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 通用设计
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/01%20%E5%88%86%E5%B8%83%E5%BC%8F%E7%BB%9F%E4%B8%80%20id%20%E8%AE%BE%E8%AE%A1/">
+										01 分布式统一 id 设计
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/02%20%E8%B7%A8%E5%BA%93%E5%88%86%E9%A1%B5/">
+										02 跨库分页
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/03%20%E7%9F%AD%E9%93%BE%E6%8E%A5/">
+										03 短链接
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/04%20%E7%9B%B8%E4%BC%BC%E5%9B%BE%E7%89%87%E8%B0%83%E7%A0%94/">
+										04 相似图片调研
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/05%20%E6%B5%B7%E6%98%8E%E8%B7%9D%E7%A6%BB%E8%AE%A1%E7%AE%97/">
+										05 海明距离计算
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/06%20%E7%A7%92%E6%9D%80%E3%80%81%E7%BA%A2%E5%8C%85%E7%B3%BB%E7%BB%9F/">
+										06 秒杀、红包系统
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/07%20%E4%BD%BF%E7%94%A8%20Java%20%E8%BF%9B%E8%A1%8C%E7%88%AC%E8%99%AB/">
+										07 使用 Java 进行爬虫
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/08%20%E6%96%87%E7%AB%A0%E7%9B%B8%E4%BC%BC%E5%BA%A6%20-%20%20simhash%20%E8%AE%A1%E7%AE%97/">
+										08 文章相似度 -  simhash 计算
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 业务设计
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/2%20%E4%B8%9A%E5%8A%A1%E8%AE%BE%E8%AE%A1/01%20%E5%8D%B3%E5%88%BB-%E9%93%BE%E6%8E%A5%E8%A7%A3%E6%9E%90-%E5%88%86%E6%9E%90/">
+										01 即刻-链接解析-分析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/2%20%E4%B8%9A%E5%8A%A1%E8%AE%BE%E8%AE%A1/02%20%E6%B6%88%E6%81%AF%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/">
+										02 消息系统设计
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/2%20%E4%B8%9A%E5%8A%A1%E8%AE%BE%E8%AE%A1/03%20%E5%85%B3%E6%B3%A8%E6%B5%81%E8%B0%83%E7%A0%94/">
+										03 关注流调研
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/2%20%E4%B8%9A%E5%8A%A1%E8%AE%BE%E8%AE%A1/04%20%E5%85%B3%E6%B3%A8%E6%B5%81%E8%AE%BE%E8%AE%A1/">
+										04 关注流设计
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 设计模式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/3%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/1%20%E5%88%9B%E5%BB%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+										1 创建型模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/3%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2%20%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+										2 结构型模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/3%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3%20%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+										3 行为型模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/3%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/4%20J2EE%20%E6%A8%A1%E5%BC%8F/">
+										4 J2EE 模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/1%20Git/0%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+										0 搭建Git服务器
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/1%20Git/1%20%E5%88%9B%E5%BB%BA%E7%89%88%E6%9C%AC%E5%BA%93/">
+										1 创建版本库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/1%20Git/2%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										2 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/1%20Git/3%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
+										3 远程仓库
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/1%20Git/4%20%E5%88%86%E6%94%AF%E7%AE%A1%E7%90%86/">
+										4 分支管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/1%20Git/5%20%E6%A0%87%E7%AD%BE%E7%AE%A1%E7%90%86/">
+										5 标签管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/1%20Git/6%20%E5%85%B6%E4%BB%96/">
+										6 其他
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/2%20SVN/1%20%E5%9F%BA%E7%A1%80%E4%BB%8B%E7%BB%8D/">
+										1 基础介绍
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/2%20SVN/2%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+										2 基本操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/2%20SVN/3%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
+										3 版本管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/2%20SVN/4%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+										4 冲突及解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/2%20SVN/5%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
+										5 开发周期
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 IDEA
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/3%20IDEA/1%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/">
+										1 IDEA 快捷键
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 Maven
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/4%20Maven/1%20Maven%20%E7%AC%94%E8%AE%B0/">
+										1 Maven 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/4%20Maven/2%20Maven%20%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3/">
+										2 Maven 冲突解决
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5 Gradle
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/5%20Gradle/1%20Gradle%20%E6%A6%82%E8%BF%B0/">
+										1 Gradle 概述
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/5%20Gradle/2%20maven%E8%BF%81%E7%A7%BB%E5%88%B0gradle/">
+										2 maven迁移到gradle
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										6 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/6%20Linux/1%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+										1 Centos 7 配置 LAMP
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/6%20Linux/2%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
+										2 Linux 常用命令
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/6%20Linux/3%20Shell%20%E8%84%9A%E6%9C%AC/">
+										3 Shell 脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										7 Zabbix
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/7%20Zabbix/1%20Zabbix%E7%AE%80%E4%BB%8B/">
+										1 Zabbix简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/7%20Zabbix/2%20zabbix%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">
+										2 zabbix中文乱码
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/7%20Zabbix/3%20zabbix%E4%B8%BB%E5%8A%A8%E6%A8%A1%E5%BC%8F%E3%80%81%E8%A2%AB%E5%8A%A8%E6%A8%A1%E5%BC%8F/">
+										3 zabbix主动模式、被动模式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/7%20Zabbix/4%20Zabbix%E8%BF%81%E7%A7%BB/">
+										4 Zabbix迁移
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										8 ELK
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/8%20ELK/1%20ElasticStack/">
+										1 ElasticStack
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										9 Docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/09%20DevOps/9%20Docker/1%20Docker%20%E7%AC%94%E8%AE%B0/">
+										1 Docker 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10 微服务
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0 服务注册与发现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/0%20%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/01%20Spring%20Cloud%20Eureka/">
+										01 Spring Cloud Eureka
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/0%20%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/02%20Spring%20Cloud%20Consul/">
+										02 Spring Cloud Consul
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 服务调用
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/01%20Spring%20Cloud%20Ribbon/">
+										01 Spring Cloud Ribbon
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/02%20Spring%20Cloud%20Hystrix/">
+										02 Spring Cloud Hystrix
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/03%20Spring%20Cloud%20Feign/">
+										03 Spring Cloud Feign
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/04%20Resilience4j/">
+										04 Resilience4j
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Apache Thrift
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/05%20Apache%20Thrift/1%20Apache%20Thrift%20%E5%88%9D%E8%AF%86%20(1)%20-%20%E7%AE%80%E4%BB%8B/">
+										1 Apache Thrift 初识 (1) - 简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/05%20Apache%20Thrift/2%20Apache%20Thrift%20%E5%88%9D%E8%AF%86%20(2)%20-%20%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E4%B8%8E%E5%9F%BA%E6%9C%AC%E8%AF%AD%E6%B3%95/">
+										2 Apache Thrift 初识 (2) - 数据类型与基本语法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/05%20Apache%20Thrift/3%20Apache%20Thrift%20%E5%88%9D%E8%AF%86%20(3)%20-%20%E5%AE%9E%E6%88%98Demo/">
+										3 Apache Thrift 初识 (3) - 实战Demo
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 配置中心
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/2%20%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/01%20Spring%20Cloud%20Config/">
+										01 Spring Cloud Config
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/2%20%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/02%20Apollo%20%E9%A1%B9%E7%9B%AE%E8%A7%A3%E6%9E%90/">
+										02 Apollo 项目解析
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/2%20%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83/%E5%BC%80%E6%BA%90%E9%85%8D%E7%BD%AE%E4%B8%AD%E5%BF%83%E5%AF%B9%E6%AF%94%E9%80%89%E5%9E%8B/">
+										开源配置中心对比选型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 API网关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/3%20API%E7%BD%91%E5%85%B3/01%20Spring%20Cloud%20Zuul/">
+										01 Spring Cloud Zuul
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/3%20API%E7%BD%91%E5%85%B3/02%20Spring%20Cloud%20Gateway/">
+										02 Spring Cloud Gateway
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 消息组件
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/4%20%E6%B6%88%E6%81%AF%E7%BB%84%E4%BB%B6/01%20Spring%20Cloud%20Bus/">
+										01 Spring Cloud Bus
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/4%20%E6%B6%88%E6%81%AF%E7%BB%84%E4%BB%B6/02%20Spring%20Cloud%20Stream/">
+										02 Spring Cloud Stream
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5 链路追踪
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/5%20%E9%93%BE%E8%B7%AF%E8%BF%BD%E8%B8%AA/01%20Spring%20Cloud%20Sleuth/">
+										01 Spring Cloud Sleuth
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Dubbo
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/Dubbo/00%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
+										00 官方文档
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										Service Mesh
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/Service%20Mesh/00%20%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
+										00 相关资料
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										11 分布式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 分布式资源协调
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/01%20%E5%88%86%E5%B8%83%E5%BC%8F%E8%B5%84%E6%BA%90%E5%8D%8F%E8%B0%83/4%20YARN/">
+										4 YARN
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 分布式计算
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/02%20%E5%88%86%E5%B8%83%E5%BC%8F%E8%AE%A1%E7%AE%97/3%20MapReduce/">
+										3 MapReduce
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 分布式存储
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Redis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/1%20Redis%20%E7%AE%80%E4%BB%8B/">
+										1 Redis 简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/2%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+										2 分布式锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/3%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BA%8F%E5%88%97%E5%8C%96/">
+										3 自定义序列化
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/4%20%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/">
+										4 执行脚本
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Memcached
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/04%20Memcached/01%20Memcached%E7%AC%94%E8%AE%B0/">
+										01 Memcached笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 MongoDB
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/05%20MongoDB/01%20MongoDB%20%E6%A6%82%E5%BF%B5/">
+										01 MongoDB 概念
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/05%20MongoDB/02%20MongoDB%20%E6%93%8D%E4%BD%9C/">
+										02 MongoDB 操作
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/05%20MongoDB/03%20MongoDB%20%E7%AE%A1%E7%90%86/">
+										03 MongoDB 管理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/05%20MongoDB/04%20Java%E4%B8%AD%E4%BD%BF%E7%94%A8/">
+										04 Java中使用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 Cassandra
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/1%20Cassandra%20%E7%AE%80%E4%BB%8B/">
+										1 Cassandra 简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/2%20Cassandra%20%E6%9E%B6%E6%9E%84/">
+										2 Cassandra 架构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/3%20Cassandra%20%E6%95%B0%E6%8D%AE%E6%A8%A1%E5%9E%8B/">
+										3 Cassandra 数据模型
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/4%20%E8%BF%81%E7%A7%BB%E6%A1%88%E4%BE%8B%E7%A4%BA%E4%BE%8B/">
+										4 迁移案例示例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/5%20Gossip%20%E5%8D%8F%E8%AE%AE/">
+										5 Gossip 协议
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/06%20Cassandra/6%20Cassandra%20vs.%20HBase/">
+										6 Cassandra vs. HBase
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/2%20HDFS/">
+										2 HDFS
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/5%20HBase/">
+										5 HBase
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/NoSQL/">
+										NoSQL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 分布式数据处理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/04%20%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/6%20Hive/">
+										6 Hive
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/04%20%E5%88%86%E5%B8%83%E5%BC%8F%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/7%20Sqoop%E6%BA%90%E7%A0%81%20-%20%20%E4%BB%8E%20MySQL%20%E5%AF%BC%E5%85%A5%E5%88%B0%20Hive/">
+										7 Sqoop源码 -  从 MySQL 导入到 Hive
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 分布式事务
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/05%20%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/">
+										分布式事务
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/05%20%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BC%9A%E8%AF%9D/">
+										分布式会话
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 分布式锁
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/06%20%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81/">
+										分布式锁
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08 负载均衡
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/08%20%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/01%20%E4%B8%80%E8%87%B4%E6%80%A7%E5%93%88%E5%B8%8C/">
+										01 一致性哈希
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/08%20%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/Paxos/">
+										Paxos
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/08%20%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/Raft/">
+										Raft
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/08%20%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/%E8%B4%9F%E8%BD%BD%E5%9D%87%E8%A1%A1/">
+										负载均衡
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/1%20Hadoop/">
+										1 Hadoop
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/8%20Hadoop%20%E6%95%B0%E6%8D%AE%E4%BB%93%E5%BA%93%20-%20%E3%80%8A%E7%A6%BB%E7%BA%BF%E5%92%8C%E5%AE%9E%E6%97%B6%E5%A4%A7%E6%95%B0%E6%8D%AE%E5%BC%80%E5%8F%91%E5%AE%9E%E6%88%98%E3%80%8B/">
+										8 Hadoop 数据仓库 - 《离线和实时大数据开发实战》
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										12 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 EasyMock
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/12%20%E6%B5%8B%E8%AF%95/1%20EasyMock/1%20EasyMock%20-%20%E6%A8%A1%E6%8B%9F%E5%AF%B9%E8%B1%A1%E6%B5%8B%E8%AF%95/">
+										1 EasyMock - 模拟对象测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 http_load
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/12%20%E6%B5%8B%E8%AF%95/2%20http_load/1%20http_load%20-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/">
+										1 http_load - 压力测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/12%20%E6%B5%8B%E8%AF%95/3%20JMeter/1%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
+										1 JMeter - 性能测试
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 JUnit
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/12%20%E6%B5%8B%E8%AF%95/4%20JUnit/1%20JUnit%205%20%E7%AE%80%E4%BB%8B/">
+										1 JUnit 5 简介
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5 MockMvc
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/12%20%E6%B5%8B%E8%AF%95/5%20MockMvc/1%20MockMvc/">
+										1 MockMvc
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										13 重构
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 重构-改善既有代码的设计
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/01%20%E9%87%8D%E6%9E%84%EF%BC%8C%E7%AC%AC%E4%B8%80%E4%B8%AA%E6%A1%88%E4%BE%8B/">
+										01 重构，第一个案例
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/02%20%E9%87%8D%E6%9E%84%E7%9A%84%E5%8E%9F%E5%88%99/">
+										02 重构的原则
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/03%20%E4%BB%A3%E7%A0%81%E7%9A%84%E5%9D%8F%E5%91%B3%E9%81%93/">
+										03 代码的坏味道
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/04%20%E6%9E%84%E7%AD%91%E6%B5%8B%E8%AF%95%E4%BD%93%E7%B3%BB/">
+										04 构筑测试体系
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/05%20%E9%87%8D%E6%9E%84%E5%88%97%E8%A1%A8/">
+										05 重构列表
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/06%20%E9%87%8D%E6%96%B0%E7%BB%84%E7%BB%87%E5%87%BD%E6%95%B0/">
+										06 重新组织函数
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/07%20%E5%9C%A8%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E6%90%AC%E7%A7%BB%E7%89%B9%E6%80%A7/">
+										07 在对象之间搬移特性
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/08%20%E9%87%8D%E6%96%B0%E7%BB%84%E7%BB%87%E6%95%B0%E6%8D%AE/">
+										08 重新组织数据
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/09%20%E7%AE%80%E5%8C%96%E6%9D%A1%E4%BB%B6%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+										09 简化条件表达式
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/10%20%E7%AE%80%E5%8C%96%E5%87%BD%E6%95%B0%E8%B0%83%E7%94%A8/">
+										10 简化函数调用
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/11%20%E5%A4%84%E7%90%86%E6%A6%82%E6%8B%AC%E5%85%B3%E7%B3%BB/">
+										11 处理概括关系
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/12%20%E5%A4%A7%E5%9E%8B%E9%87%8D%E6%9E%84/">
+										12 大型重构
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										14 前端
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 FIS
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/14%20%E5%89%8D%E7%AB%AF/4%20FIS/1%20FIS%203%E6%8E%A5%E5%8F%A3%E9%80%9F%E6%9F%A5/">
+										1 FIS 3接口速查
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										15 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/15%20%E6%9C%8D%E5%8A%A1%E5%99%A8/4%20Nginx/1%20Nginx%20%E7%AC%94%E8%AE%B0/">
+										1 Nginx 笔记
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										16 辅助工具类
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 Apache Commons
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/1%20Apache%20Commons/1%20Apache%20Commons%20-%20%E6%80%BB%E8%A7%88/">
+										1 Apache Commons - 总览
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/1%20Apache%20Commons/2%20Apache%20Commons%20BeanUtils/">
+										2 Apache Commons BeanUtils
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/1%20Apache%20Commons/3%20Apache%20Commons%20Codec/">
+										3 Apache Commons Codec
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/1%20Apache%20Commons/4%20Apache%20Commons%20Collections/">
+										4 Apache Commons Collections
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/1%20Apache%20Commons/5%20Apache%20Commons%20Lang/">
+										5 Apache Commons Lang
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/1%20Apache%20Commons/6%20Apache%20Commons%20Pool/">
+										6 Apache Commons Pool
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/1%20Apache%20Commons/7%20Apache%20Commons%20Text/">
+										7 Apache Commons Text
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 日常小工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/3%20%E6%97%A5%E5%B8%B8%E5%B0%8F%E5%B7%A5%E5%85%B7/1%20%E4%BD%BF%E7%94%A8%20Java%20%E8%87%AA%E5%B8%A6%20MessageDigest%20%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%AF%86%EF%BC%88MD5%20%E5%92%8C%20SHA%EF%BC%89/">
+										1 使用 Java 自带 MessageDigest 实现加密（MD5 和 SHA）
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/3%20%E6%97%A5%E5%B8%B8%E5%B0%8F%E5%B7%A5%E5%85%B7/2%20%E4%B8%80%E6%AC%A1%E6%80%A7%E8%AF%BB%E5%8F%96%20GZIP%20%E5%8E%8B%E7%BC%A9%E7%9A%84%20CSV%20%E6%96%87%E4%BB%B6/">
+										2 一次性读取 GZIP 压缩的 CSV 文件
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/3%20%E6%97%A5%E5%B8%B8%E5%B0%8F%E5%B7%A5%E5%85%B7/3%20HttpUtil/">
+										3 HttpUtil
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 数据格式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 Json
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/4%20%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/1%20Json/Jackson%20%E5%B8%B8%E7%94%A8%E8%AE%B0%E5%BD%95/">
+										Jackson 常用记录
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/4%20%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/1%20Lombok%E6%B6%88%E9%99%A4Java%E5%86%97%E9%95%BF/">
+										1 Lombok消除Java冗长
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/4%20%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/2%20MapStruct%E5%AE%9E%E4%BD%93%E9%97%B4%E8%BD%AC%E6%8D%A2/">
+										2 MapStruct实体间转换
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/4%20%E6%95%B0%E6%8D%AE%E6%A0%BC%E5%BC%8F/3%20YAML%20%E5%9F%BA%E7%A1%80%E8%AF%AD%E6%B3%95/">
+										3 YAML 基础语法
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										20 笔记梳理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/20%20%E7%AC%94%E8%AE%B0%E6%A2%B3%E7%90%86/01%20Java/">
+										01 Java
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/20%20%E7%AC%94%E8%AE%B0%E6%A2%B3%E7%90%86/02%20JVM/">
+										02 JVM
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/20%20%E7%AC%94%E8%AE%B0%E6%A2%B3%E7%90%86/03%20MySQL/">
+										03 MySQL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/20%20%E7%AC%94%E8%AE%B0%E6%A2%B3%E7%90%86/04%20NoSQL/">
+										04 NoSQL
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										21 其他
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/21%20%E5%85%B6%E4%BB%96/2019%20%E5%B9%B4%E5%B7%A5%E4%BD%9C%E6%80%BB%E7%BB%93/">
+										2019 年工作总结
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/21%20%E5%85%B6%E4%BB%96/2020.2%20Java%20%E7%A4%BE%E6%8B%9B%E9%9D%A2%E8%AF%95%E6%95%B4%E7%90%86/">
+										2020.2 Java 社招面试整理
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content">
+		<h1 id="article-title">
+
+	7 Dynamic DataSource
+</h1>
+<div class="article-meta">
+	
+	<span>Wu Jun</span>
+	<span>2020-01-10 10:25:56</span>
+		<div id="article-categories">
+    
+		<span>Categories：</span>
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/06-Spring/">06 Spring</a>
+                        </i>
+                      
+                        >
+                      
+                    </span>
+                
+            
+                
+                    <span>
+                        <i class="fa fa-folder" aria-hidden="true">
+                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+                        </i>
+                      
+                    </span>
+                
+            
+    
+
+    
+		<span>Tags：</span>
+            
+    
+		</div>
+
+</div>
+
+<div id="article-content">
+	<h2 id="一、AOP-实现"><a class="header-anchor" href="#一、AOP-实现"></a>一、AOP 实现</h2>
+<p>AOP 实现多数据源，可读写分离</p>
+<h3 id="1-配置文件"><a class="header-anchor" href="#1-配置文件"></a>1 配置文件</h3>
+<pre><code>dynamic-db.master.driver-class-name = com.mysql.jdbc.Driver
+dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/sometable?characterEncoding=utf8&amp;useSSL=false
+dynamic-db.master.username = xxx
+dynamic-db.master.password = xxx
+
+dynamic-db.slave.driver-class-name = com.mysql.jdbc.Driver
+dynamic-db.slave.jdbc-url = jdbc:mysql://somehost:3306/sometable?characterEncoding=utf8&amp;useSSL=false
+dynamic-db.slave.username = xxx
+dynamic-db.slave.password = xxx
+</code></pre>
+<h3 id="2-ContextHolder"><a class="header-anchor" href="#2-ContextHolder"></a>2 ContextHolder</h3>
+<p>管理 DataSource</p>
+<pre><code>public class DynamicDataSourceContextHolder {
+    /**
+     * 存储当前 DataSource
+     */
+    private static final ThreadLocal&lt;String&gt; CONTEXT_HOLDER = new ThreadLocal&lt;&gt;();
+   
+    /**
+     * 所有 DataSource 的 key
+     */
+    public static List&lt;Object&gt; dataSourceKeys = new ArrayList&lt;&gt;();
+   
+    /**
+     * 切换 DataSource
+     */
+    public static void setDataSourceKey(String key) {
+        CONTEXT_HOLDER.set(key);
+    }
+
+    /**
+     * 获取当前 DataSource，默认为 master
+     */
+    public static String getDataSourceKey() {
+        String key = CONTEXT_HOLDER.get();
+        return key == null ? &quot;master&quot; : key;
+    }
+
+    /**
+     * 清空当前 DataSource
+     */
+    public static void clearDataSourceKey() {
+        CONTEXT_HOLDER.remove();
+    }
+
+    /**
+     * 判断是否当前 DataSource
+     */
+    public static boolean containDataSourceKey(String key) {
+        return dataSourceKeys.contains(key);
+    }
+}
+</code></pre>
+<h3 id="3-注册动态配置"><a class="header-anchor" href="#3-注册动态配置"></a>3 注册动态配置</h3>
+<p>继承 AbstractRoutingDataSource</p>
+<pre><code>public class DynamicRoutingDataSource extends AbstractRoutingDataSource {
+    //将当前DataSource加入应用上下文
+    @Override
+    protected Object determineCurrentLookupKey() {
+        return DynamicDataSourceContextHolder.getDataSourceKey();
+    }
+}
+</code></pre>
+<h3 id="4-加载配置"><a class="header-anchor" href="#4-加载配置"></a>4 加载配置</h3>
+<pre><code>@Slf4j
+@Configuration
+public class DataSourceConfigurer {
+    @Bean(&quot;master&quot;)
+    @Primary
+    @ConfigurationProperties(prefix = &quot;dynamic-db.master&quot;)
+    public DataSource master() {
+        return DataSourceBuilder.create().build();
+    }
+    @Bean(&quot;slave&quot;)
+    @ConfigurationProperties(prefix = &quot;dynamic-db.slave&quot;)
+    public DataSource slave() {
+        return DataSourceBuilder.create().build();
+    }
+
+    /**
+     * 配置动态 DataSource
+     */
+    @Bean(&quot;dynamicDataSource&quot;)
+    public DataSource dynamicDataSource() {
+        DynamicRoutingDataSource dynamicRoutingDataSource = new DynamicRoutingDataSource();
+        
+        //所有DataSource
+        Map&lt;Object, Object&gt; dataSourceMap = new HashMap&lt;&gt;(2);
+        dataSourceMap.put(&quot;master&quot;, master());
+        dataSourceMap.put(&quot;slave&quot;, slave());
+
+        //设置默认DataSource
+        dynamicRoutingDataSource.setDefaultTargetDataSource(master());
+        //设置所有DataSource
+        dynamicRoutingDataSource.setTargetDataSources(dataSourceMap);
+
+        //将所有DataSource的key放入，以供判断
+        DynamicDataSourceContextHolder.dataSourceKeys.addAll(dataSourceMap.keySet());
+        return dynamicRoutingDataSource;
+    }
+
+    /**
+     * 将数据源添加到 SqlSession 工厂；获取 mybatis 配置
+     */
+    @Bean
+    @ConfigurationProperties(prefix = &quot;mybatis&quot;)
+    public SqlSessionFactoryBean sqlSessionFactoryBean() {
+        SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+        sqlSessionFactoryBean.setDataSource(dynamicDataSource());
+        return sqlSessionFactoryBean;
+    }
+
+    /**
+     * 将数据源添加到事物管理器
+     */
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        return new DataSourceTransactionManager(dynamicDataSource());
+    }
+}
+</code></pre>
+<h3 id="5-注解"><a class="header-anchor" href="#5-注解"></a>5 注解</h3>
+<pre><code>@Target({ElementType.METHOD, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+public @interface TargetDataSource {
+    String value();
+}
+</code></pre>
+<h3 id="6-Aspect"><a class="header-anchor" href="#6-Aspect"></a>6 Aspect</h3>
+<p>要用 @Order(0) 注解让这个切面的优先级最高，以免被其他切面（如事务管理器）影响</p>
+<pre><code>@Aspect
+@Component
+@Order(0)
+public class DynamicDataSourceAspect {
+    //切换
+    @Before(&quot;@annotation(targetDataSource))&quot;)
+    public void switchDataSource(JoinPoint point, TargetDataSource targetDataSource) {
+        if (DynamicDataSourceContextHolder.containDataSourceKey(targetDataSource.value())){
+            DynamicDataSourceContextHolder.setDataSourceKey(targetDataSource.value());
+        }
+    }
+    //还原
+    @After(&quot;@annotation(targetDataSource))&quot;)
+    public void restoreDataSource(JoinPoint point, TargetDataSource targetDataSource) {
+        DynamicDataSourceContextHolder.clearDataSourceKey();
+    }
+}
+</code></pre>
+<h3 id="7-实例"><a class="header-anchor" href="#7-实例"></a>7 实例</h3>
+<p>读写分离</p>
+<pre><code>@Repository
+public interface InterMsgMapper {
+    @InsertProvider(type = InterMsgProvider.class, method = &quot;insert&quot;)
+    int insert(InterMsg interMsg);
+
+    @TargetDataSource(&quot;slave&quot;)
+    @SelectProvider(type = InterMsgProvider.class, method = &quot;findMessages&quot;)
+    List&lt;InterMsg&gt; findMessages(Long userId, Integer limit, Long lastId, Long currentTime);
+}
+</code></pre>
+<h2 id="二、普通配置"><a class="header-anchor" href="#二、普通配置"></a>二、普通配置</h2>
+<h3 id="1-配置文件-v2"><a class="header-anchor" href="#1-配置文件-v2"></a>1 配置文件</h3>
+<pre><code>dynamic-db.master.driver-class-name = com.mysql.jdbc.Driver
+dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/sometable?characterEncoding=utf8&amp;useSSL=false
+dynamic-db.master.username = xxx
+dynamic-db.master.password = xxx
+
+dynamic-db.slave.driver-class-name = com.mysql.jdbc.Driver
+dynamic-db.slave.jdbc-url = jdbc:mysql://somehost:3306/sometable?characterEncoding=utf8&amp;useSSL=false
+dynamic-db.slave.username = xxx
+dynamic-db.slave.password = xxx
+</code></pre>
+<h3 id="2-DataSourceConfig"><a class="header-anchor" href="#2-DataSourceConfig"></a>2 DataSourceConfig</h3>
+<pre><code>
+@Configuration
+public class DataSourceConfig {
+    //开启 数据库下划线转驼峰
+    @Bean
+    @Scope(&quot;prototype&quot;) //默认单例会使多数据源失效
+    @ConfigurationProperties(&quot;mybatis.configuration&quot;)
+    public org.apache.ibatis.session.Configuration globalConfiguration(){
+        return new org.apache.ibatis.session.Configuration();
+    }
+
+    @Bean(&quot;masterDataSource&quot;)
+    @Primary
+    @ConfigurationProperties(prefix = &quot;dynamic-db.master&quot;)
+    public DataSource master() {
+        return DataSourceBuilder.create().build();
+    }
+    @Bean(&quot;slaveDataSource&quot;)
+    @ConfigurationProperties(prefix = &quot;dynamic-db.slave&quot;)
+    public DataSource slave() {
+        return DataSourceBuilder.create().build();
+    }
+
+    //多数据源事务管理
+    @Bean(name=&quot;tranMagMaster&quot;)
+    public PlatformTransactionManager masterTransactionManager(@Qualifier(&quot;masterDataSource&quot;)DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
+    }
+    @Bean(name=&quot;tranMagSlave&quot;)
+    public PlatformTransactionManager slaveTransactionManager(@Qualifier(&quot;slaveDataSource&quot;)DataSource dataSource) {
+        return new DataSourceTransactionManager(dataSource);
+    }
+}
+</code></pre>
+<h3 id="3-JdbcTemplatesConfig"><a class="header-anchor" href="#3-JdbcTemplatesConfig"></a>3 JdbcTemplatesConfig</h3>
+<pre><code>@Configuration
+public class JdbcTemplatesConfig{
+
+    //支持JdbcTemplate实现多数据源
+    @Bean(name=&quot;masterJdbcTemplate&quot;)
+    public JdbcTemplate masterJdbcTemplate(@Qualifier(&quot;masterDataSource&quot;) DataSource dataSource){
+        return new JdbcTemplate(dataSource);
+    }
+
+    @Bean(name=&quot;slaveJdbcTemplate&quot;)
+    public JdbcTemplate slaveJdbcTemplate(@Qualifier(&quot;slaveDataSource&quot;) DataSource dataSource){
+        return new JdbcTemplate(dataSource);
+    }
+}
+</code></pre>
+<h3 id="3-MybatisConfigMaster"><a class="header-anchor" href="#3-MybatisConfigMaster"></a>3 MybatisConfigMaster</h3>
+<pre><code>@Configuration
+@MapperScan(basePackages = &quot;com.xxx.mapper.master&quot;, 
+        sqlSessionTemplateRef = &quot;masterSqlSessionTemplate&quot;
+)
+public class MybatisConfigMaster{
+    @Bean
+    SqlSessionTemplate masterSqlSessionTemplate(DataSource masterDataSource, org.apache.ibatis.session.Configuration globalConfiguration) {
+        SqlSessionFactory sqlSessionFactory = null;
+        try {
+            SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+            sqlSessionFactoryBean.setConfiguration(globalConfiguration);
+            sqlSessionFactoryBean.setDataSource(masterDataSource);
+            sqlSessionFactory = sqlSessionFactoryBean.getObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new SqlSessionTemplate(sqlSessionFactory);
+    }
+}
+</code></pre>
+<h3 id="4-MybatisConfigSlave"><a class="header-anchor" href="#4-MybatisConfigSlave"></a>4 MybatisConfigSlave</h3>
+<pre><code>@Configuration
+@MapperScan(basePackages = &quot;com.xxx.mapper.slave&quot;, 
+        sqlSessionTemplateRef = &quot;slaveSqlSessionTemplate&quot;
+)
+public class MybatisConfigSlave{
+    @Bean
+    SqlSessionTemplate slaveSqlSessionTemplate(DataSource slaveDataSource, org.apache.ibatis.session.Configuration globalConfiguration) {
+        SqlSessionFactory sqlSessionFactory = null;
+        try {
+            SqlSessionFactoryBean sqlSessionFactoryBean = new SqlSessionFactoryBean();
+            sqlSessionFactoryBean.setConfiguration(globalConfiguration);
+            sqlSessionFactoryBean.setDataSource(slaveDataSource);
+            sqlSessionFactory = sqlSessionFactoryBean.getObject();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return new SqlSessionTemplate(sqlSessionFactory);
+    }
+}
+</code></pre>
+<h3 id="5-使用"><a class="header-anchor" href="#5-使用"></a>5 使用</h3>
+<p>在 @MapperScan 配置的目录下写 mapper 就行了</p>
+
+</div>
+
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/06%20Spring/05%20Data/6%20Spring%20Cache/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  6 Spring Cache
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
+                9 Spring Cache + Caffeine
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+
+	<div id="vcomments"></div>
+
+
+<script>
+	
+		// 评论
+		new Valine({
+			av: AV,
+			el: '#vcomments',
+			notify: false,
+			verify: false,
+			path: window.location.pathname,
+			appId: 'cbzi4mBFHIqKdH4wYkVHs44K-MdYXbMMI',
+			appKey: '4qY2BKiLCCOPgxVbsB5RkMc0',
+			placeholder: '请输入评论',
+			avatar: 'retro',
+			recordIP: false
+		})
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©2019-<span id="footerYear"></span> 
+	<a href="/">Wu Jun</a> 
+	
+	
+		|
+		<span id="busuanzi_container_site_pv">
+			pv
+			<span id="busuanzi_value_site_pv"></span>
+		</span>
+		|
+		<span id="busuanzi_container_site_uv"> 
+			uv
+			<span id="busuanzi_value_site_uv"></span>
+		</span>
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//github.com/wujun234" target="_blank">WuJun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+<script type="text/javascript"> 
+	document.getElementById('footerYear').innerHTML = new Date().getFullYear() + '';
+</script>
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

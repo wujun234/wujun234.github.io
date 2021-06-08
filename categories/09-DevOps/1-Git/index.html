@@ -2512,12 +2512,12 @@ var _hmt = _hmt || [];
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
-										05 Data.md
+										05 Data
 									</a>
 									
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/1%20JdbcTemplate/">
+									<a href="/06%20Spring/05%20Data/1%20JdbcTemplate/">
 										1 JdbcTemplate
 									</a>
 								</li>
@@ -2526,7 +2526,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
+									<a href="/06%20Spring/05%20Data/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
 										10 Ehcache 3.8 简单持久化
 									</a>
 								</li>
@@ -2535,7 +2535,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/2%20Spring%20Data%20JPA/">
+									<a href="/06%20Spring/05%20Data/2%20Spring%20Data%20JPA/">
 										2 Spring Data JPA
 									</a>
 								</li>
@@ -2544,7 +2544,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/3%20Spring%20Data%20MongoDB/">
+									<a href="/06%20Spring/05%20Data/3%20Spring%20Data%20MongoDB/">
 										3 Spring Data MongoDB
 									</a>
 								</li>
@@ -2553,7 +2553,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/4%20Spring%20Data%20Neo4j/">
+									<a href="/06%20Spring/05%20Data/4%20Spring%20Data%20Neo4j/">
 										4 Spring Data Neo4j
 									</a>
 								</li>
@@ -2562,7 +2562,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/5%20Spring%20Data%20Redis/">
+									<a href="/06%20Spring/05%20Data/5%20Spring%20Data%20Redis/">
 										5 Spring Data Redis
 									</a>
 								</li>
@@ -2571,7 +2571,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/6%20Spring%20Cache/">
+									<a href="/06%20Spring/05%20Data/6%20Spring%20Cache/">
 										6 Spring Cache
 									</a>
 								</li>
@@ -2580,7 +2580,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/7%20Dynamic%20DataSource/">
+									<a href="/06%20Spring/05%20Data/7%20Dynamic%20DataSource/">
 										7 Dynamic DataSource
 									</a>
 								</li>
@@ -2589,7 +2589,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/8%20Transaction/">
+									<a href="/06%20Spring/05%20Data/8%20Transaction/">
 										8 Transaction
 									</a>
 								</li>
@@ -2598,7 +2598,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/9%20Spring%20Cache%20+%20Caffeine/">
+									<a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
 										9 Spring Cache + Caffeine
 									</a>
 								</li>
@@ -4681,22 +4681,14 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/1%20Git/0%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+			<a href="/09%20DevOps/1%20Git/3%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
 				<h2 class="index-title">
-					0 搭建Git服务器
+					3 远程仓库
 				</h2>
 				<div class="index-brief">
-					原文
-
-搭建Git服务器非常简单，通常10分钟即可完成；
-要方便管理公钥，用Gitosis；
-要像SVN那样变态地控制权限，用Gitolite。
-
-假设你已经有sudo权限的用户账号，下面，正式开始安装。
-第一步，安装git：
-$ sudo apt-get install git
-
-第二步，创建一个
+					创建SSH Key
+在用户主目录看看.ssh目录下有没有id_rsa和id_rsa.pub这两个文件，如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
+$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot
 					...
 				</div>
 			</a>
@@ -4739,6 +4731,52 @@ git config --global user.email &quot;wujun234@gmail.com&quot;
 一、创建本地版本库
 1 进入项目文件夹
 cd exist
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/09%20DevOps/1%20Git/0%20%E6%90%AD%E5%BB%BAGit%E6%9C%8D%E5%8A%A1%E5%99%A8/">
+				<h2 class="index-title">
+					0 搭建Git服务器
+				</h2>
+				<div class="index-brief">
+					原文
+
+搭建Git服务器非常简单，通常10分钟即可完成；
+要方便管理公钥，用Gitosis；
+要像SVN那样变态地控制权限，用Gitolite。
+
+假设你已经有sudo权限的用户账号，下面，正式开始安装。
+第一步，安装git：
+$ sudo apt-get install git
+
+第二步，创建一个
 					...
 				</div>
 			</a>
@@ -4835,44 +4873,6 @@ HEAD：指向当前版本
 
 git reset --hard commit_id：跳转到指定版本
 git log：可以查
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/09%20DevOps/1%20Git/3%20%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93/">
-				<h2 class="index-title">
-					3 远程仓库
-				</h2>
-				<div class="index-brief">
-					创建SSH Key
-在用户主目录看看.ssh目录下有没有id_rsa和id_rsa.pub这两个文件，如果没有，打开Shell（Windows下打开Git Bash），创建SSH Key：
-$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot
 					...
 				</div>
 			</a>

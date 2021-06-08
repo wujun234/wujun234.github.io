@@ -2512,12 +2512,12 @@ var _hmt = _hmt || [];
 								<li class="directory">
 									<a href="#" class="directory">
 										<i class="fa fa-plus-square-o"></i>
-										05 Data.md
+										05 Data
 									</a>
 									
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/1%20JdbcTemplate/">
+									<a href="/06%20Spring/05%20Data/1%20JdbcTemplate/">
 										1 JdbcTemplate
 									</a>
 								</li>
@@ -2526,7 +2526,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
+									<a href="/06%20Spring/05%20Data/10%20Ehcache%203.8%20%E7%AE%80%E5%8D%95%E6%8C%81%E4%B9%85%E5%8C%96/">
 										10 Ehcache 3.8 简单持久化
 									</a>
 								</li>
@@ -2535,7 +2535,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/2%20Spring%20Data%20JPA/">
+									<a href="/06%20Spring/05%20Data/2%20Spring%20Data%20JPA/">
 										2 Spring Data JPA
 									</a>
 								</li>
@@ -2544,7 +2544,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/3%20Spring%20Data%20MongoDB/">
+									<a href="/06%20Spring/05%20Data/3%20Spring%20Data%20MongoDB/">
 										3 Spring Data MongoDB
 									</a>
 								</li>
@@ -2553,7 +2553,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/4%20Spring%20Data%20Neo4j/">
+									<a href="/06%20Spring/05%20Data/4%20Spring%20Data%20Neo4j/">
 										4 Spring Data Neo4j
 									</a>
 								</li>
@@ -2562,7 +2562,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/5%20Spring%20Data%20Redis/">
+									<a href="/06%20Spring/05%20Data/5%20Spring%20Data%20Redis/">
 										5 Spring Data Redis
 									</a>
 								</li>
@@ -2571,7 +2571,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/6%20Spring%20Cache/">
+									<a href="/06%20Spring/05%20Data/6%20Spring%20Cache/">
 										6 Spring Cache
 									</a>
 								</li>
@@ -2580,7 +2580,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/7%20Dynamic%20DataSource/">
+									<a href="/06%20Spring/05%20Data/7%20Dynamic%20DataSource/">
 										7 Dynamic DataSource
 									</a>
 								</li>
@@ -2589,7 +2589,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/8%20Transaction/">
+									<a href="/06%20Spring/05%20Data/8%20Transaction/">
 										8 Transaction
 									</a>
 								</li>
@@ -2598,7 +2598,7 @@ var _hmt = _hmt || [];
 			
 							<ul>
 								<li class="file">
-									<a href="/06%20Spring/05%20Data.md/9%20Spring%20Cache%20+%20Caffeine/">
+									<a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
 										9 Spring Cache + Caffeine
 									</a>
 								</li>
@@ -4732,16 +4732,18 @@ var _hmt = _hmt || [];
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/3%20%E6%93%8D%E4%BD%9C%E5%AD%97%E8%8A%82/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/2%20%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6/">
 				<h2 class="index-title">
-					3 操作字节
+					2 操作字符
 				</h2>
 				<div class="index-brief">
-					1 DataInput 和 DataOutput 接口
-1.1 DataInput 接口
-DataInput接口 write* 方法写二进制格式数据
-DataInputStream 类实现了 DataInput 接口
-DataInputStream in = new DataInputStream(
+					存储文本字符串时，需要考虑字符编码方式。
+
+OutputStreamWriter 类：将使用选定的字符编码方式，把 Unicode 码元的输出流转换为字节流。
+InputStreamReader 类：将包含字节的输入流转换为可以产生 Unicode 码元的读入器。
+
+1 文本输出
+文本输出使用 Pr
 					...
 				</div>
 			</a>
@@ -4782,18 +4784,16 @@ DataInputStream in = new DataInputStream(
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/2%20%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/3%20%E6%93%8D%E4%BD%9C%E5%AD%97%E8%8A%82/">
 				<h2 class="index-title">
-					2 操作字符
+					3 操作字节
 				</h2>
 				<div class="index-brief">
-					存储文本字符串时，需要考虑字符编码方式。
-
-OutputStreamWriter 类：将使用选定的字符编码方式，把 Unicode 码元的输出流转换为字节流。
-InputStreamReader 类：将包含字节的输入流转换为可以产生 Unicode 码元的读入器。
-
-1 文本输出
-文本输出使用 Pr
+					1 DataInput 和 DataOutput 接口
+1.1 DataInput 接口
+DataInput接口 write* 方法写二进制格式数据
+DataInputStream 类实现了 DataInput 接口
+DataInputStream in = new DataInputStream(
 					...
 				</div>
 			</a>
@@ -4889,29 +4889,19 @@ getBundle 方法试图匹配当前 locale 定义的语言和国家的包，直
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/4%20%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/3%20%E6%8E%92%E5%BA%8F%E5%92%8C%E8%8C%83%E5%8C%96/">
 				<h2 class="index-title">
-					4 消息格式化
+					3 排序和范化
 				</h2>
 				<div class="index-brief">
-					MessageFormat 格式化类似 printf，支持 Locale，可格式化数字和日期
-1 格式化数字和日期
-1.1 模式化字符串与占位符
-占位符索引后面可跟一个类型和一个风格
-1）类型
+					Collator 类实现了 Comparator 接口，Locale 敏感，可以设置不同语言的排序
+Collator coll = Collator.getInstance(Locale.US);
 
-number
-风格
+1 字符差别强度
+排序器有字符差别强度设置：
 
-intger
-currency
-percent
-数字格式模式
-
-
-time
-风格
-
+Collator.PRIMARY：首要的
+Colla
 					...
 				</div>
 			</a>
@@ -4952,19 +4942,29 @@ time
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/3%20%E6%8E%92%E5%BA%8F%E5%92%8C%E8%8C%83%E5%8C%96/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/4%20%E6%B6%88%E6%81%AF%E6%A0%BC%E5%BC%8F%E5%8C%96/">
 				<h2 class="index-title">
-					3 排序和范化
+					4 消息格式化
 				</h2>
 				<div class="index-brief">
-					Collator 类实现了 Comparator 接口，Locale 敏感，可以设置不同语言的排序
-Collator coll = Collator.getInstance(Locale.US);
+					MessageFormat 格式化类似 printf，支持 Locale，可格式化数字和日期
+1 格式化数字和日期
+1.1 模式化字符串与占位符
+占位符索引后面可跟一个类型和一个风格
+1）类型
 
-1 字符差别强度
-排序器有字符差别强度设置：
+number
+风格
 
-Collator.PRIMARY：首要的
-Colla
+intger
+currency
+percent
+数字格式模式
+
+
+time
+风格
+
 					...
 				</div>
 			</a>
