@@ -2974,6 +2974,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/09%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/">
+										09 热加载实践
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4834,19 +4843,16 @@ XSLT = XSL 转换，是一种用于将 XML 文档转换为 XHTML 文档或其他
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/1%20XML%20%E6%A6%82%E8%BF%B0/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/2%20XML%20%E8%A7%A3%E6%9E%90/">
 				<h2 class="index-title">
-					1 XML 概述
+					2 XML 解析
 				</h2>
 				<div class="index-brief">
-					XML 指可扩展标记语言（eXtensible Markup Language），标签自定义，作用是：
-
-程序之间的数据传输通讯
-配置文件
-存储数据，充当小型数据库
-
-与 HTML 一样从标准通用标记语言（SGML）衍生，区别是XML语法要求严格，大小写敏感，标签必须闭合，属性必须引号括起来。
-1 
+					xml 文件除了给开发者看，更多的情况使用程序读取 xml 文件的内容。读取 xml 文档的过程就是 xml 解析
+1 XML解析方式
+Java库提供了两种XML解析器：
+1.1 树型解析器：DOM 解析
+DOM 解析器一次性把整个xml文档加载进内存，然后在内存中构建一个 Document 的对象
 					...
 				</div>
 			</a>
@@ -4887,16 +4893,19 @@ XSLT = XSL 转换，是一种用于将 XML 文档转换为 XHTML 文档或其他
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/2%20XML%20%E8%A7%A3%E6%9E%90/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/10%20XML/1%20XML%20%E6%A6%82%E8%BF%B0/">
 				<h2 class="index-title">
-					2 XML 解析
+					1 XML 概述
 				</h2>
 				<div class="index-brief">
-					xml 文件除了给开发者看，更多的情况使用程序读取 xml 文件的内容。读取 xml 文档的过程就是 xml 解析
-1 XML解析方式
-Java库提供了两种XML解析器：
-1.1 树型解析器：DOM 解析
-DOM 解析器一次性把整个xml文档加载进内存，然后在内存中构建一个 Document 的对象
+					XML 指可扩展标记语言（eXtensible Markup Language），标签自定义，作用是：
+
+程序之间的数据传输通讯
+配置文件
+存储数据，充当小型数据库
+
+与 HTML 一样从标准通用标记语言（SGML）衍生，区别是XML语法要求严格，大小写敏感，标签必须闭合，属性必须引号括起来。
+1 
 					...
 				</div>
 			</a>

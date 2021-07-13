@@ -2974,6 +2974,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/09%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/">
+										09 热加载实践
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4681,13 +4690,15 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/06%20Spring/04%20Web/3%20Spring%20RestTemplate/">
+			<a href="/06%20Spring/04%20Web/2%20Spring%20MVC%20%E8%BF%9B%E9%98%B6/">
 				<h2 class="index-title">
-					3 Spring RestTemplate
+					2 Spring MVC 进阶
 				</h2>
 				<div class="index-brief">
-					RestTemplate 属于 Spring-Web，是 Spring 的同步客户端HTTP访问的中心类。简化了与 HTTP 服务器的通信，并应用了 RESTful 原则。
-RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可切换到使用不同
+					1 替代配置
+1.1 自定义 DispatcherServlet
+除了三个必须重载的抽象方法，AbstractAnnotationConfigDispatcherServletInitializer 还有很多方法可以重载，以实现额外配置。
+例如，通过对 customizeRegistration()
 					...
 				</div>
 			</a>
@@ -4718,25 +4729,13 @@ RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可
 		</div>	
 	
 		<div class="index-li">
-			<a href="/06%20Spring/04%20Web/4%20%E8%B7%A8%E5%9F%9F/">
+			<a href="/06%20Spring/04%20Web/3%20Spring%20RestTemplate/">
 				<h2 class="index-title">
-					4 跨域
+					3 Spring RestTemplate
 				</h2>
 				<div class="index-brief">
-					常用的跨域解决方案有 JSONP 和 CORS， spingboot 2.0 开始不推荐使用 JSONP。
-1 CORS
-1.1 属性含义
-
-
-
-属性
-含义
-
-
-
-
-value
-指定所支持域的集合， 表示所有域都支持，默认值为 。这些值对应于 HTTP 请求头中的 Access-Control-Al
+					RestTemplate 属于 Spring-Web，是 Spring 的同步客户端HTTP访问的中心类。简化了与 HTTP 服务器的通信，并应用了 RESTful 原则。
+RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可切换到使用不同
 					...
 				</div>
 			</a>
@@ -4889,6 +4888,55 @@ public class S
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/06-Spring/07-Async/">07 Async</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/06%20Spring/04%20Web/4%20%E8%B7%A8%E5%9F%9F/">
+				<h2 class="index-title">
+					4 跨域
+				</h2>
+				<div class="index-brief">
+					常用的跨域解决方案有 JSONP 和 CORS， spingboot 2.0 开始不推荐使用 JSONP。
+1 CORS
+1.1 属性含义
+
+
+
+属性
+含义
+
+
+
+
+value
+指定所支持域的集合， 表示所有域都支持，默认值为 。这些值对应于 HTTP 请求头中的 Access-Control-Al
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-01-10</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
 										
                                     </span>
                                 
@@ -5058,66 +5106,10 @@ JredisConnectionFacto
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/06%20Spring/05%20Data/8%20Transaction/">
-				<h2 class="index-title">
-					8 Transaction
-				</h2>
-				<div class="index-brief">
-					Spring 事务的本质是数据库对事务的支持。
-@EnableTransactionManagement 开启对事务注解的解析
-1 声明式事务
-1.1 @Transactional 注解
-
-
-
-属性
-类型
-描述
-
-
-
-
-value
-String
-事务管理器
-
-
-propagation
-Propaga
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-01-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/page/17/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/16/">16</a><a class="page-number" href="/archives/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/archives/page/19/">19</a><a class="page-number" href="/archives/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/37/">37</a><a class="extend next" rel="next" href="/archives/page/19/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/17/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/16/">16</a><a class="page-number" href="/archives/page/17/">17</a><span class="page-number current">18</span><a class="page-number" href="/archives/page/19/">19</a><a class="page-number" href="/archives/page/20/">20</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/38/">38</a><a class="extend next" rel="next" href="/archives/page/19/">&gt;</a>
 		
 	</div>
 </div>

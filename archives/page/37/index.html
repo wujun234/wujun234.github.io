@@ -2974,6 +2974,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/09%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/">
+										09 热加载实践
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4681,26 +4690,14 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/Service%20Mesh/00%20%E7%9B%B8%E5%85%B3%E8%B5%84%E6%96%99/">
+			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/04%20Resilience4j/">
 				<h2 class="index-title">
-					00 相关资料
+					04 Resilience4j
 				</h2>
 				<div class="index-brief">
 					【todo】
-概念好文
-
-浅谈Service Mesh体系中的Envoy
-Service Mesh解读：新一代微服务技术新秀
-Service Mesh：下一代微服务
-
-实战好文
-Istio Service Mesh 教程
-文档
-
-istio中文文档
-conduit中文文档
-linkerd中文文档
-
+Hystrix官方已经停止开发了，Hystrix官方推荐使用新一代熔断器作为Resilience4j。作为新一代的熔断器，Resilience4j有很多优势，比如依赖少，模块化程度较好等优势。
+入门教程：Guide to Resilience4j
 
 					...
 				</div>
@@ -4722,7 +4719,101 @@ linkerd中文文档
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/Service-Mesh/">Service Mesh</a>
+                                        <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/01%20Spring%20Cloud%20Ribbon/">
+				<h2 class="index-title">
+					01 Spring Cloud Ribbon
+				</h2>
+				<div class="index-brief">
+					Spring Cloud Ribbon封装了Netflix Ribbon，是基于HTTP和TCP的客户端负载均衡器。
+它主要包括六个组件：
+
+ServerList：负载均衡使用的服务器列表。
+ServerListFilter：服务器列表过滤器。
+IPing：探测服务实例是否存活的策略。
+IRule：
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/4%20%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/">
+				<h2 class="index-title">
+					4 执行脚本
+				</h2>
+				<div class="index-brief">
+					1 配置
+@Configuration
+@EnableTransactionManagement
+public class RedisTemplateConfig {
+
+    @Bean(&quot;redisTemplate&quot;)
+    public RedisTemplate red
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/11-分布式/">11 分布式</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/11-分布式/03-分布式存储/">03 分布式存储</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/11-分布式/03-分布式存储/03-Redis/">03 Redis</a>
 										
                                     </span>
                                 
@@ -4742,6 +4833,61 @@ linkerd中文文档
 &lt;!-- https://mvnrepository.com/artifact/org.redisson/redisson --&gt;
 &lt;dependency&gt;
     &lt;groupId&gt;org.redisson&
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/11-分布式/">11 分布式</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/11-分布式/03-分布式存储/">03 分布式存储</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/11-分布式/03-分布式存储/03-Redis/">03 Redis</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/3%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BA%8F%E5%88%97%E5%8C%96/">
+				<h2 class="index-title">
+					3 自定义序列化
+				</h2>
+				<div class="index-brief">
+					/**
+ * @author wujun
+ * @date 2018-10-30 16:25
+ */
+@Configuration
+public class RedisConfig {
+    /**
+     * redisTemplate 自定义序列化类
+     *
+     * @param
 					...
 				</div>
 			</a>
@@ -4824,113 +4970,6 @@ telnet HOST PORT
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/11-分布式/03-分布式存储/04-Memcached/">04 Memcached</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/3%20%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BA%8F%E5%88%97%E5%8C%96/">
-				<h2 class="index-title">
-					3 自定义序列化
-				</h2>
-				<div class="index-brief">
-					/**
- * @author wujun
- * @date 2018-10-30 16:25
- */
-@Configuration
-public class RedisConfig {
-    /**
-     * redisTemplate 自定义序列化类
-     *
-     * @param
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/11-分布式/">11 分布式</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/11-分布式/03-分布式存储/">03 分布式存储</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/11-分布式/03-分布式存储/03-Redis/">03 Redis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/11%20%E5%88%86%E5%B8%83%E5%BC%8F/03%20%E5%88%86%E5%B8%83%E5%BC%8F%E5%AD%98%E5%82%A8/03%20Redis/4%20%E6%89%A7%E8%A1%8C%E8%84%9A%E6%9C%AC/">
-				<h2 class="index-title">
-					4 执行脚本
-				</h2>
-				<div class="index-brief">
-					1 配置
-@Configuration
-@EnableTransactionManagement
-public class RedisTemplateConfig {
-
-    @Bean(&quot;redisTemplate&quot;)
-    public RedisTemplate red
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/11-分布式/">11 分布式</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/11-分布式/03-分布式存储/">03 分布式存储</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/11-分布式/03-分布式存储/03-Redis/">03 Redis</a>
 										
                                     </span>
                                 
@@ -5161,58 +5200,10 @@ MongoDB术语/概念
                 </div>
 		</div>	
 	
-		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/7%20%E5%AD%97%E8%8A%82%E7%A0%81%E5%B7%A5%E7%A8%8B/">
-				<h2 class="index-title">
-					7 字节码工程
-				</h2>
-				<div class="index-brief">
-					1 修改类文件
-2 在加载时修改字节码
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/">05 Java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/00-Java-基础/">00 Java 基础</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/00-Java-基础/15-脚本、编译、注解/">15 脚本、编译、注解</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/page/36/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/35/">35</a><a class="page-number" href="/archives/page/36/">36</a><span class="page-number current">37</span>
+			<a class="extend prev" rel="prev" href="/archives/page/36/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/35/">35</a><a class="page-number" href="/archives/page/36/">36</a><span class="page-number current">37</span><a class="page-number" href="/archives/page/38/">38</a><a class="extend next" rel="next" href="/archives/page/38/">&gt;</a>
 		
 	</div>
 </div>

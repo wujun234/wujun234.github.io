@@ -2974,6 +2974,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/09%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/">
+										09 热加载实践
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5060,16 +5069,18 @@ javadoc 从下面几个特性中抽取信息：
 		</div>	
 	
 		<div class="index-li">
-			<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/3%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3%20%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+			<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/3%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2%20%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
 				<h2 class="index-title">
-					3 行为型模式
+					2 结构型模式
 				</h2>
 				<div class="index-brief">
-					1. Chain of Responsibility（责任链）
-为请求创建了一个接收者对象的链。
-将请求的发送者和请求的处理者解耦，每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。
-应用实例
-JAVA WEB 中 Apache Tom
+					1. Adapter（适配器）
+将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，别名包装器(Wrapper)。
+如非必要，可以重构
+模式应用
+
+Enumeration 接口转化为 Iterator 接口
+Java I/O中 InputStreamReader 和 O
 					...
 				</div>
 			</a>
@@ -5100,18 +5111,16 @@ JAVA WEB 中 Apache Tom
 		</div>	
 	
 		<div class="index-li">
-			<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/3%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/2%20%E7%BB%93%E6%9E%84%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
+			<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/3%20%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/3%20%E8%A1%8C%E4%B8%BA%E5%9E%8B%E6%A8%A1%E5%BC%8F/">
 				<h2 class="index-title">
-					2 结构型模式
+					3 行为型模式
 				</h2>
 				<div class="index-brief">
-					1. Adapter（适配器）
-将一个接口转换成客户希望的另一个接口，适配器模式使接口不兼容的那些类可以一起工作，别名包装器(Wrapper)。
-如非必要，可以重构
-模式应用
-
-Enumeration 接口转化为 Iterator 接口
-Java I/O中 InputStreamReader 和 O
+					1. Chain of Responsibility（责任链）
+为请求创建了一个接收者对象的链。
+将请求的发送者和请求的处理者解耦，每个接收者都包含对另一个接收者的引用。如果一个对象不能处理该请求，那么它会把相同的请求传给下一个接收者，依此类推。
+应用实例
+JAVA WEB 中 Apache Tom
 					...
 				</div>
 			</a>

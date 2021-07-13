@@ -2974,6 +2974,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/09%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/">
+										09 热加载实践
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -5052,22 +5061,15 @@ Rowsets
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/4%20%E6%B3%A8%E8%A7%A3%E8%AF%AD%E6%B3%95/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/6%20%E6%BA%90%E7%A0%81%E7%BA%A7%E6%B3%A8%E8%A7%A3%E5%A4%84%E7%90%86/">
 				<h2 class="index-title">
-					4 注解语法
+					6 源码级注解处理
 				</h2>
 				<div class="index-brief">
-					1 注解接口
-注解是由注解接口来定义的：
-modifiers @interface AnnotationName {
-	elementDeclaration1
-	elementDeclaration2
-}
-
-注解接口隐式扩展自 Annotation 接口，无法扩展注解接口。
-元素
-元素声明
-type
+					1 注解处理
+编译器会定位源文件中的注解。每个注解处理器会依次执行。如果某个注解处理器产生了新的源文件，则重复处理。没有新文件产生后，就编译所有源文件。
+注解处理器通常扩展 AbstractProcessor 类实现 Processor 接口。
+@SupportedAnnotationTypes(&
 					...
 				</div>
 			</a>
@@ -5108,15 +5110,22 @@ type
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/6%20%E6%BA%90%E7%A0%81%E7%BA%A7%E6%B3%A8%E8%A7%A3%E5%A4%84%E7%90%86/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/4%20%E6%B3%A8%E8%A7%A3%E8%AF%AD%E6%B3%95/">
 				<h2 class="index-title">
-					6 源码级注解处理
+					4 注解语法
 				</h2>
 				<div class="index-brief">
-					1 注解处理
-编译器会定位源文件中的注解。每个注解处理器会依次执行。如果某个注解处理器产生了新的源文件，则重复处理。没有新文件产生后，就编译所有源文件。
-注解处理器通常扩展 AbstractProcessor 类实现 Processor 接口。
-@SupportedAnnotationTypes(&
+					1 注解接口
+注解是由注解接口来定义的：
+modifiers @interface AnnotationName {
+	elementDeclaration1
+	elementDeclaration2
+}
+
+注解接口隐式扩展自 Annotation 接口，无法扩展注解接口。
+元素
+元素声明
+type
 					...
 				</div>
 			</a>

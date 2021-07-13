@@ -2974,6 +2974,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/09%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/">
+										09 热加载实践
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4720,16 +4729,15 @@ Zabbix能监控各
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/7%20Zabbix/2%20zabbix%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">
+			<a href="/09%20DevOps/7%20Zabbix/3%20zabbix%E4%B8%BB%E5%8A%A8%E6%A8%A1%E5%BC%8F%E3%80%81%E8%A2%AB%E5%8A%A8%E6%A8%A1%E5%BC%8F/">
 				<h2 class="index-title">
-					2 zabbix中文乱码
+					3 zabbix主动模式、被动模式
 				</h2>
 				<div class="index-brief">
-					Zabbix中文界面下，图形页面会有乱码，是因为字体格式不一致导致
+					zabbix agent检测分为主动（agent active）和被动（agent）两种形式，主动与被动的说法均是相对于agent来讨论的。
 
-
-从C:\Windows\Fonts找到 中文字体上传至zabbix的fonts目录/usr/share/zabbix/fonts
-修改include下的defines.inc.php中字体的配置，将里面关于字体设置从graphf
+主动：agent请求server获取主动的监控项列表，并主动将监控项内需要检测的数据提交给server/proxy
+被动：server向agent请求获取监
 					...
 				</div>
 			</a>
@@ -4802,15 +4810,16 @@ Zabbix能监控各
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/7%20Zabbix/3%20zabbix%E4%B8%BB%E5%8A%A8%E6%A8%A1%E5%BC%8F%E3%80%81%E8%A2%AB%E5%8A%A8%E6%A8%A1%E5%BC%8F/">
+			<a href="/09%20DevOps/7%20Zabbix/2%20zabbix%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">
 				<h2 class="index-title">
-					3 zabbix主动模式、被动模式
+					2 zabbix中文乱码
 				</h2>
 				<div class="index-brief">
-					zabbix agent检测分为主动（agent active）和被动（agent）两种形式，主动与被动的说法均是相对于agent来讨论的。
+					Zabbix中文界面下，图形页面会有乱码，是因为字体格式不一致导致
 
-主动：agent请求server获取主动的监控项列表，并主动将监控项内需要检测的数据提交给server/proxy
-被动：server向agent请求获取监
+
+从C:\Windows\Fonts找到 中文字体上传至zabbix的fonts目录/usr/share/zabbix/fonts
+修改include下的defines.inc.php中字体的配置，将里面关于字体设置从graphf
 					...
 				</div>
 			</a>

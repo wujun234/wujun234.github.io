@@ -2974,6 +2974,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/09%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E5%AE%9E%E8%B7%B5/">
+										09 热加载实践
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4681,46 +4690,6 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/8%20ELK/1%20ElasticStack/">
-				<h2 class="index-title">
-					1 ElasticStack
-				</h2>
-				<div class="index-brief">
-					ElasticStack 最初的核心是 ELK (Elasticsearch, Logstash, Kibana) ，后又新增了一个FileBeat。
-ELK架构
-
-Elasticsearch ：分布式搜索引擎。基于 Lucene，可用于全文检索、结构化检索和分析。
-Logstash ：数据收集处理
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/8-ELK/">8 ELK</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/09%20DevOps/6%20Linux/3%20Shell%20%E8%84%9A%E6%9C%AC/">
 				<h2 class="index-title">
 					3 Shell 脚本
@@ -4768,14 +4737,24 @@ chmod +x filename
 		</div>	
 	
 		<div class="index-li">
-			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/1%20%E6%9C%8D%E5%8A%A1%E8%B0%83%E7%94%A8/03%20Spring%20Cloud%20Feign/">
+			<a href="/09%20DevOps/6%20Linux/2%20Linux%20%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/">
 				<h2 class="index-title">
-					03 Spring Cloud Feign
+					2 Linux 常用命令
 				</h2>
 				<div class="index-brief">
-					Spring Cloud Feign是一套基于Netflix Feign实现的声明式服务调用客户端，目的是让Web Service调用更加简单，使用HTTP请求远程服务时能与调用本地方法一样的编码体验。
-工作机制
-提供了HTTP请求模板，通过编写简单的接口和插入注解，就可完成对Web服务接口的绑定。
+					1、文件相关
+1.1文件跳转
+
+pwd：打印当前目录名
+ls：列出目录内容
+-a：列出所有文件，包括“.”开头的隐藏文件
+-d：通常，指定目录名
+-F：名字后面加指示符
+-h：以人们可读的格式而非字节数，显示文件大小
+-l：以长格式显示结果
+-r：反序显示
+-S：按文件大小排序
+-t： 按修改时间排
 					...
 				</div>
 			</a>
@@ -4786,7 +4765,7 @@ chmod +x filename
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/">10 微服务</a>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
 										
 											>
 										
@@ -4796,7 +4775,7 @@ chmod +x filename
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
+                                        <a href="/categories/09-DevOps/6-Linux/">6 Linux</a>
 										
                                     </span>
                                 
@@ -4806,17 +4785,16 @@ chmod +x filename
 		</div>	
 	
 		<div class="index-li">
-			<a href="/12%20%E6%B5%8B%E8%AF%95/1%20EasyMock/1%20EasyMock%20-%20%E6%A8%A1%E6%8B%9F%E5%AF%B9%E8%B1%A1%E6%B5%8B%E8%AF%95/">
+			<a href="/09%20DevOps/8%20ELK/1%20ElasticStack/">
 				<h2 class="index-title">
-					1 EasyMock - 模拟对象测试
+					1 ElasticStack
 				</h2>
 				<div class="index-brief">
-					easymock官网
-一、Mock对象
+					ElasticStack 最初的核心是 ELK (Elasticsearch, Logstash, Kibana) ，后又新增了一个FileBeat。
+ELK架构
 
-测试是个好习惯，然而当你想测试自己的代码，而依赖的其他类或方法又还没实现。或者你在实践TDD（测试驱动开发），还没完成你的实现，而又想先测试。该怎么办呢？
-简单情况可以手动编写mock类，复杂情况可以借助EasyMock等Mock框架来模拟这些类和方法。
-m
+Elasticsearch ：分布式搜索引擎。基于 Lucene，可用于全文检索、结构化检索和分析。
+Logstash ：数据收集处理
 					...
 				</div>
 			</a>
@@ -4827,7 +4805,7 @@ m
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/">12 测试</a>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
 										
 											>
 										
@@ -4837,137 +4815,7 @@ m
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/1-EasyMock/">1 EasyMock</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/12%20%E6%B5%8B%E8%AF%95/2%20http_load/1%20http_load%20-%20%E5%8E%8B%E5%8A%9B%E6%B5%8B%E8%AF%95/">
-				<h2 class="index-title">
-					1 http_load - 压力测试
-				</h2>
-				<div class="index-brief">
-					1.http_load简介
-http_load官网
-http_load是一款基于Linux平台的web服务器性能测试工具，以并行复用的方式运行，用于测试web服务器的吞吐量与负载，web页面的性能。
-优点：
-
-基于命令行，简单、易于上手。
-小巧轻便，解压缩后不到100k。
-开源，免费。
-
-缺点：
-
-
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/">12 测试</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/2-http-load/">2 http_load</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/12%20%E6%B5%8B%E8%AF%95/3%20JMeter/1%20JMeter%20-%20%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%95/">
-				<h2 class="index-title">
-					1 JMeter - 性能测试
-				</h2>
-				<div class="index-brief">
-					JMeter是开源软件Apache基金会下的一个性能测试工具，用来测试部署在服务器端的应用程序的性能。
-官网下载，下载解压后，运行 %JMETER_HOME%\bin\ApacheJMeter.jar 即可。
-1 添加虚拟用户组
-JMeter使用一个Java线程来模拟一个用户，线程组就是一组虚拟用户
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/">12 测试</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/3-JMeter/">3 JMeter</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/12%20%E6%B5%8B%E8%AF%95/5%20MockMvc/1%20MockMvc/">
-				<h2 class="index-title">
-					1 MockMvc
-				</h2>
-				<div class="index-brief">
-					测试controller
-初始化
-SpringBoot 中很方便
-@RunWith(SpringRunner.class)
-@SpringBootTest
-@AutoConfigureMockMvc
-public class HelloWorldControlerTests {
-
-    @Auto
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/">12 测试</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/5-MockMvc/">5 MockMvc</a>
+                                        <a href="/categories/09-DevOps/8-ELK/">8 ELK</a>
 										
                                     </span>
                                 
@@ -4996,6 +4844,94 @@ public class HelloWorldControlerTests {
 
 代码块愈小，代码的功能就愈容易管理，代码的处理和移动也就愈轻松。
 任何不会被修改的变量都
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/">13 重构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/09%20DevOps/6%20Linux/1%20Centos%207%20%E9%85%8D%E7%BD%AE%20LAMP/">
+				<h2 class="index-title">
+					1 Centos 7 配置 LAMP
+				</h2>
+				<div class="index-brief">
+					LAMP是Linux、Apache HTTP，MySQL（或MariaDB）和PHP（或Perl、Python）的首字母缩写，下面讨论如何在RHEL/CentOS/Scientific Linux 7上搭建LAMP环境。
+一、Install Apache HTTP Server
+在终端以root权限
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/6-Linux/">6 Linux</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/02%20%E9%87%8D%E6%9E%84%E7%9A%84%E5%8E%9F%E5%88%99/">
+				<h2 class="index-title">
+					02 重构的原则
+				</h2>
+				<div class="index-brief">
+					1 何为重构
+重构: 在不改变软件可观察行为的前提下改善其内部结构
+2 为何重构
+重构可以提高代码质量
+3 何时重构
+事不过三，三则重构。
+重构应该是在开发过程中实时的、渐进的演化过程：
+
+添加新功能时重构
+修补错误时重构
+复审代码时重构
+
+4 怎么对经理说
+为了质量 or 不要告诉
+5 重构的难题
 					...
 				</div>
 			</a>
@@ -5069,29 +5005,28 @@ public class HelloWorldControlerTests {
 		</div>	
 	
 		<div class="index-li">
-			<a href="/12%20%E6%B5%8B%E8%AF%95/4%20JUnit/1%20JUnit%205%20%E7%AE%80%E4%BB%8B/">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/05%20%E9%87%8D%E6%9E%84%E5%88%97%E8%A1%A8/">
 				<h2 class="index-title">
-					1 JUnit 5 简介
+					05 重构列表
 				</h2>
 				<div class="index-brief">
-					
+					1 重构的记录格式
+采用一个标准格式，每个重构手法都有如下五个部分：
 
-一、JUnit 5 的架构
+名称
+简短概要
+动机
+做法
+范例
 
-使用 JUnit Jupiter 编写测试内容
-使用 JUnit Platform 运行测试
-后向兼容性：JUnit Vintage
+2 寻找引用点
 
+不要盲目替换。检查每一个引用点，确定它指向想要替换得东西。
+使用编译器帮助寻找引用点。
 
-二、使用 JUnit Jupiter 编写测试
+使用编译器查找，要注意的问题：
 
-注解
-断言
-前置条件
-嵌套测试
-
-
-三、使用 JUnit Platform 运
+被删除的部分在继承体系中声明不止一次，编译器也会迷
 					...
 				</div>
 			</a>
@@ -5102,7 +5037,7 @@ public class HelloWorldControlerTests {
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/">12 测试</a>
+                                        <a href="/categories/13-重构/">13 重构</a>
 										
 											>
 										
@@ -5112,7 +5047,92 @@ public class HelloWorldControlerTests {
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/12-测试/4-JUnit/">4 JUnit</a>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/08%20%E9%87%8D%E6%96%B0%E7%BB%84%E7%BB%87%E6%95%B0%E6%8D%AE/">
+				<h2 class="index-title">
+					08 重新组织数据
+				</h2>
+				<div class="index-brief">
+					
+
+1 Self Encapsulate Filed 自封装字段
+2 Replace Data Value with Object 以对象取代数据值
+3 Change Value to Reference 将值对象改为引用对象
+4 Change Reference to Value 将引用对象改为值
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/">13 重构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/13%20%E9%87%8D%E6%9E%84/1%20%E9%87%8D%E6%9E%84-%E6%94%B9%E5%96%84%E6%97%A2%E6%9C%89%E4%BB%A3%E7%A0%81%E7%9A%84%E8%AE%BE%E8%AE%A1/07%20%E5%9C%A8%E5%AF%B9%E8%B1%A1%E4%B9%8B%E9%97%B4%E6%90%AC%E7%A7%BB%E7%89%B9%E6%80%A7/">
+				<h2 class="index-title">
+					07 在对象之间搬移特性
+				</h2>
+				<div class="index-brief">
+					
+
+1 Move Method （搬移函数）
+2 Move Field （搬移字段）
+3 Extract Class （提炼类）
+4 Inline Class （将类内联化）
+5 Hide Delegate （隐藏“委托关系”）
+6 Remove Middle Man （移除中间人）
+7 Intro
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/">13 重构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
 										
                                     </span>
                                 
@@ -5124,7 +5144,7 @@ public class HelloWorldControlerTests {
 	
 	<div id="index-paginator">
 		
-			<a class="extend prev" rel="prev" href="/archives/page/30/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/29/">29</a><a class="page-number" href="/archives/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/archives/page/32/">32</a><a class="page-number" href="/archives/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/37/">37</a><a class="extend next" rel="next" href="/archives/page/32/">&gt;</a>
+			<a class="extend prev" rel="prev" href="/archives/page/30/">&lt;</a><a class="page-number" href="/archives/">1</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/29/">29</a><a class="page-number" href="/archives/page/30/">30</a><span class="page-number current">31</span><a class="page-number" href="/archives/page/32/">32</a><a class="page-number" href="/archives/page/33/">33</a><span class="space">&hellip;</span><a class="page-number" href="/archives/page/38/">38</a><a class="extend next" rel="next" href="/archives/page/32/">&gt;</a>
 		
 	</div>
 </div>
