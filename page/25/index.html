@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4690,18 +4699,65 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/5%20%E7%AE%97%E6%B3%95/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/08%20Java%20SE%208%20%E7%9A%84%E6%B5%81%E5%BA%93/2%20Optional/">
 				<h2 class="index-title">
-					5 算法
+					2 Optional
 				</h2>
 				<div class="index-brief">
-					泛型集合接口有一个很大的优点，即算法只需要实现一次。
-1 排序与混排
-1.1 排序
-Collections.sort()
-底层使用了数组的归并排序。即先转化集合为数组，排好序以后在复制回以前的集合。
-归并排序相较于快速排序，速度慢，但是稳定，它不需要交换相同的元素。
-排序传递的列表必须是可修改的，不
+					@since 1.8
+为了解决空指针异常，受到 Google Guava 的启发，Optional 类已经成为 Java 8 类库的一部分。
+Optional 实际上是个容器：它可以保存类型T的值，或者仅仅保存 null。Optional 提供很多有用的方法，这样就不用显式进行空值检测。
+1 初始化
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-01-02</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/">05 Java</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/00-Java-基础/">00 Java 基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/00-Java-基础/08-Java-SE-8-的流库/">08 Java SE 8 的流库</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/6%20%E9%81%97%E7%95%99%E7%9A%84%E9%9B%86%E5%90%88/">
+				<h2 class="index-title">
+					6 遗留的集合
+				</h2>
+				<div class="index-brief">
+					1 Hashtable
+与 HashMap 的作用是一样的，但是 Hashtable 是线程同步的。
+如果同步性没有要求，应该尽量使用 HashMap。
+2 枚举
+遗留集合使用 Enumeration 接口对元素序列进行遍历。 Enumeration 接口有两个方法，即 hasMoreElement
 					...
 				</div>
 			</a>
@@ -4742,16 +4798,18 @@ Collections.sort()
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/6%20%E9%81%97%E7%95%99%E7%9A%84%E9%9B%86%E5%90%88/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/5%20%E7%AE%97%E6%B3%95/">
 				<h2 class="index-title">
-					6 遗留的集合
+					5 算法
 				</h2>
 				<div class="index-brief">
-					1 Hashtable
-与 HashMap 的作用是一样的，但是 Hashtable 是线程同步的。
-如果同步性没有要求，应该尽量使用 HashMap。
-2 枚举
-遗留集合使用 Enumeration 接口对元素序列进行遍历。 Enumeration 接口有两个方法，即 hasMoreElement
+					泛型集合接口有一个很大的优点，即算法只需要实现一次。
+1 排序与混排
+1.1 排序
+Collections.sort()
+底层使用了数组的归并排序。即先转化集合为数组，排好序以后在复制回以前的集合。
+归并排序相较于快速排序，速度慢，但是稳定，它不需要交换相同的元素。
+排序传递的列表必须是可修改的，不
 					...
 				</div>
 			</a>
@@ -5143,60 +5201,6 @@ ArrayDeque
 
 
 Prio
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-31</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/">05 Java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/00-Java-基础/">00 Java 基础</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/00-Java-基础/06-集合/">06 集合</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/06%20%E9%9B%86%E5%90%88/1%20%E9%9B%86%E5%90%88%E6%8E%A5%E5%8F%A3/">
-				<h2 class="index-title">
-					1 集合接口
-				</h2>
-				<div class="index-brief">
-					框架，是一个类的集。
-容器，是可以容纳其他 Java 对象的对象。
-JDK 1.2 开始，Java 集合框架（JCF）提供了通用的容器。
-JDK 1.5 开始，集合类是带有类型参数的泛型类。
-Java 容器里只能放对象，基本类型会自动装箱。
-集合中也是值传递。
-1 接口与实现
-1.1 接口
-为了规范
 					...
 				</div>
 			</a>

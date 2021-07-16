@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4690,6 +4699,52 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/09%20DevOps/2%20SVN/2%20%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/">
+				<h2 class="index-title">
+					2 基本操作
+				</h2>
+				<div class="index-brief">
+					1 TortoiseSVN 基本操作
+
+浏览版本库（ Repo-browser ）
+检出文件（Checkout）
+更新最新文件（Update）
+增加文件（Add）
+删除文件（Delete）
+提交文件（Commit）
+修改文件（modify&amp;commit）
+放弃修改（Revert）
+导入/导出
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/09%20DevOps/2%20SVN/3%20%E7%89%88%E6%9C%AC%E7%AE%A1%E7%90%86/">
 				<h2 class="index-title">
 					3 版本管理
@@ -4737,18 +4792,15 @@ var _hmt = _hmt || [];
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/2%20SVN/4%20%E5%86%B2%E7%AA%81%E5%8F%8A%E8%A7%A3%E5%86%B3/">
+			<a href="/09%20DevOps/2%20SVN/5%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
 				<h2 class="index-title">
-					4 冲突及解决
+					5 开发周期
 				</h2>
 				<div class="index-brief">
-					1 SVN两种工作模式
-1.1 锁定-修改-锁定模型：
-一个时间段里版本库的一个文件只允许被一个用户修改。
-适用于二进制格式文件，内部结构复杂，不容易理解更改处的上下文，采用该方案较好。
-
-Get lock/ Release lock：锁定/解锁文件
-通过Get lock进行文件加锁，锁定后在浏览界
+					
+truck：是用来做主方向开发的，新功能的开发应放在主线中，当模块开发完成后，需要修改，就用branch。
+branch：分支开发和主线开发是可以同时进行的，也就是并行开发，分支通常用于修复bug时使用
+tag：用于标记某个可用的版本，可以标记已经上线发布的版本，也可以标记正在测试的版本，通常是只
 					...
 				</div>
 			</a>
@@ -4779,15 +4831,22 @@ Get lock/ Release lock：锁定/解锁文件
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/5%20Gradle/1%20Gradle%20%E6%A6%82%E8%BF%B0/">
+			<a href="/09%20DevOps/3%20IDEA/1%20IDEA%20%E5%BF%AB%E6%8D%B7%E9%94%AE/">
 				<h2 class="index-title">
-					1 Gradle 概述
+					1 IDEA 快捷键
 				</h2>
 				<div class="index-brief">
-					Gradle 用户指南：https://docs.gradle.org/current/userguide/userguide.html
+					可以在Settrings–Keymaps中修改快捷键
+快捷操作
 
-Gradle 同时拥有 Ant 和 Maven 的优点，具有 Ant 的强大和灵活，继承了 Maven 的生命周期管理。
-它使用基于 Groovy 的 DSL，
+psvm：快捷创建main函数
+fori：快捷创建for循环
+sout：快速打出System.out.println()
+St：快速打出String
+todo：快速打出//Todo: 日期
+
+更多的提示可以CTRL + j 可以查看
+
 					...
 				</div>
 			</a>
@@ -4808,7 +4867,7 @@ Gradle 同时拥有 Ant 和 Maven 的优点，具有 Ant 的强大和灵活，�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/5-Gradle/">5 Gradle</a>
+                                        <a href="/categories/09-DevOps/3-IDEA/">3 IDEA</a>
 										
                                     </span>
                                 
@@ -4862,45 +4921,6 @@ Gradle 同时拥有 Ant 和 Maven 的优点，具有 Ant 的强大和灵活，�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/2%20SVN/5%20%E5%BC%80%E5%8F%91%E5%91%A8%E6%9C%9F/">
-				<h2 class="index-title">
-					5 开发周期
-				</h2>
-				<div class="index-brief">
-					
-truck：是用来做主方向开发的，新功能的开发应放在主线中，当模块开发完成后，需要修改，就用branch。
-branch：分支开发和主线开发是可以同时进行的，也就是并行开发，分支通常用于修复bug时使用
-tag：用于标记某个可用的版本，可以标记已经上线发布的版本，也可以标记正在测试的版本，通常是只
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/09%20DevOps/4%20Maven/2%20Maven%20%E5%86%B2%E7%AA%81%E8%A7%A3%E5%86%B3/">
 				<h2 class="index-title">
 					2 Maven 冲突解决
@@ -4941,19 +4961,16 @@ mvn dependency:tree命令可以查看当前项目的依赖关系。可以将当�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/5%20Gradle/2%20maven%E8%BF%81%E7%A7%BB%E5%88%B0gradle/">
+			<a href="/09%20DevOps/7%20Zabbix/2%20zabbix%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">
 				<h2 class="index-title">
-					2 maven迁移到gradle
+					2 zabbix中文乱码
 				</h2>
 				<div class="index-brief">
-					1 生成Maven构建图
+					Zabbix中文界面下，图形页面会有乱码，是因为字体格式不一致导致
 
-在根项目中 .mvn/extensions.xml 文件声明Gradle扩展
 
-&lt;extensions&gt;
-    &lt;extension&gt;
-        &lt;groupId&gt;com.gradle&lt;/groupId&gt;
-     
+从C:\Windows\Fonts找到 中文字体上传至zabbix的fonts目录/usr/share/zabbix/fonts
+修改include下的defines.inc.php中字体的配置，将里面关于字体设置从graphf
 					...
 				</div>
 			</a>
@@ -4974,7 +4991,7 @@ mvn dependency:tree命令可以查看当前项目的依赖关系。可以将当�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/5-Gradle/">5 Gradle</a>
+                                        <a href="/categories/09-DevOps/7-Zabbix/">7 Zabbix</a>
 										
                                     </span>
                                 
@@ -5065,16 +5082,19 @@ mvn dependency:tree命令可以查看当前项目的依赖关系。可以将当�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/09%20DevOps/7%20Zabbix/2%20zabbix%E4%B8%AD%E6%96%87%E4%B9%B1%E7%A0%81/">
+			<a href="/09%20DevOps/5%20Gradle/2%20maven%E8%BF%81%E7%A7%BB%E5%88%B0gradle/">
 				<h2 class="index-title">
-					2 zabbix中文乱码
+					2 maven迁移到gradle
 				</h2>
 				<div class="index-brief">
-					Zabbix中文界面下，图形页面会有乱码，是因为字体格式不一致导致
+					1 生成Maven构建图
 
+在根项目中 .mvn/extensions.xml 文件声明Gradle扩展
 
-从C:\Windows\Fonts找到 中文字体上传至zabbix的fonts目录/usr/share/zabbix/fonts
-修改include下的defines.inc.php中字体的配置，将里面关于字体设置从graphf
+&lt;extensions&gt;
+    &lt;extension&gt;
+        &lt;groupId&gt;com.gradle&lt;/groupId&gt;
+     
 					...
 				</div>
 			</a>
@@ -5095,7 +5115,7 @@ mvn dependency:tree命令可以查看当前项目的依赖关系。可以将当�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/7-Zabbix/">7 Zabbix</a>
+                                        <a href="/categories/09-DevOps/5-Gradle/">5 Gradle</a>
 										
                                     </span>
                                 

@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4729,16 +4738,16 @@ Spring 的缓存抽象在很大程度上是围绕切面构建的。 在 Spring �
 		</div>	
 	
 		<div class="index-li">
-			<a href="/06%20Spring/05%20Data/7%20Dynamic%20DataSource/">
+			<a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
 				<h2 class="index-title">
-					7 Dynamic DataSource
+					9 Spring Cache + Caffeine
 				</h2>
 				<div class="index-brief">
-					一、AOP 实现
-AOP 实现多数据源，可读写分离
-1 配置文件
-dynamic-db.master.driver-class-name = com.mysql.jdbc.Driver
-dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/s
+					Caffeine 是使用 Java8 对 Guava 缓存的重写版本，在 Spring Boot 2.0 中取代 Guava。
+1 引入依赖
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+
 					...
 				</div>
 			</a>
@@ -4769,16 +4778,16 @@ dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/s
 		</div>	
 	
 		<div class="index-li">
-			<a href="/06%20Spring/05%20Data/9%20Spring%20Cache%20+%20Caffeine/">
+			<a href="/06%20Spring/05%20Data/7%20Dynamic%20DataSource/">
 				<h2 class="index-title">
-					9 Spring Cache + Caffeine
+					7 Dynamic DataSource
 				</h2>
 				<div class="index-brief">
-					Caffeine 是使用 Java8 对 Guava 缓存的重写版本，在 Spring Boot 2.0 中取代 Guava。
-1 引入依赖
-&lt;dependency&gt;
-    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-
+					一、AOP 实现
+AOP 实现多数据源，可读写分离
+1 配置文件
+dynamic-db.master.driver-class-name = com.mysql.jdbc.Driver
+dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/s
 					...
 				</div>
 			</a>

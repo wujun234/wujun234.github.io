@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4789,16 +4798,20 @@ Java的
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/1%20JDBC%20%E7%AE%80%E4%BB%8B/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/3%20javax.sql%20%E5%8C%85%E7%AE%80%E4%BB%8B/">
 				<h2 class="index-title">
-					1 JDBC 简介
+					3 javax.sql 包简介
 				</h2>
 				<div class="index-brief">
-					1 JDBC 简介
-Java数据库连接（JDBC）API 提供了来自 Java 的通用数据访问。该 API 包含一个框架，可以动态安装不同的驱动程序来访问不同的数据源。JDBC API 允许用户访问任何形式的表格数据，尤其是存储在关系数据库中的数据。
-JDBC API由两个包组成：
+					补充 java.sql 包，提供 Java 服务器端数据源访问和处理的 API。
+javax.sql 包提供了以下内容：
 
-java.sq
+DataSource 接口，DriverManager 的替代品，用于与数据源建立连接
+连接池和语句池
+分布式事务
+Rowsets
+
+应用程序可直接使用的 API 是 Data
 					...
 				</div>
 			</a>
@@ -4839,20 +4852,16 @@ java.sq
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/3%20javax.sql%20%E5%8C%85%E7%AE%80%E4%BB%8B/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/12%20JDBC/1%20JDBC%20%E7%AE%80%E4%BB%8B/">
 				<h2 class="index-title">
-					3 javax.sql 包简介
+					1 JDBC 简介
 				</h2>
 				<div class="index-brief">
-					补充 java.sql 包，提供 Java 服务器端数据源访问和处理的 API。
-javax.sql 包提供了以下内容：
+					1 JDBC 简介
+Java数据库连接（JDBC）API 提供了来自 Java 的通用数据访问。该 API 包含一个框架，可以动态安装不同的驱动程序来访问不同的数据源。JDBC API 允许用户访问任何形式的表格数据，尤其是存储在关系数据库中的数据。
+JDBC API由两个包组成：
 
-DataSource 接口，DriverManager 的替代品，用于与数据源建立连接
-连接池和语句池
-分布式事务
-Rowsets
-
-应用程序可直接使用的 API 是 Data
+java.sq
 					...
 				</div>
 			</a>
@@ -5009,67 +5018,16 @@ Rowsets
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/5%20%E6%A0%87%E5%87%86%E6%B3%A8%E8%A7%A3/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/3%20%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3/">
 				<h2 class="index-title">
-					5 标准注解
+					3 使用注解
 				</h2>
 				<div class="index-brief">
-					Java SE 在 java.lang、java.lang.annotation 和 javax.annotation 包中定义了大量注解接口
-1 用于编译的注解
-
-@Deprecated：不再鼓励使用
-@SuppressWarnings：阻止特定警告
-@Override：覆盖超类方法
-@Gener
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-01-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/">05 Java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/00-Java-基础/">00 Java 基础</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/00-Java-基础/15-脚本、编译、注解/">15 脚本、编译、注解</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/6%20%E6%BA%90%E7%A0%81%E7%BA%A7%E6%B3%A8%E8%A7%A3%E5%A4%84%E7%90%86/">
-				<h2 class="index-title">
-					6 源码级注解处理
-				</h2>
-				<div class="index-brief">
-					1 注解处理
-编译器会定位源文件中的注解。每个注解处理器会依次执行。如果某个注解处理器产生了新的源文件，则重复处理。没有新文件产生后，就编译所有源文件。
-注解处理器通常扩展 AbstractProcessor 类实现 Processor 接口。
-@SupportedAnnotationTypes(&
+					注解是插入到源代码的标签，由其他工具对其进行处理，不会改变程序的编译方式
+1 注解位置
+在 Java 中，注解是当作一个修饰符来使用的。它被置于被注解项之前，中间没有分号。每一个注解的名称前面都加上了 @ 符号。
+2 注解项
+注解项可以是方法、类、成员以及局部变量，还可以是包、参数变量、类型参数和类
 					...
 				</div>
 			</a>
@@ -5166,16 +5124,67 @@ type
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/3%20%E4%BD%BF%E7%94%A8%E6%B3%A8%E8%A7%A3/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/6%20%E6%BA%90%E7%A0%81%E7%BA%A7%E6%B3%A8%E8%A7%A3%E5%A4%84%E7%90%86/">
 				<h2 class="index-title">
-					3 使用注解
+					6 源码级注解处理
 				</h2>
 				<div class="index-brief">
-					注解是插入到源代码的标签，由其他工具对其进行处理，不会改变程序的编译方式
-1 注解位置
-在 Java 中，注解是当作一个修饰符来使用的。它被置于被注解项之前，中间没有分号。每一个注解的名称前面都加上了 @ 符号。
-2 注解项
-注解项可以是方法、类、成员以及局部变量，还可以是包、参数变量、类型参数和类
+					1 注解处理
+编译器会定位源文件中的注解。每个注解处理器会依次执行。如果某个注解处理器产生了新的源文件，则重复处理。没有新文件产生后，就编译所有源文件。
+注解处理器通常扩展 AbstractProcessor 类实现 Processor 接口。
+@SupportedAnnotationTypes(&
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-01-02</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/">05 Java</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/00-Java-基础/">00 Java 基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/00-Java-基础/15-脚本、编译、注解/">15 脚本、编译、注解</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/15%20%E8%84%9A%E6%9C%AC%E3%80%81%E7%BC%96%E8%AF%91%E3%80%81%E6%B3%A8%E8%A7%A3/5%20%E6%A0%87%E5%87%86%E6%B3%A8%E8%A7%A3/">
+				<h2 class="index-title">
+					5 标准注解
+				</h2>
+				<div class="index-brief">
+					Java SE 在 java.lang、java.lang.annotation 和 javax.annotation 包中定义了大量注解接口
+1 用于编译的注解
+
+@Deprecated：不再鼓励使用
+@SuppressWarnings：阻止特定警告
+@Override：覆盖超类方法
+@Gener
 					...
 				</div>
 			</a>

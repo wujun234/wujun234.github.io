@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4690,19 +4699,26 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/3%20%E7%BA%BF%E6%80%A7%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE/">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/4%20%E4%B8%B2%EF%BC%88string%EF%BC%89/">
 				<h2 class="index-title">
-					3 线性索引查找
+					4 串（string）
 				</h2>
 				<div class="index-brief">
-					
-索引：就是把一个关键字与它对应的记录相关联的过程。
-索引按照结构可以分为线性索引、树形索引和多级索引。
-线性索引：就是将索引项集合组织为线性结构，也称为索引表。
+					1 基本概念
 
-1 稠密索引
-稠密索引：在线性索引中，将数据集中的每个记录对应一个索引项，索引项按照关键码有序排列。
-但数据量大时，可能由于内存有限，
+串：是由零个或多个字符组成的优先序列，又名叫字符串。
+本质是一种线性表的扩展，但更多的是关注子串的应用问题
+子串在主串中的位置就是子串的第一个字符在主串中的序号。
+
+字符编码
+
+ASCII：7位
+拓展 ASCII：8位
+Unicode：16位
+
+串的比较
+
+挨个比较字符，以第一个不同
 					...
 				</div>
 			</a>
@@ -4733,7 +4749,7 @@ var _hmt = _hmt || [];
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/01-数据结构/">01 数据结构</a>
 										
                                     </span>
                                 
@@ -4743,17 +4759,16 @@ var _hmt = _hmt || [];
 		</div>	
 	
 		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/4%20%E5%A4%9A%E8%B7%AF%E6%9F%A5%E6%89%BE%E6%A0%91(B%20%E6%A0%91)/">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/7%20%E7%BA%A2%E9%BB%91%E6%A0%91/">
 				<h2 class="index-title">
-					4 多路查找树(B 树)
+					7 红黑树
 				</h2>
 				<div class="index-brief">
-					多路查找树：每一个结点的孩子数可以多于两个，且每一个结点处可以存储多个元素。
-1、2-3 树
+					1、红黑树定义
+红黑树是一种近似平衡的二叉查找树，它能够确保任何一个节点的左右子树的高度差不会超过二者中较低那个的一陪。可以在 O(logn) 时间内做查找，插入和删除。红黑树相对于AVL树来说，牺牲了部分平衡性以换取插入/删除操作时少量的旋转操作，整体来说性能要优于AVL树。
+满足如下条件：
 
-2-3 树：每一个结点都具有两个孩子 (2 结点) 或三个孩子 (3 结点) 的多路查找树
-2 结点：包含一个元素和两个孩子(或没有孩子) ，左小右大。
-3 结点：包含一小一大两个元素和三个孩子(或没有孩
+每
 					...
 				</div>
 			</a>
@@ -4784,57 +4799,7 @@ var _hmt = _hmt || [];
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/5%20%E6%95%A3%E5%88%97(Hash)%E8%A1%A8/">
-				<h2 class="index-title">
-					5 散列(Hash)表
-				</h2>
-				<div class="index-brief">
-					1 散列表查找定义
-
-散列技术：是在记录的存储位置和它的关键字之间建立一个确定的对应关系 f，使得每个关键字 key 对应一个存储位置 f (key)。
-散列函数：对应关系 f 。又称为哈希 (Hash) 函数。
-散列表：采用散列技术存储记录的一块连续的存储空间。又称为哈希表 (Hash table
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/">01 数据结构与算法</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/">数据结构</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/01-数据结构/">01 数据结构</a>
 										
                                     </span>
                                 
@@ -4948,20 +4913,19 @@ bool
 		</div>	
 	
 		<div class="index-li">
-			<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/02%20%E8%B7%A8%E5%BA%93%E5%88%86%E9%A1%B5/">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/6%20%E5%9B%BE/">
 				<h2 class="index-title">
-					02 跨库分页
+					6 图
 				</h2>
 				<div class="index-brief">
-					原文：https://mp.weixin.qq.com/s/cMAXYBxmevFV_fwysZqP8w
-需求缘起
-分页需求
-分页拉取需求有这样一些特点：
+					一、图的基本概念
+图：由顶点的有穷非空集合和顶点之间边的集合组成，通常表示为: G(V,E)，其中，G 表示一个图，V 是图 G 中顶点的集合。E 是图 G 中边的集合。
+1、各种图定义
 
-有一个业务主键id
-分页排序是按照非业务主键id来排序的，业务中经常按照时间time来排序order by
 
-在数据量不大时，可以通过在排序字
+无向边：若顶点 $V_i$ 到 $V_j$，之间的边没有方向，则称这条边为无向边(Edge)。
+
+用无序偶对
 					...
 				</div>
 			</a>
@@ -4972,7 +4936,7 @@ bool
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/08-系统设计/">08 系统设计</a>
+                                        <a href="/categories/01-数据结构与算法/">01 数据结构与算法</a>
 										
 											>
 										
@@ -4982,39 +4946,7 @@ bool
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/08-系统设计/1-通用设计/">1 通用设计</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/03%20%E7%9F%AD%E9%93%BE%E6%8E%A5/">
-				<h2 class="index-title">
-					03 短链接
-				</h2>
-				<div class="index-brief">
-					短链接URL系统是怎么设计的？
-实现一个自增发号器，每个长地址，发个短号，存储长短关系，请求短号时返回对应长号。
-在[0-9]的10进制与[0-9a-zA-Z]的62进制之间转换。可以使号码很小。
-大并发高可用？
-并发量大还可以搞分布式。类似 snowflake。
-一长对多短？还是一对一？
-如有需要
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/08-系统设计/">08 系统设计</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/">数据结构</a>
 										
 											>
 										
@@ -5024,7 +4956,7 @@ bool
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/08-系统设计/1-通用设计/">1 通用设计</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/01-数据结构/">01 数据结构</a>
 										
                                     </span>
                                 
@@ -5034,97 +4966,13 @@ bool
 		</div>	
 	
 		<div class="index-li">
-			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/03%20CDDATA%E5%9D%97/">
+			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/0%20%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/01%20Spring%20Cloud%20Eureka/">
 				<h2 class="index-title">
-					03 CDDATA块
-				</h2>
-				<div class="index-brief">
-					&quot;script&quot;里才需要转换 CDDATA 块！
-
-
-
-符号
-转换
-
-
-
-
-&amp;
-&amp;amp;
-
-
-&lt;
-&amp;lt;
-
-
-&gt;
-&amp;gt;
-
-
-&quot;
-&amp;quot;
-
-
-'
-&amp;apos;
-
-
-
-
-
-
--
--
--
--
-
-
-
-
-小
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/07-数据库/">07 数据库</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/07-数据库/02-MyBatis/">02 MyBatis</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/01%20MyBatis+Spring%20Boot/">
-				<h2 class="index-title">
-					01 MyBatis+Spring Boot
+					01 Spring Cloud Eureka
 				</h2>
 				<div class="index-brief">
 					简介
-
-
-MyBatis
-传统方法使用 MyBatis ，有  MyBatis 官网中文文档 。
-Generator
-传统方法比较繁琐，因而 MyBatis 推出了 MyBatis Generator 工具，可自动生成实体类、配置文件和dao层代码，以减轻一部分开发量。
-Spring Boot + 
+Spring Cloud针对服务注册与发现，进行了一层抽象，并提供了三种实现：Eureka、Consul、Zookeeper。目前支持得最好的就是Eureka，其次是Consul，最后是Zookeeper。Eureka 是封装了 Netflix 的 Eureka 模块，采用了 C-S 的设计架
 					...
 				</div>
 			</a>
@@ -5135,7 +4983,7 @@ Spring Boot +
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/07-数据库/">07 数据库</a>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
 										
 											>
 										
@@ -5145,7 +4993,7 @@ Spring Boot +
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/07-数据库/02-MyBatis/">02 MyBatis</a>
+                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
 										
                                     </span>
                                 
@@ -5155,17 +5003,13 @@ Spring Boot +
 		</div>	
 	
 		<div class="index-li">
-			<a href="/07%20%E6%95%B0%E6%8D%AE%E5%BA%93/02%20MyBatis/02%20MyBatis%20Generator/">
+			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/3%20API%E7%BD%91%E5%85%B3/02%20Spring%20Cloud%20Gateway/">
 				<h2 class="index-title">
-					02 MyBatis Generator
+					02 Spring Cloud Gateway
 				</h2>
 				<div class="index-brief">
-					MyBatis Generator
+					【todo】
 
-一、在pom.xml中添加plugin
-      &lt;plugin&gt;
-        &lt;groupId&gt;org.mybatis.generator&lt;/groupId&gt;
-        &lt;artifactId&gt;myb
 					...
 				</div>
 			</a>
@@ -5176,7 +5020,7 @@ Spring Boot +
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/07-数据库/">07 数据库</a>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
 										
 											>
 										
@@ -5186,7 +5030,131 @@ Spring Boot +
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/07-数据库/02-MyBatis/">02 MyBatis</a>
+                                        <a href="/categories/10-微服务/3-API网关/">3 API网关</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/0%20%E6%9C%8D%E5%8A%A1%E6%B3%A8%E5%86%8C%E4%B8%8E%E5%8F%91%E7%8E%B0/02%20Spring%20Cloud%20Consul/">
+				<h2 class="index-title">
+					02 Spring Cloud Consul
+				</h2>
+				<div class="index-brief">
+					Spring Cloud Consul是针对Consul的服务治理实现，提供服务发现和服务配置。包含了下面几个特性：
+
+服务发现
+健康检查
+Key/Value存储
+多数据中心
+
+Consul自身提供了服务端，不需要创建服务注册中心，通过命令“$consul agent -dev”启动consul服务
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/4%20%E6%B6%88%E6%81%AF%E7%BB%84%E4%BB%B6/01%20Spring%20Cloud%20Bus/">
+				<h2 class="index-title">
+					01 Spring Cloud Bus
+				</h2>
+				<div class="index-brief">
+					消息总线是一种通信工具，可以在机器之间互相传输消息、文件等。消息总线扮演着一种消息路由的角色，拥有一套完备的路由机制来决定消息传输方向。发送段只需要向消息总线发出消息而不用管消息被如何转发。
+原理
+spring cloud bus整合 java的事件处理机制和消息中间件消息的发送和接受，主要由发送端
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/4-消息组件/">4 消息组件</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/3%20API%E7%BD%91%E5%85%B3/01%20Spring%20Cloud%20Zuul/">
+				<h2 class="index-title">
+					01 Spring Cloud Zuul
+				</h2>
+				<div class="index-brief">
+					Spring Cloud Zuul是提供负载均衡、反向代理、权限认证的一个API gateway。
+简单路由
+
+添加依赖
+引入 spring-cloud-starter-zuul 包
+
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/3-API网关/">3 API网关</a>
 										
                                     </span>
                                 

@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4808,19 +4817,19 @@ time
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/5%20%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%92%8C%E5%AD%97%E7%AC%A6%E9%9B%86/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/3%20%E6%8E%92%E5%BA%8F%E5%92%8C%E8%8C%83%E5%8C%96/">
 				<h2 class="index-title">
-					5 文本文件和字符集
+					3 排序和范化
 				</h2>
 				<div class="index-brief">
-					1 文本文件
-获取平台的编码机制
-Charset platformEncoding = Charset.defalutCharset();
+					Collator 类实现了 Comparator 接口，Locale 敏感，可以设置不同语言的排序
+Collator coll = Collator.getInstance(Locale.US);
 
-2 行结束符
-Window 中，文本文件希望每行末尾使用“\r\n”，UNIX只需“\n”。
-可使用 printf 和 %n 来产生平台相关的行结束符
-out
+1 字符差别强度
+排序器有字符差别强度设置：
+
+Collator.PRIMARY：首要的
+Colla
 					...
 				</div>
 			</a>
@@ -4861,19 +4870,19 @@ out
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/3%20%E6%8E%92%E5%BA%8F%E5%92%8C%E8%8C%83%E5%8C%96/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/5%20%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%92%8C%E5%AD%97%E7%AC%A6%E9%9B%86/">
 				<h2 class="index-title">
-					3 排序和范化
+					5 文本文件和字符集
 				</h2>
 				<div class="index-brief">
-					Collator 类实现了 Comparator 接口，Locale 敏感，可以设置不同语言的排序
-Collator coll = Collator.getInstance(Locale.US);
+					1 文本文件
+获取平台的编码机制
+Charset platformEncoding = Charset.defalutCharset();
 
-1 字符差别强度
-排序器有字符差别强度设置：
-
-Collator.PRIMARY：首要的
-Colla
+2 行结束符
+Window 中，文本文件希望每行末尾使用“\r\n”，UNIX只需“\n”。
+可使用 printf 和 %n 来产生平台相关的行结束符
+out
 					...
 				</div>
 			</a>

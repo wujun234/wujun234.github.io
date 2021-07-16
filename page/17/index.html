@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4690,6 +4699,49 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/16%20%E8%BE%85%E5%8A%A9%E5%B7%A5%E5%85%B7%E7%B1%BB/3%20%E6%97%A5%E5%B8%B8%E5%B0%8F%E5%B7%A5%E5%85%B7/1%20%E4%BD%BF%E7%94%A8%20Java%20%E8%87%AA%E5%B8%A6%20MessageDigest%20%E5%AE%9E%E7%8E%B0%E5%8A%A0%E5%AF%86%EF%BC%88MD5%20%E5%92%8C%20SHA%EF%BC%89/">
+				<h2 class="index-title">
+					1 使用 Java 自带 MessageDigest 实现加密（MD5 和 SHA）
+				</h2>
+				<div class="index-brief">
+					使用 Java 自带 MessageDigest 实现加密（MD5 和 SHA）
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+/**
+* 加密工具类
+*
+* @author w
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-01-14</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/16-辅助工具类/">16 辅助工具类</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/16-辅助工具类/3-日常小工具/">3 日常小工具</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/10%20%E5%BE%AE%E6%9C%8D%E5%8A%A1/Dubbo/00%20%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3/">
 				<h2 class="index-title">
 					00 官方文档
@@ -4774,17 +4826,17 @@ pom依赖
 		</div>	
 	
 		<div class="index-li">
-			<a href="/06%20Spring/02%20IoC/2%20%E9%AB%98%E7%BA%A7%E8%A3%85%E9%85%8D/">
+			<a href="/06%20Spring/02%20IoC/3%20%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C%20Bean/">
 				<h2 class="index-title">
-					2 高级装配
+					3 动态注册 Bean
 				</h2>
 				<div class="index-brief">
-					1 环境与 profile
-1.1 配置 profile
-@Profile 注解
-指定某个 bean 属于哪一个 profile，运行时做出环境决策。
-没有指定 profile 的 bean 始终都会被创建， 与激活哪个 profile 没有关系。
-@Profile(&quot;dev&quot;)
+					1 注册接口
+有两种接口可动态注册 bean
+
+BeanDefinitionRegistry
+注册 Bean 定义，使用BeanDefinitionRegistry 接口 registerBeanDefinition() 方法，根据BeanDefinition实例化 bean 实例
+Singleto
 					...
 				</div>
 			</a>
@@ -4815,17 +4867,17 @@ pom依赖
 		</div>	
 	
 		<div class="index-li">
-			<a href="/06%20Spring/02%20IoC/3%20%E5%8A%A8%E6%80%81%E6%B3%A8%E5%86%8C%20Bean/">
+			<a href="/06%20Spring/02%20IoC/2%20%E9%AB%98%E7%BA%A7%E8%A3%85%E9%85%8D/">
 				<h2 class="index-title">
-					3 动态注册 Bean
+					2 高级装配
 				</h2>
 				<div class="index-brief">
-					1 注册接口
-有两种接口可动态注册 bean
-
-BeanDefinitionRegistry
-注册 Bean 定义，使用BeanDefinitionRegistry 接口 registerBeanDefinition() 方法，根据BeanDefinition实例化 bean 实例
-Singleto
+					1 环境与 profile
+1.1 配置 profile
+@Profile 注解
+指定某个 bean 属于哪一个 profile，运行时做出环境决策。
+没有指定 profile 的 bean 始终都会被创建， 与激活哪个 profile 没有关系。
+@Profile(&quot;dev&quot;)
 					...
 				</div>
 			</a>
@@ -5005,45 +5057,6 @@ public class LogAspect {
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/06-Spring/03-AOP/">03 AOP</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/06%20Spring/04%20Web/1%20Spring%20MVC/">
-				<h2 class="index-title">
-					1 Spring MVC
-				</h2>
-				<div class="index-brief">
-					1 Spring MVC 概览
-Spring 提供了一个功能齐全的 MVC 框架用于构建 Web 应用程序。Spring 框架可以很容易的和其他的 MVC 框架融合(如 Struts)，该框架使用控制反转(IOC)将控制器逻辑和业务对象分离开来。它也允许以声明的方式绑定请求参数到业务对象上。
-
-Di
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-01-10</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
 										
                                     </span>
                                 

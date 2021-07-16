@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4690,6 +4699,48 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/05%20Java/02%20Effective%20Java/03%20%E7%B1%BB%E5%92%8C%E6%8E%A5%E5%8F%A3%EF%BC%8815-25%EF%BC%89/">
+				<h2 class="index-title">
+					03 类和接口（15-25）
+				</h2>
+				<div class="index-brief">
+					第 15 条：使类和成员的可访问性最小化
+公有静态 final 域暴露常量，要么包含基本类型值，要么包含指向不可变对象的引用
+第 16 条：在公有类中使用访问方法而非公有域
+
+公有类不应该暴露可变域，因为其客户端代码遍布各处，将来极难改变内部表示法
+公有类暴露不可变域危害较小，事实上也不应该
+包级私
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-01-02</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/">05 Java</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/02-Effective-Java/">02 Effective Java</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/05%20Java/02%20Effective%20Java/07%20%E6%96%B9%E6%B3%95%EF%BC%8849-56%EF%BC%89/">
 				<h2 class="index-title">
 					07 方法（49-56）
@@ -4952,45 +5003,6 @@ JNI 有两组操作字符串的函数，一组把 Java 字符串转为 “改良
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/02%20Effective%20Java/04%20%E6%B3%9B%E5%9E%8B%EF%BC%8826-33%EF%BC%89/">
-				<h2 class="index-title">
-					04 泛型（26-33）
-				</h2>
-				<div class="index-brief">
-					第 26 条：请不要在新代码中使用原生态类型
-原生态类型只为了与引入泛型之前的遗留代码进行兼容和互用而提供的。
-第 27 条：消除非受检警告
-如果无法消除警告，同时可以证明引起警告的代码是类型安全的，只有在这种情况下才可以用一个 @SuppressWarnings(“unchecked”) 注解来禁
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-01-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/">05 Java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/02-Effective-Java/">02 Effective Java</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/05%20Java/02%20Effective%20Java/05%20%E6%9E%9A%E4%B8%BE%E5%92%8C%E6%B3%A8%E8%A7%A3%EF%BC%8834-41%EF%BC%89/">
 				<h2 class="index-title">
 					05 枚举和注解（34-41）
@@ -5030,15 +5042,15 @@ JNI 有两组操作字符串的函数，一组把 Java 字符串转为 “改良
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/02%20Effective%20Java/06%20Lambdas%20%E4%B8%8E%20Streams%EF%BC%8842-48%EF%BC%89/">
+			<a href="/05%20Java/02%20Effective%20Java/04%20%E6%B3%9B%E5%9E%8B%EF%BC%8826-33%EF%BC%89/">
 				<h2 class="index-title">
-					06 Lambdas 与 Streams（42-48）
+					04 泛型（26-33）
 				</h2>
 				<div class="index-brief">
-					第 42 条：lambdas 优于匿名类
-从 Java 8 开始，lambda 是迄今为止表示小函数对象的最佳方式。 除非必须创建非函数式接口类型的实例，否则不要使用匿名类作为函数对象。
-lambda 没有名称和文档，如果超过三行，不要使用 lambda 表达式。
-第 43 条: 方法引用优于 la
+					第 26 条：请不要在新代码中使用原生态类型
+原生态类型只为了与引入泛型之前的遗留代码进行兼容和互用而提供的。
+第 27 条：消除非受检警告
+如果无法消除警告，同时可以证明引起警告的代码是类型安全的，只有在这种情况下才可以用一个 @SuppressWarnings(“unchecked”) 注解来禁
 					...
 				</div>
 			</a>

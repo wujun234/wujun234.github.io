@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4690,6 +4699,57 @@ var _hmt = _hmt || [];
 		<div id="index">
 	
 		<div class="index-li">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/7%20%E6%AD%A3%E5%88%99%E8%A1%A8%E8%BE%BE%E5%BC%8F/">
+				<h2 class="index-title">
+					7 正则表达式
+				</h2>
+				<div class="index-brief">
+					1 语法
+在使用正则表达式的各种程序和类库之间，表达式语法并未完全标准化。
+1.1 字符
+
+字符类是一个括在括号中的可选择的字符集，例如，[Jj]、[0-9]、[A-Za-z]或 1。这里“-”表示是一个范围，而 ^ 表示补集。
+如果字符类中包含-，必须第一项或最后一项；如果包含[，必须第一项；包含
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2020-01-02</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/">05 Java</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/00-Java-基础/">00 Java 基础</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/05-Java/00-Java-基础/09-IO/">09 IO</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/5%20%E6%93%8D%E4%BD%9C%E6%96%87%E4%BB%B6/">
 				<h2 class="index-title">
 					5 操作文件
@@ -4790,18 +4850,16 @@ Path 表示的是一个目录名序列，其后还可以跟着一个文件名。
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/2%20%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/3%20%E6%93%8D%E4%BD%9C%E5%AD%97%E8%8A%82/">
 				<h2 class="index-title">
-					2 操作字符
+					3 操作字节
 				</h2>
 				<div class="index-brief">
-					存储文本字符串时，需要考虑字符编码方式。
-
-OutputStreamWriter 类：将使用选定的字符编码方式，把 Unicode 码元的输出流转换为字节流。
-InputStreamReader 类：将包含字节的输入流转换为可以产生 Unicode 码元的读入器。
-
-1 文本输出
-文本输出使用 Pr
+					1 DataInput 和 DataOutput 接口
+1.1 DataInput 接口
+DataInput接口 write* 方法写二进制格式数据
+DataInputStream 类实现了 DataInput 接口
+DataInputStream in = new DataInputStream(
 					...
 				</div>
 			</a>
@@ -4842,16 +4900,18 @@ InputStreamReader 类：将包含字节的输入流转换为可以产生 Unicode
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/3%20%E6%93%8D%E4%BD%9C%E5%AD%97%E8%8A%82/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/09%20IO/2%20%E6%93%8D%E4%BD%9C%E5%AD%97%E7%AC%A6/">
 				<h2 class="index-title">
-					3 操作字节
+					2 操作字符
 				</h2>
 				<div class="index-brief">
-					1 DataInput 和 DataOutput 接口
-1.1 DataInput 接口
-DataInput接口 write* 方法写二进制格式数据
-DataInputStream 类实现了 DataInput 接口
-DataInputStream in = new DataInputStream(
+					存储文本字符串时，需要考虑字符编码方式。
+
+OutputStreamWriter 类：将使用选定的字符编码方式，把 Unicode 码元的输出流转换为字节流。
+InputStreamReader 类：将包含字节的输入流转换为可以产生 Unicode 码元的读入器。
+
+1 文本输出
+文本输出使用 Pr
 					...
 				</div>
 			</a>
@@ -5010,59 +5070,6 @@ time
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/5%20%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%92%8C%E5%AD%97%E7%AC%A6%E9%9B%86/">
-				<h2 class="index-title">
-					5 文本文件和字符集
-				</h2>
-				<div class="index-brief">
-					1 文本文件
-获取平台的编码机制
-Charset platformEncoding = Charset.defalutCharset();
-
-2 行结束符
-Window 中，文本文件希望每行末尾使用“\r\n”，UNIX只需“\n”。
-可使用 printf 和 %n 来产生平台相关的行结束符
-out
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2020-01-02</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/">05 Java</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/00-Java-基础/">00 Java 基础</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/05-Java/00-Java-基础/14-国际化/">14 国际化</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/3%20%E6%8E%92%E5%BA%8F%E5%92%8C%E8%8C%83%E5%8C%96/">
 				<h2 class="index-title">
 					3 排序和范化
@@ -5116,14 +5123,19 @@ Colla
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/2%20%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%92%8C%E8%A7%A3%E6%9E%90/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/5%20%E6%96%87%E6%9C%AC%E6%96%87%E4%BB%B6%E5%92%8C%E5%AD%97%E7%AC%A6%E9%9B%86/">
 				<h2 class="index-title">
-					2 格式化和解析
+					5 文本文件和字符集
 				</h2>
 				<div class="index-brief">
-					1 数字格式
-NumberFormat 类接受 Locale 参数，静态工厂方法 getNumberInstance、getCurrencyInstance、getPercentInstance 分别返回对数字、货币量、百分比的格式化和解析。
-NumberFormat currFmt = Numbe
+					1 文本文件
+获取平台的编码机制
+Charset platformEncoding = Charset.defalutCharset();
+
+2 行结束符
+Window 中，文本文件希望每行末尾使用“\r\n”，UNIX只需“\n”。
+可使用 printf 和 %n 来产生平台相关的行结束符
+out
 					...
 				</div>
 			</a>
@@ -5164,21 +5176,14 @@ NumberFormat currFmt = Numbe
 		</div>	
 	
 		<div class="index-li">
-			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/1%20Locale%20%E5%AF%B9%E8%B1%A1/">
+			<a href="/05%20Java/00%20Java%20%E5%9F%BA%E7%A1%80/14%20%E5%9B%BD%E9%99%85%E5%8C%96/2%20%E6%A0%BC%E5%BC%8F%E5%8C%96%E5%92%8C%E8%A7%A3%E6%9E%90/">
 				<h2 class="index-title">
-					1 Locale 对象
+					2 格式化和解析
 				</h2>
 				<div class="index-brief">
-					java.util.Locale 是表示语言和国家/地区信息的本地化类，它是创建国际化应用的基础。
-1 组成
-Locale 由 5 个元素组成，语言必选，其他可选：
-
-语言
-2 到 3 个小写字母。例如 en、zh
-字符脚本
-首字母大写的四个字母。例如 Hant 繁体中文字符。
-国家/地区
-2 个大
+					1 数字格式
+NumberFormat 类接受 Locale 参数，静态工厂方法 getNumberInstance、getCurrencyInstance、getPercentInstance 分别返回对数字、货币量、百分比的格式化和解析。
+NumberFormat currFmt = Numbe
 					...
 				</div>
 			</a>

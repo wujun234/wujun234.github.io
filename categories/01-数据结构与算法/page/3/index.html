@@ -2983,6 +2983,15 @@ var _hmt = _hmt || [];
 								<div class="article-toc" style="display: none;"></div>
 							</ul>
 			
+							<ul>
+								<li class="file">
+									<a href="/08%20%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/1%20%E9%80%9A%E7%94%A8%E8%AE%BE%E8%AE%A1/10%20Groovy%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E4%B8%8E%20Java%20%E7%83%AD%E5%8A%A0%E8%BD%BD%E7%9A%84%E5%AF%B9%E6%AF%94/">
+										10 Groovy 热加载与 Java 热加载的对比
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
 								</li>
 								
 							</ul>
@@ -4863,23 +4872,14 @@ public static long countOne(long i) {
 		</div>	
 	
 		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/1%20%E7%BA%BF%E6%80%A7%E8%A1%A8%EF%BC%88List%EF%BC%89/">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/1%20%E9%A1%BA%E5%BA%8F%E8%A1%A8%E6%9F%A5%E6%89%BE/">
 				<h2 class="index-title">
-					1 线性表（List）
+					1 顺序表查找
 				</h2>
 				<div class="index-brief">
-					一、线性表的定义和基本操作
-1）定义
-线性表：零个或多个数据元素的有序排列。
+					顺序查找：又叫线性查找，从表中第一个(或最后一个)记录开始，逐个比较。
+适合小型数据，静态查找查。
 
-除第一个元素外，每个元素有且只有一个直接前驱元素；初最后一个元素外，每个元素有且只有一个直接后继元素。
-
-2）基本操作
-
-InitList：初始化
-ListEmpty：判空
-ClearList：清空
-GetElem：取值
 					...
 				</div>
 			</a>
@@ -4910,7 +4910,7 @@ GetElem：取值
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/01-数据结构/">01 数据结构</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
 										
                                     </span>
                                 
@@ -4920,23 +4920,19 @@ GetElem：取值
 		</div>	
 	
 		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/3%20%E6%95%B0%E7%BB%84%E5%92%8C%E5%B9%BF%E4%B9%89%E8%A1%A8/">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/0%20%E6%9F%A5%E6%89%BE%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/">
 				<h2 class="index-title">
-					3 数组和广义表
+					0 查找的基本概念
 				</h2>
 				<div class="index-brief">
-					1 数组的概念、多维数组的实现
-1）数组的概念
+					
+查找：就是根据给定的某个值，在查找表中确定一个其关键字等于给定值的数据元素 （或记录）。
+查找表：是由同一类型的数据元素（或记录）构成的集合。
+关键字：是数据元素中某个数据项的值
+主关键字：可以唯一地标识一个记录的关键字
+次关键字：可以识别多个数据元素(或记录)的关键字
 
-数组的特点：元素数目固定；下标有界。
-数组的操作：按照下标进行读写。
-
-2）多维数组的实现
-行优先顺序
-存储时先按行从小到大的顺序存储，在每一行中按列号从小到大存储。
-列优先顺序
-存储时先按列从小到大的顺序存储，在每一列中按行号从小到大存储。
-2 矩
+查找表按照操作方式来分有
 					...
 				</div>
 			</a>
@@ -4967,7 +4963,7 @@ GetElem：取值
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/01-数据结构/">01 数据结构</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
 										
                                     </span>
                                 
@@ -4977,26 +4973,15 @@ GetElem：取值
 		</div>	
 	
 		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/4%20%E4%B8%B2%EF%BC%88string%EF%BC%89/">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/2%20%E6%9C%89%E5%BA%8F%E8%A1%A8%E6%9F%A5%E6%89%BE/">
 				<h2 class="index-title">
-					4 串（string）
+					2 有序表查找
 				</h2>
 				<div class="index-brief">
-					1 基本概念
-
-串：是由零个或多个字符组成的优先序列，又名叫字符串。
-本质是一种线性表的扩展，但更多的是关注子串的应用问题
-子串在主串中的位置就是子串的第一个字符在主串中的序号。
-
-字符编码
-
-ASCII：7位
-拓展 ASCII：8位
-Unicode：16位
-
-串的比较
-
-挨个比较字符，以第一个不同
+					1 折半查找(二分查找)
+折半查找：又称为二分查找。在有序顺序存储的线性表中，取中间记录作为比较对象，若相等,则成功；若给小于，则在左半区继续查找；若给大于，则在右半区继续查找。
+$mid = \frac{low+high}{2}= low+\frac{1}{2}(high-low)$
+适合有序，静
 					...
 				</div>
 			</a>
@@ -5027,7 +5012,111 @@ Unicode：16位
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/01-数据结构/">01 数据结构</a>
+                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/3%20%E7%BA%BF%E6%80%A7%E7%B4%A2%E5%BC%95%E6%9F%A5%E6%89%BE/">
+				<h2 class="index-title">
+					3 线性索引查找
+				</h2>
+				<div class="index-brief">
+					
+索引：就是把一个关键字与它对应的记录相关联的过程。
+索引按照结构可以分为线性索引、树形索引和多级索引。
+线性索引：就是将索引项集合组织为线性结构，也称为索引表。
+
+1 稠密索引
+稠密索引：在线性索引中，将数据集中的每个记录对应一个索引项，索引项按照关键码有序排列。
+但数据量大时，可能由于内存有限，
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/01-数据结构与算法/">01 数据结构与算法</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/01-数据结构与算法/数据结构/">数据结构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/03%20%E6%9F%A5%E6%89%BE/4%20%E5%A4%9A%E8%B7%AF%E6%9F%A5%E6%89%BE%E6%A0%91(B%20%E6%A0%91)/">
+				<h2 class="index-title">
+					4 多路查找树(B 树)
+				</h2>
+				<div class="index-brief">
+					多路查找树：每一个结点的孩子数可以多于两个，且每一个结点处可以存储多个元素。
+1、2-3 树
+
+2-3 树：每一个结点都具有两个孩子 (2 结点) 或三个孩子 (3 结点) 的多路查找树
+2 结点：包含一个元素和两个孩子(或没有孩子) ，左小右大。
+3 结点：包含一小一大两个元素和三个孩子(或没有孩
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/01-数据结构与算法/">01 数据结构与算法</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/01-数据结构与算法/数据结构/">数据结构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/01-数据结构与算法/数据结构/03-查找/">03 查找</a>
 										
                                     </span>
                                 
@@ -5075,109 +5164,6 @@ Unicode：16位
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/01-数据结构与算法/数据结构/04-排序/">04 排序</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/6%20%E5%9B%BE/">
-				<h2 class="index-title">
-					6 图
-				</h2>
-				<div class="index-brief">
-					一、图的基本概念
-图：由顶点的有穷非空集合和顶点之间边的集合组成，通常表示为: G(V,E)，其中，G 表示一个图，V 是图 G 中顶点的集合。E 是图 G 中边的集合。
-1、各种图定义
-
-
-无向边：若顶点 $V_i$ 到 $V_j$，之间的边没有方向，则称这条边为无向边(Edge)。
-
-用无序偶对
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/">01 数据结构与算法</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/">数据结构</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/01-数据结构/">01 数据结构</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84%E4%B8%8E%E7%AE%97%E6%B3%95/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/01%20%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/7%20%E7%BA%A2%E9%BB%91%E6%A0%91/">
-				<h2 class="index-title">
-					7 红黑树
-				</h2>
-				<div class="index-brief">
-					1、红黑树定义
-红黑树是一种近似平衡的二叉查找树，它能够确保任何一个节点的左右子树的高度差不会超过二者中较低那个的一陪。可以在 O(logn) 时间内做查找，插入和删除。红黑树相对于AVL树来说，牺牲了部分平衡性以换取插入/删除操作时少量的旋转操作，整体来说性能要优于AVL树。
-满足如下条件：
-
-每
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/">01 数据结构与算法</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/">数据结构</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/01-数据结构与算法/数据结构/01-数据结构/">01 数据结构</a>
 										
                                     </span>
                                 
