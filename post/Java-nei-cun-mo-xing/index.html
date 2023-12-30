@@ -1,0 +1,5619 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8">
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+	
+	<!-- title -->
+	
+	<title>
+	
+		Java 内存模型 | 
+	 
+	Wu Jun&#39;s Notes
+	</title>
+	
+	<!-- keywords,description -->
+	
+		<meta name="keywords" content="吴俊,wujun234,wujun,wu jun,wu,jun" />
+	
+	
+
+	<!-- favicon -->
+	
+	<link rel="shortcut icon" href="/favicon.ico">
+	
+
+
+	<!-- search -->
+	<script>
+		var searchEngine = "https://www.google.com/search?q=";
+		if(typeof searchEngine == "undefined" || searchEngine == null || searchEngine == ""){
+			searchEngine = "https://www.google.com/search?q=";
+		}
+		var homeHost = "wujun234.com";
+		if(typeof homeHost == "undefined" || homeHost == null || homeHost == ""){
+			homeHost = window.location.host;
+		}
+	</script>
+
+
+	
+<link rel="stylesheet" href="/css/main.css">
+
+	
+<link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/styles/darcula.min.css">
+
+	
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css">
+
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@9.17.1/build/highlight.min.js"></script>
+
+	
+<script src="https://cdn.jsdelivr.net/npm/jquery-pjax@2.0.1/jquery.pjax.min.js"></script>
+
+	
+<script src="/js/main.js"></script>
+
+
+	
+		
+<script src="https://cdn.jsdelivr.net/npm/leancloud-storage/dist/av-min.js"></script>
+
+		
+<script src="https://cdn.jsdelivr.net/npm/valine@v1.5.1/dist/Valine.min.js"></script>
+
+	
+	
+
+<meta name="generator" content="Hexo 4.2.1"></head>
+
+<body>
+	<header id="header">
+    <a id="title" href="/" class="logo">Wu Jun's Notes</a>
+
+	<ul id="menu">
+    
+      <li class="menu-item">
+        <a href="/about" class="menu-item-link">About</a>
+      </li>
+    
+
+    
+      <li class="menu-item">
+        <a href="/tags" class="menu-item-link">Tags</a>
+      </li>
+    
+
+    
+      <li class="menu-item">
+        <a href="/categories" class="menu-item-link">Categories</a>
+      </li>
+    
+
+    
+  
+    
+      <li class="menu-item">
+        <a href='https://github.com/wujun234' class="menu-item-link" target="_blank">
+          <i class="fa fa-github fa-2x"></i>
+        </a>
+      </li>
+    
+	</ul>
+</header>
+
+	
+<div id="sidebar">
+	<button id="sidebar-toggle" class="toggle" ><i class="fa fa-arrow-right " aria-hidden="true"></i></button>
+	
+	<div id="site-toc">
+		<input id="search-input" class="search-input" type="search" placeholder="Press Enter to search">
+		<div id="tree">
+			
+
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 数据结构与算法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Long-bitCount-jie-xi/">
+                     
+										    Long.bitCount() 解析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数据结构
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 数据结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/shu-ju-jie-gou-gai-shu/">
+                     
+										    数据结构概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xian-xing-biao-List-/">
+                     
+										    线性表（List）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhan-yu-dui-lie/">
+                     
+										    栈与队列
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-zu-he-guang-yi-biao/">
+                     
+										    数组和广义表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/chuan-string-/">
+                     
+										    串（string）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-yu-er-cha-shu/">
+                     
+										    树与二叉树
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/tu/">
+                     
+										    图
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/hong-hei-shu/">
+                     
+										    红黑树
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dui/">
+                     
+										    堆
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 高级数据结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/tiao-yue-biao-Skip-List-/">
+                     
+										    跳跃表（Skip List)
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/hua-fen-shu/">
+                     
+										    划分树
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 查找
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/cha-zhao-de-ji-ben-gai-nian/">
+                     
+										    查找的基本概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shun-xu-biao-cha-zhao/">
+                     
+										    顺序表查找
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/you-xu-biao-cha-zhao/">
+                     
+										    有序表查找
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xian-xing-suo-yin-cha-zhao/">
+                     
+										    线性索引查找
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/duo-lu-cha-zhao-shu-B-shu-/">
+                     
+										    多路查找树(B 树)
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/san-lie-Hash-biao/">
+                     
+										    散列(Hash)表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 排序
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/pai-xu-de-ji-ben-gai-nian-yu-fen-lei/">
+                     
+										    排序的基本概念与分类
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/cha-ru-pai-xu/">
+                     
+										    插入排序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/jiao-huan-pai-xu/">
+                     
+										    交换排序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xuan-ze-pai-xu/">
+                     
+										    选择排序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/gui-bing-pai-xu/">
+                     
+										    归并排序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fen-pei-pai-xu/">
+                     
+										    分配排序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wai-bu-pai-xu/">
+                     
+										    外部排序
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										算法题
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										回溯搜索
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/pai-lie/">
+                     
+										    排列
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										字符串
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/ba-zi-fu-chuan-zhuan-huan-cheng-zheng-shu/">
+                     
+										    把字符串转换成整数
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ti-huan-kong-ge/">
+                     
+										    替换空格
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										数组
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/er-wei-shu-zu-zhong-de-cha-zhao/">
+                     
+										    二维数组中的查找
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-zu-zhong-zhong-fu-de-shu-zi/">
+                     
+										    数组中重复的数字
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										树
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/er-cha-shu-de-bian-li/">
+                     
+										    二叉树的遍历
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										链表
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/cong-wei-dao-tou-da-yin-lian-biao/">
+                     
+										    从尾到头打印链表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dan-xiang-lian-biao-fan-zhuan/">
+                     
+										    单向链表反转
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dan-lian-biao-jia-fa/">
+                     
+										    单链表加法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/gui-bing-lian-biao/">
+                     
+										    归并链表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 计算机组成原理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/ji-suan-ji-xi-tong-gai-shu/">
+                     
+										    计算机系统概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-ju-de-biao-shi-he-yun-suan/">
+                     
+										    数据的表示和运算
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 计算机网络
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 计算机网络体系结构
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/ji-suan-ji-wang-luo-gai-shu/">
+                     
+										    计算机网络概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ji-suan-ji-wang-luo-de-xing-neng/">
+                     
+										    计算机网络的性能
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ji-suan-ji-wang-luo-ti-xi-jie-gou-yu-can-kao-mo-xing/">
+                     
+										    计算机网络体系结构与参考模型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 物理层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/wu-li-ceng-de-ji-ben-gai-nian/">
+                     
+										    物理层的基本概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wu-li-ceng-de-zhong-yao-gai-nian/">
+                     
+										    物理层的重要概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 数据链路层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/shi-yong-dian-dui-dian-xin-dao-de-shu-ju-lian-lu-ceng/">
+                     
+										    使用点对点信道的数据链路层
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dian-dui-dian-xie-yi-PPP/">
+                     
+										    点对点协议 PPP
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shi-yong-guang-bo-xin-dao-de-shu-ju-lian-lu-ceng/">
+                     
+										    使用广播信道的数据链路层
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/kuo-zhan-de-yi-tai-wang/">
+                     
+										    扩展的以太网
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/gao-su-yi-tai-wang/">
+                     
+										    高速以太网
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-ju-lian-lu-ceng-de-zhong-yao-gai-nian/">
+                     
+										    数据链路层的重要概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 网络层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/wang-luo-ceng-ti-gong-de-liang-zhong-fu-wu/">
+                     
+										    网络层提供的两种服务
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wang-ji-xie-yi-IP/">
+                     
+										    网际协议 IP
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/hua-fen-zi-wang-he-gou-zao-chao-wang/">
+                     
+										    划分子网和构造超网
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wang-ji-kong-zhi-bao-wen-xie-yi-ICMP/">
+                     
+										    网际控制报文协议 ICMP
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/hu-lian-wang-de-lu-you-xuan-ze-xie-yi/">
+                     
+										    互联网的路由选择协议
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/IPv6/">
+                     
+										    IPv6
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/IP-duo-bo/">
+                     
+										    IP 多播
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xu-ni-zhuan-yong-wang-VPN-he-wang-luo-di-zhi-zhuan-huan-NAT/">
+                     
+										    虚拟专用网 VPN 和网络地址转换 NAT
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/duo-xie-yi-biao-ji-jiao-huan-MPLS/">
+                     
+										    多协议标记交换 MPLS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wang-luo-ceng-de-zhong-yao-gai-nian/">
+                     
+										    网络层的重要概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5 传输层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/yun-shu-ceng-xie-yi-gai-shu/">
+                     
+										    运输层协议概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/UDP-yong-hu-shu-ju-bao-xie-yi/">
+                     
+										    UDP 用户数据报协议
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/TCP-gai-shu/">
+                     
+										    TCP 概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/TCP-ke-kao-chuan-shu/">
+                     
+										    TCP 可靠传输
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/TCP-liu-liang-kong-zhi/">
+                     
+										    TCP 流量控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/TCP-yong-sai-kong-zhi/">
+                     
+										    TCP 拥塞控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/TCP-lian-jie-guan-li/">
+                     
+										    TCP 连接管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										6 应用层
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/yu-ming-xi-tong-DNS/">
+                     
+										    域名系统 DNS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wen-jian-chuan-song-xie-yi-FTP/">
+                     
+										    文件传送协议 FTP
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yuan-cheng-zhong-duan-xie-yi-TELNET/">
+                     
+										    远程终端协议 TELNET
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wan-wei-wang-WWW/">
+                     
+										    万维网 WWW
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dian-zi-you-jian/">
+                     
+										    电子邮件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dong-tai-zhu-ji-pei-zhi-xie-yi-DHCP/">
+                     
+										    动态主机配置协议 DHCP
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/jian-dan-wang-luo-guan-li-xie-yi-SNMP/">
+                     
+										    简单网络管理协议 SNMP
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ying-yong-jin-cheng-kua-yue-wang-luo-de-tong-xin/">
+                     
+										    应用进程跨越网络的通信
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/P2P-ying-yong/">
+                     
+										    P2P 应用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ying-yong-ceng-gai-shu/">
+                     
+										    应用层概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										7 网络安全
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/wang-luo-an-quan-wen-ti-gai-shu/">
+                     
+										    网络安全问题概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/liang-lei-mi-ma-ti-zhi/">
+                     
+										    两类密码体制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-zi-qian-ming/">
+                     
+										    数字签名
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/jian-bie/">
+                     
+										    鉴别
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/mi-yao-fen-pei/">
+                     
+										    密钥分配
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/hu-lian-wang-shi-yong-de-an-quan-xie-yi/">
+                     
+										    互联网使用的安全协议
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xi-tong-an-quan-fang-huo-qiang-yu-ru-qin-jian-ce/">
+                     
+										    系统安全：防火墙与入侵检测
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Java
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										00 Java 基础
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 基本设计
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/shu-ju-lei-xing/">
+                     
+										    数据类型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zi-fu-chuan/">
+                     
+										    字符串
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-zu/">
+                     
+										    数组
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yun-suan-fu/">
+                     
+										    运算符
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-ru-shu-chu/">
+                     
+										    输入输出
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/kong-zhi-liu-cheng/">
+                     
+										    控制流程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 对象与类
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/mian-xiang-dui-xiang/">
+                     
+										    面向对象
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xiu-shi-fu/">
+                     
+										    修饰符
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/lei/">
+                     
+										    类
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fan-she/">
+                     
+										    反射
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wen-dang-zhu-shi/">
+                     
+										    文档注释
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 接口、lambda、内部类、代理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/jie-kou/">
+                     
+										    接口
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/lambda/">
+                     
+										    lambda
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/nei-bu-lei/">
+                     
+										    内部类
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dai-li/">
+                     
+										    代理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 异常、断言、日志
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/yi-chang/">
+                     
+										    异常
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/duan-yan/">
+                     
+										    断言
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ri-zhi/">
+                     
+										    日志
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 泛型、事件
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/fan-xing/">
+                     
+										    泛型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shi-jian/">
+                     
+										    事件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 集合
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/ji-he-jie-kou/">
+                     
+										    集合接口
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-0-ju-ti-de-ji-he/">
+                     
+										    2.0 具体的集合
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-1-ArrayList-Vector/">
+                     
+										    2.1 ArrayList、Vector
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-2-LinkedList/">
+                     
+										    2.2 LinkedList
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-3-ArrayDeque/">
+                     
+										    2.3 ArrayDeque
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-4-TreeMap-TreeSet/">
+                     
+										    2.4 TreeMap、TreeSet
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-5-HashMap-HashSet-Hashtable/">
+                     
+										    2.5 HashMap、HashSet、Hashtable
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-6-LinkedHashMap-LinkedHashSet/">
+                     
+										    2.6 LinkedHashMap、LinkedHashSet
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-7-PriorityQueue/">
+                     
+										    2.7 PriorityQueue
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2-8-ConcurrentHashMap/">
+                     
+										    2.8 ConcurrentHashMap
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ying-she/">
+                     
+										    映射
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shi-tu-yu-bao-zhuang-qi/">
+                     
+										    视图与包装器
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/suan-fa/">
+                     
+										    算法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yi-liu-de-ji-he/">
+                     
+										    遗留的集合
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xian-cheng-an-quan-de-ji-he/">
+                     
+										    线程安全的集合
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 并发
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/xian-cheng/">
+                     
+										    线程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xian-cheng-chi/">
+                     
+										    线程池
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/suo/">
+                     
+										    锁
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/tong-bu-qi/">
+                     
+										    同步器
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fei-zu-sai-tong-bu/">
+                     
+										    非阻塞同步
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08 Java SE 8 的流库
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Stream/">
+                     
+										    Stream
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Optional/">
+                     
+										    Optional
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 IO
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/shu-ru-shu-chu-liu/">
+                     
+										    输入输出流
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/cao-zuo-zi-fu/">
+                     
+										    操作字符
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/cao-zuo-zi-jie/">
+                     
+										    操作字节
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xu-lie-hua/">
+                     
+										    序列化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/cao-zuo-wen-jian/">
+                     
+										    操作文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/NIO-nei-cun-ying-she-wen-jian-/">
+                     
+										    NIO（内存映射文件）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zheng-ze-biao-da-shi/">
+                     
+										    正则表达式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10 XML
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/XML-gai-shu/">
+                     
+										    XML 概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/XML-jie-xi/">
+                     
+										    XML 解析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yan-zheng-XML-wen-dang/">
+                     
+										    验证 XML 文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/sheng-cheng-XML-wen-dang/">
+                     
+										    生成 XML 文档
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/XSL-zhuan-huan/">
+                     
+										    XSL 转换
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										11 网络
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Socket-lian-jie/">
+                     
+										    Socket 连接
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/huo-qu-URL-shu-ju/">
+                     
+										    获取 URL 数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fa-song-E-mail/">
+                     
+										    发送 E-mail
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										12 JDBC
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/JDBC-jian-jie/">
+                     
+										    JDBC 简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/java-sql-bao-jian-jie/">
+                     
+										    java.sql 包简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/javax-sql-bao-jian-jie/">
+                     
+										    javax.sql 包简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										13 日期和时间
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/jue-dui-shi-jian/">
+                     
+										    绝对时间
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ren-lei-shi-jian/">
+                     
+										    人类时间
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ge-shi-hua-he-jie-xi/">
+                     
+										    格式化和解析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yu-yi-liu-dai-ma-de-hu-cao-zuo/">
+                     
+										    与遗留代码的互操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										14 国际化
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Locale-dui-xiang/">
+                     
+										    Locale 对象
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ge-shi-hua-he-jie-xi/">
+                     
+										    格式化和解析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/pai-xu-he-fan-hua/">
+                     
+										    排序和范化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xiao-xi-ge-shi-hua/">
+                     
+										    消息格式化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wen-ben-wen-jian-he-zi-fu-ji/">
+                     
+										    文本文件和字符集
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zi-yuan-bao/">
+                     
+										    资源包
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										15 脚本、编译、注解
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Java-ping-tai-de-jiao-ben/">
+                     
+										    Java 平台的脚本
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/bian-yi-qi-API/">
+                     
+										    编译器 API
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shi-yong-zhu-jie/">
+                     
+										    使用注解
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhu-jie-yu-fa/">
+                     
+										    注解语法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhu-jie-yu-fa/">
+                     
+										    注解语法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yuan-ma-ji-zhu-jie-chu-li/">
+                     
+										    源码级注解处理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zi-jie-ma-gong-cheng/">
+                     
+										    字节码工程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										16 安全
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/lei-jia-zai-qi/">
+                     
+										    类加载器
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/an-quan-guan-li-qi-yu-fang-wen-quan-xian/">
+                     
+										    安全管理器与访问权限
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yong-hu-ren-zheng/">
+                     
+										    用户认证
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-ju-qian-ming/">
+                     
+										    数据签名
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/jia-mi/">
+                     
+										    加密
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										17 本地方法
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/diao-yong-C-han-shu/">
+                     
+										    调用 C 函数
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/can-shu-yu-fan-hui/">
+                     
+										    参数与返回
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/00-Java-ji-chu-17-ben-di-fang-fa-todo/">
+                     
+										    00 Java 基础/17 本地方法/ todo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Java 虚拟机
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/zou-jin-Java/">
+                     
+										    走进 Java
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/JVM-nei-cun/">
+                     
+										    JVM 内存
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/GC-yu-nei-cun-fen-pei/">
+                     
+										    GC 与内存分配
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xing-neng-jian-kong-gu-zhang-chu-li/">
+                     
+										    性能监控 + 故障处理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/diao-you-an-li/">
+                     
+										    调优案例
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/lei-wen-jian-jie-gou/">
+                     
+										    类文件结构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/lei-jia-zai-ji-zhi/">
+                     
+										    类加载机制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zi-jie-ma-zhi-xing-yin-qing/">
+                     
+										    字节码执行引擎
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/lei-jia-zai-an-li-yu-shi-zhan/">
+                     
+										    类加载案例与实战
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zao-qi-bian-yi-qi-you-hua/">
+                     
+										    早期（编译期）优化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wan-qi-yun-xing-qi-you-hua/">
+                     
+										    晚期（运行期）优化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file active">
+									<a href="/post/Java-nei-cun-mo-xing/">
+                     
+										    Java 内存模型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 Effective Java
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/chuang-jian-he-xiao-hui-dui-xiang-1-9-/">
+                     
+										    创建和销毁对象（1-9）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dui-yu-suo-you-dui-xiang-dou-tong-yong-de-fang-fa-10-14-/">
+                     
+										    对于所有对象都通用的方法（10-14）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/lei-he-jie-kou-15-25-/">
+                     
+										    类和接口（15-25）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fan-xing-26-33-/">
+                     
+										    泛型（26-33）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/mei-ju-he-zhu-jie-34-41-/">
+                     
+										    枚举和注解（34-41）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Lambdas-yu-Streams-42-48-/">
+                     
+										    Lambdas 与 Streams（42-48）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fang-fa-49-56-/">
+                     
+										    方法（49-56）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/tong-yong-cheng-xu-she-ji-57-68-/">
+                     
+										    通用程序设计（57-68）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yi-chang-69-77-/">
+                     
+										    异常（69-77）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/bing-fa-78-84-/">
+                     
+										    并发（78-84）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xu-lie-hua-85-90-/">
+                     
+										    序列化（85-90）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 Spring
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 Core
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-ji-ben-gai-nian/">
+                     
+										    Spring 基本概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/IoC-rong-qi-yu-Bean/">
+                     
+										    IoC 容器与 Bean
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/SpringBoot-qi-dong-liu-cheng/">
+                     
+										    SpringBoot 启动流程
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 IoC
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/yi-lai-zhu-ru/">
+                     
+										    依赖注入
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/gao-ji-zhuang-pei/">
+                     
+										    高级装配
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dong-tai-zhu-ce-Bean/">
+                     
+										    动态注册 Bean
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 AOP
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/AOP-jian-jie/">
+                     
+										    AOP 简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/qie-dian/">
+                     
+										    切点
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/qie-mian/">
+                     
+										    切面
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Web
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-MVC/">
+                     
+										    Spring MVC
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-MVC-jin-jie/">
+                     
+										    Spring MVC 进阶
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-RestTemplate/">
+                     
+										    Spring RestTemplate
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/kua-yu/">
+                     
+										    跨域
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Data
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/JdbcTemplate/">
+                     
+										    JdbcTemplate
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Ehcache-3-8-jian-dan-chi-jiu-hua/">
+                     
+										    Ehcache 3.8 简单持久化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Data-JPA/">
+                     
+										    Spring Data JPA
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Data-MongoDB/">
+                     
+										    Spring Data MongoDB
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Data-Neo4j/">
+                     
+										    Spring Data Neo4j
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Data-Redis/">
+                     
+										    Spring Data Redis
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cache/">
+                     
+										    Spring Cache
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Dynamic-DataSource/">
+                     
+										    Dynamic DataSource
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Transaction/">
+                     
+										    Transaction
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cache-Caffeine/">
+                     
+										    Spring Cache + Caffeine
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 Security
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Security/">
+                     
+										    Spring Security
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 Async
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Scheduled/">
+                     
+										    Scheduled
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Async/">
+                     
+										    Async
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08 Log
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/mo-ren-ri-zhi/">
+                     
+										    默认日志
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/slf4j-he-log4j-logback-guan-xi/">
+                     
+										    slf4j 和 log4j、logback 关系
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-chu-sout-dao-ri-zhi-wen-jian/">
+                     
+										    输出 sout 到日志文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10 Retry
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Retry/">
+                     
+										    Spring Retry
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										07 存储
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										01 MySQL
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/guan-xi-shu-ju-ku/">
+                     
+										    关系数据库
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/suo/">
+                     
+										    锁
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shi-wu/">
+                     
+										    事务
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/duo-ban-ben-bing-fa-kong-zhi/">
+                     
+										    多版本并发控制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/cun-chu-yin-qing/">
+                     
+										    存储引擎
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shu-ju-lei-xing/">
+                     
+										    数据类型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/SQL/">
+                     
+										    SQL
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/suo-yin/">
+                     
+										    索引
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/cha-xun-xing-neng-you-hua/">
+                     
+										    查询性能优化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fen-ku-fen-biao/">
+                     
+										    分库分表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fu-zhi/">
+                     
+										    复制
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 MyBatis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/MyBatis-Spring-Boot/">
+                     
+										    MyBatis+Spring Boot
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/MyBatis-Generator/">
+                     
+										    MyBatis Generator
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/CDDATA-kuai/">
+                     
+										    CDDATA块
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhu-jie-shi-yong/">
+                     
+										    注解使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										03 Redis
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Redis-jian-jie/">
+                     
+										    Redis 简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fen-bu-shi-suo/">
+                     
+										    分布式锁
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zi-ding-yi-xu-lie-hua/">
+                     
+										    自定义序列化
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhi-xing-jiao-ben/">
+                     
+										    执行脚本
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										04 Memcached
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Memcached-bi-ji/">
+                     
+										    Memcached笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 MongoDB
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/MongoDB-gai-nian/">
+                     
+										    MongoDB 概念
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/MongoDB-cao-zuo/">
+                     
+										    MongoDB 操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/MongoDB-guan-li/">
+                     
+										    MongoDB 管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Java-zhong-shi-yong/">
+                     
+										    Java中使用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 Cassandra
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Cassandra-jian-jie/">
+                     
+										    Cassandra 简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Cassandra-jia-gou/">
+                     
+										    Cassandra 架构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Cassandra-shu-ju-mo-xing/">
+                     
+										    Cassandra 数据模型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/qian-yi-an-li-shi-li/">
+                     
+										    迁移案例示例
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Gossip-xie-yi/">
+                     
+										    Gossip 协议
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Cassandra-vs-HBase/">
+                     
+										    Cassandra vs. HBase
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Hadoop/">
+                     
+										    Hadoop 生态
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/HDFS/">
+                     
+										    HDFS
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/HBase/">
+                     
+										    HBase
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Hive/">
+                     
+										    Hive
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Sqoop-yuan-ma-cong-MySQL-dao-ru-dao-Hive/">
+                     
+										    Sqoop源码 -  从 MySQL 导入到 Hive
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Hadoop-shu-ju-cang-ku-li-xian-he-shi-shi-da-shu-ju-kai-fa-shi-zhan-/">
+                     
+										    Hadoop 数据仓库 - 《离线和实时大数据开发实战》
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/NoSQL/">
+                     
+										    NoSQL
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08 系统设计
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 通用设计
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/fen-bu-shi-tong-yi-id-she-ji/">
+                     
+										    分布式统一 id 设计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/kua-ku-fen-ye/">
+                     
+										    跨库分页
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/duan-lian-jie/">
+                     
+										    短链接
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xiang-si-tu-pian-diao-yan/">
+                     
+										    相似图片调研
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/hai-ming-ju-li-ji-suan/">
+                     
+										    海明距离计算
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/miao-sha-hong-bao-xi-tong/">
+                     
+										    秒杀、红包系统
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/shi-yong-Java-jin-xing-pa-chong/">
+                     
+										    使用 Java 进行爬虫
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/wen-zhang-xiang-si-du-simhash-ji-suan/">
+                     
+										    文章相似度 -  simhash 计算
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/re-jia-zai-shi-jian/">
+                     
+										    热加载实践
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Groovy-re-jia-zai-yu-Java-re-jia-zai-de-dui-bi/">
+                     
+										    Groovy 热加载与 Java 热加载的对比
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yi-di-duo-huo/">
+                     
+										    异地多活
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 业务设计
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/ji-ke-lian-jie-jie-xi-fen-xi/">
+                     
+										    即刻-链接解析-分析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xiao-xi-xi-tong-she-ji/">
+                     
+										    消息系统设计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/guan-zhu-liu-diao-yan/">
+                     
+										    关注流调研
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/guan-zhu-liu-she-ji/">
+                     
+										    关注流设计
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 设计模式
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/chuang-jian-xing-mo-shi/">
+                     
+										    创建型模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/jie-gou-xing-mo-shi/">
+                     
+										    结构型模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/xing-wei-xing-mo-shi/">
+                     
+										    行为型模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/J2EE-mo-shi/">
+                     
+										    J2EE 模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										09 DevOps
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 Git
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/da-jian-Git-fu-wu-qi/">
+                     
+										    搭建Git服务器
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/chuang-jian-ban-ben-ku/">
+                     
+										    创建版本库
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ban-ben-guan-li/">
+                     
+										    版本管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yuan-cheng-cang-ku/">
+                     
+										    远程仓库
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fen-zhi-guan-li/">
+                     
+										    分支管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/biao-qian-guan-li/">
+                     
+										    标签管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/qi-ta/">
+                     
+										    其他
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 SVN
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/ji-chu-jie-shao/">
+                     
+										    基础介绍
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ji-ben-cao-zuo/">
+                     
+										    基本操作
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/ban-ben-guan-li/">
+                     
+										    版本管理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/chong-tu-ji-jie-jue/">
+                     
+										    冲突及解决
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/kai-fa-zhou-qi/">
+                     
+										    开发周期
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 IDEA
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/IDEA-kuai-jie-jian/">
+                     
+										    IDEA 快捷键
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 Maven
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Maven-bi-ji/">
+                     
+										    Maven 笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Maven-chong-tu-jie-jue/">
+                     
+										    Maven 冲突解决
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5 Gradle
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Gradle-gai-shu/">
+                     
+										    Gradle 概述
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/maven-qian-yi-dao-gradle/">
+                     
+										    maven迁移到gradle
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										6 Linux
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Centos-7-pei-zhi-LAMP/">
+                     
+										    Centos 7 配置 LAMP
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Linux-chang-yong-ming-ling/">
+                     
+										    Linux 常用命令
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Shell-jiao-ben/">
+                     
+										    Shell 脚本
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										7 Zabbix
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Zabbix-jian-jie/">
+                     
+										    Zabbix简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zabbix-zhong-wen-luan-ma/">
+                     
+										    zabbix中文乱码
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zabbix-zhu-dong-mo-shi-bei-dong-mo-shi/">
+                     
+										    zabbix主动模式、被动模式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Zabbix-qian-yi/">
+                     
+										    Zabbix迁移
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										8 ELK
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/ElasticStack/">
+                     
+										    ElasticStack
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										9 Docker
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Docker-bi-ji/">
+                     
+										    Docker 笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										10 微服务
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										0 服务注册与发现
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Eureka/">
+                     
+										    Spring Cloud Eureka
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Consul/">
+                     
+										    Spring Cloud Consul
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 服务调用
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Ribbon/">
+                     
+										    Spring Cloud Ribbon
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Hystrix/">
+                     
+										    Spring Cloud Hystrix
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Feign/">
+                     
+										    Spring Cloud Feign
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Resilience4j/">
+                     
+										    Resilience4j
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 Apache Thrift
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Thrift-chu-shi-1-jian-jie/">
+                     
+										    Apache Thrift 初识 (1) - 简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Thrift-chu-shi-2-shu-ju-lei-xing-yu-ji-ben-yu-fa/">
+                     
+										    Apache Thrift 初识 (2) - 数据类型与基本语法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Thrift-chu-shi-3-shi-zhan-Demo/">
+                     
+										    Apache Thrift 初识 (3) - 实战Demo
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 配置中心
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Config/">
+                     
+										    Spring Cloud Config
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apollo-xiang-mu-jie-xi/">
+                     
+										    Apollo 项目解析
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/kai-yuan-pei-zhi-zhong-xin-dui-bi-xuan-xing/">
+                     
+										    开源配置中心对比选型
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 API网关
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Zuul/">
+                     
+										    Spring Cloud Zuul
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Gateway/">
+                     
+										    Spring Cloud Gateway
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 消息组件
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Bus/">
+                     
+										    Spring Cloud Bus
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Stream/">
+                     
+										    Spring Cloud Stream
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5 链路追踪
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Spring-Cloud-Sleuth/">
+                     
+										    Spring Cloud Sleuth
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										11 分布式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										02 分布式计算
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/MapReduce/">
+                     
+										    MapReduce
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										05 分布式事务
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/fen-bu-shi-shi-wu/">
+                     
+										    分布式事务
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fen-bu-shi-hui-hua/">
+                     
+										    分布式会话
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										06 分布式锁
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/fen-bu-shi-suo/">
+                     
+										    分布式锁
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										08 负载均衡
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/yi-zhi-xing-ha-xi/">
+                     
+										    一致性哈希
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Paxos/">
+                     
+										    Paxos
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Raft/">
+                     
+										    Raft
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/fu-zai-jun-heng/">
+                     
+										    负载均衡
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										12 测试
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 EasyMock
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/EasyMock-mo-ni-dui-xiang-ce-shi/">
+                     
+										    EasyMock - 模拟对象测试
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										2 http_load
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/http-load-ya-li-ce-shi/">
+                     
+										    http_load - 压力测试
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 JMeter
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/JMeter-xing-neng-ce-shi/">
+                     
+										    JMeter - 性能测试
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 JUnit
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/JUnit-5-jian-jie/">
+                     
+										    JUnit 5 简介
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										5 MockMvc
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/MockMvc/">
+                     
+										    MockMvc
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										13 重构
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 重构-改善既有代码的设计
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/zhong-gou-di-yi-ge-an-li/">
+                     
+										    重构，第一个案例
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhong-gou-de-yuan-ze/">
+                     
+										    重构的原则
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/dai-ma-de-huai-wei-dao/">
+                     
+										    代码的坏味道
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/gou-zhu-ce-shi-ti-xi/">
+                     
+										    构筑测试体系
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhong-gou-lie-biao/">
+                     
+										    重构列表
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhong-xin-zu-zhi-han-shu/">
+                     
+										    重新组织函数
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zai-dui-xiang-zhi-jian-ban-yi-te-xing/">
+                     
+										    在对象之间搬移特性
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/zhong-xin-zu-zhi-shu-ju/">
+                     
+										    重新组织数据
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/jian-hua-tiao-jian-biao-da-shi/">
+                     
+										    简化条件表达式
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/jian-hua-han-shu-diao-yong/">
+                     
+										    简化函数调用
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/chu-li-gai-kuo-guan-xi/">
+                     
+										    处理概括关系
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/da-xing-zhong-gou/">
+                     
+										    大型重构
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										15 服务器
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 Nginx
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Nginx-bi-ji/">
+                     
+										    Nginx 笔记
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										16 辅助工具类
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 Apache Commons
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Commons-zong-lan/">
+                     
+										    Apache Commons - 总览
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Commons-BeanUtils/">
+                     
+										    Apache Commons BeanUtils
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Commons-Codec/">
+                     
+										    Apache Commons Codec
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Commons-Collections/">
+                     
+										    Apache Commons Collections
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Commons-Lang/">
+                     
+										    Apache Commons Lang
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Commons-Pool/">
+                     
+										    Apache Commons Pool
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Apache-Commons-Text/">
+                     
+										    Apache Commons Text
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										3 日常小工具
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/shi-yong-Java-zi-dai-MessageDigest-shi-xian-jia-mi-MD5-he-SHA-/">
+                     
+										    使用 Java 自带 MessageDigest 实现加密（MD5 和 SHA）
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/yi-ci-xing-du-qu-GZIP-ya-suo-de-CSV-wen-jian/">
+                     
+										    一次性读取 GZIP 压缩的 CSV 文件
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/HttpUtil/">
+                     
+										    HttpUtil
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										4 数据格式
+									</a>
+									
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										1 Json
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Jackson-chang-yong-ji-lu/">
+                     
+										    Jackson 常用记录
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/Lombok-xiao-chu-Java-rong-zhang/">
+                     
+										    Lombok消除Java冗长
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/MapStruct-shi-ti-jian-zhuan-huan/">
+                     
+										    MapStruct实体间转换
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/YAML-ji-chu-yu-fa/">
+                     
+										    YAML 基础语法
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										20 笔记梳理
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/Java/">
+                     
+										    Java
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/JVM/">
+                     
+										    JVM
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/MySQL/">
+                     
+										    MySQL
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/NoSQL/">
+                     
+										    NoSQL
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+							<ul>
+								<li class="directory">
+									<a href="#" class="directory">
+										<i class="fa fa-plus-square-o"></i>
+										21 其他
+									</a>
+									
+							<ul>
+								<li class="file">
+									<a href="/post/nian-gong-zuo-zong-jie/">
+                     
+										    2019 年工作总结
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+							<ul>
+								<li class="file">
+									<a href="/post/2020-2-Java-she-zhao-mian-shi-zheng-li/">
+                     
+										    2020.2 Java 社招面试整理
+                     
+									</a>
+								</li>
+								<div class="article-toc" style="display: none;"></div>
+							</ul>
+			
+								</li>
+								
+							</ul>
+			
+		</div>
+	</div>
+</div>
+
+	<!-- 引入正文 -->
+	<div id="content" class="content">
+		<h1 id="article-title">
+	Java 内存模型
+</h1>
+
+<!-- meta -->
+<div class="article-meta">
+	
+
+	<span>Wu Jun</span>
+	<span>2019-12-31 10:43:49</span>
+
+  <div id="article-categories">
+    
+		  <span>Categories：</span>
+      
+          
+              <span>
+                  <i class="fa fa-folder" aria-hidden="true">
+                  <a href="/categories/05-Java/">05 Java</a>
+                  </i>
+                
+                  >
+                
+              </span>
+          
+      
+          
+              <span>
+                  <i class="fa fa-folder" aria-hidden="true">
+                  <a href="/categories/05-Java/01-Java-虚拟机/">01 Java 虚拟机</a>
+                  </i>
+                
+              </span>
+          
+      
+    
+
+    
+		    <span>Tags：</span>
+        
+    
+  </div>
+
+</div>
+
+<!-- content -->
+<div id="article-content">
+	<h3 id="1-为什么需要内存模型"><a class="header-anchor" href="#1-为什么需要内存模型"></a>1 为什么需要内存模型</h3>
+<h4 id="1-1-硬件的效率与一致性"><a class="header-anchor" href="#1-1-硬件的效率与一致性"></a>1.1 硬件的效率与一致性</h4>
+<h5 id="1）高速缓存"><a class="header-anchor" href="#1）高速缓存"></a>1）高速缓存</h5>
+<p>绝大多数的运算任务不可能只靠处理器计算就能完成，处理器至少要与内存交互，所以现代计算机系统都不得不加入一层读写速度尽可能接近处理器运算速度的高速缓存来作为内存与处理器之间的缓冲：将运算需要使用到的数据复制到缓存中，让运算能快速运行，当运算结束后再从缓存同步回内存之中，这样处理器就无须等待缓慢的内存读写了；</p>
+<h5 id="2）缓存一致性"><a class="header-anchor" href="#2）缓存一致性"></a>2）缓存一致性</h5>
+<p>基于高速缓存的存储交互很好地解决了处理器与内存的速度矛盾，但是也为计算机系统带来更高的复杂度，因为它引入了一个新的问题：缓存一致性；为了解决一致性的问题，需要各个处理器访问缓存时都遵循一些协议，在读写时要根据协议来进行操作，这类协议有MSI、MESI、MOSI、Synapse、Firefly及Dragon Protocol等；</p>
+<h5 id="3）内存模型"><a class="header-anchor" href="#3）内存模型"></a>3）内存模型</h5>
+<p>内存模型可以理解在特定的操作协议下，对特定的内存或高速缓存进行读写访问的过程抽象；不同架构的物理机器可以拥有不一样的内存模型，而Java虚拟机也有自己的内存模型，并且这里介绍的内存访问操作与硬件的缓存访问具有很高的可比性；</p>
+<h5 id="4）乱序执行优化"><a class="header-anchor" href="#4）乱序执行优化"></a>4）乱序执行优化</h5>
+<p>除了增加高速缓存之外，为了使得处理器内部的运算单元能尽量被充分利用，处理器可能会对输入代码进行乱序执行优化，处理器会在计算之后将乱序执行的结果重组，保证该结果与顺序执行的结果是一致的；</p>
+<h4 id="1-2-重排序"><a class="header-anchor" href="#1-2-重排序"></a>1.2 重排序</h4>
+<ul>
+<li>在编译器中生成的指令顺序，可以与源代码中的顺序不同</li>
+<li>此外编译器还会把变量保存在寄存器而不是内存中；</li>
+<li>处理器可以采用乱序或并行等方式来执行指令；</li>
+<li>缓存可能会改变将写人变量提交到主内存的次序；</li>
+<li>而且，保存在处理器本地缓存中的值，对于其他处理器是不可见的。</li>
+</ul>
+<p>同步将限制编译器、运行时和硬件对内存操作重排序的方式，从而在实施重排序时不会破坏JMM提供的可见性保证。</p>
+<h4 id="1-3-Java-内存模型"><a class="header-anchor" href="#1-3-Java-内存模型"></a>1.3 Java 内存模型</h4>
+<p>Java 虚拟机规范中试图定义一种 Java 内存模型（JMM）来屏蔽掉各种硬件和操作系统的内存访问差异，以实现让 Java 程序在各种平台下都能达到一致的内存访问效果。</p>
+<p>为了使 Java 开发人员无须关心不同架构上内存模型之间的差异，Java 提供了自己的内存模型，并且 JVM 通过在适当的位置上插人内存栅栏来屏蔽在 JVM 与底层平台内存模型之间的差异。</p>
+<p>主内存、工作内存与 JVM 内存不是同一个层次的内存划分，没有关联</p>
+<h3 id="2-主内存与工作内存"><a class="header-anchor" href="#2-主内存与工作内存"></a>2 主内存与工作内存</h3>
+<p>Java 内存模型的主要目标是定义程序中各个线程共享变量的访问规则</p>
+<h4 id="2-1-主内存"><a class="header-anchor" href="#2-1-主内存"></a>2.1 主内存</h4>
+<p>Java 内存模型规定了所有的变量都存储在主内存中，线程不能直接读写主内存中的变量；</p>
+<h4 id="2-2-工作内存"><a class="header-anchor" href="#2-2-工作内存"></a>2.2 工作内存</h4>
+<p>线程有自己的工作内存，保存了被该线程使用到的变量的主内存副本拷贝，线程对变量的所有操作都必须在工作内存中进行</p>
+<h4 id="2-3-内存栅栏"><a class="header-anchor" href="#2-3-内存栅栏"></a>2.3 内存栅栏</h4>
+<p>内存栅栏（Memory Barrier）就是从本地或工作内存到主存之间的拷贝动作：Java 并发 API 中很多操作都隐含有跨越内存栅栏的含义：volatile、synchronized、Thread 中的函数如 start() 和 interrupt()、ExecutorService 中的函数以及像 CountDownLatch 这样的同步工具类等。</p>
+<p>线程、主内存和工作内存的关系如下所示：
+<img src="https://cdn.jsdelivr.net/gh/wujun234/images@master/1545648768929.jpg" alt=""></p>
+<h3 id="3-内存间交互操作"><a class="header-anchor" href="#3-内存间交互操作"></a>3 内存间交互操作</h3>
+<p>Java 内存模型中定义了以下八种操作来完成主内存与工作内存之间具体的交互协议，虚拟机实现时必须保证下面提及的每一种操作都是原子的、不可再分的（对于 double 和 long 类型的变量的某些操作在某些平台允许有例外）：</p>
+<p>lock、unlock、read、load、use、assign、store、write</p>
+<p>基于理解难度和严谨性考虑，最新的 JSR-133 文档中，已经<strong>放弃采用</strong>这八种操作去定义 Java 内存模型的访问协议了，后面将会介绍一个等效判断原则 – <strong>先行发生原则</strong>，用来确定一个访问在并发环境下是否安全；</p>
+<h3 id="4-volatile-变量的特殊规则"><a class="header-anchor" href="#4-volatile-变量的特殊规则"></a>4 volatile 变量的特殊规则</h3>
+<p>关键字 volatile 是 JVM 提供的最轻量级的同步机制；</p>
+<h4 id="4-1-两种特性"><a class="header-anchor" href="#4-1-两种特性"></a>4.1 两种特性</h4>
+<p>volatile 变量具备两种特性：</p>
+<ul>
+<li><strong>可见性</strong>：当一个线程修改了这个变量的值，新的值对于其他线程来说是可以立即得知的，而普通的变量的值在线程间传递均需要通过主内存来完成；</li>
+<li><strong>有序性</strong>：禁止指令重排序优化,普通的变量仅仅会保证在该方法的执行过程中所有依赖赋值结果的地方都能获取到正确的结果，而不能保证变量赋值操作的顺序与程序代码中的执行顺序一致；</li>
+</ul>
+<h4 id="4-2-非线程安全"><a class="header-anchor" href="#4-2-非线程安全"></a>4.2 非线程安全</h4>
+<p>volatile 变量在各个线程的工作内存中不存在一致性问题，但是 Java 里面的运算并非原子操作，导致 volatile 变量的运算在并发下一样是不安全的；</p>
+<p>在不符合以下两条规则的运算场景中，我们仍然要通过加锁来保证原子性：</p>
+<ul>
+<li>运算结果并不依赖变量的当前值或者能够确保只有单一的线程修改变量的值</li>
+<li>变量不需要与其他的状态变量共同参与不变约束；</li>
+</ul>
+<h4 id="4-3-性能"><a class="header-anchor" href="#4-3-性能"></a>4.3 性能</h4>
+<p>volatile 变量读操作没差别，写操作慢一些；大多数场景下总开销比锁低</p>
+<p>在 volatile 与锁之中选择的唯一依据仅仅是 volatile 的语义能否满足使用场景的需求；</p>
+<h4 id="4-4-原理"><a class="header-anchor" href="#4-4-原理"></a>4.4 原理</h4>
+<p>Volatile 如何保证内存可见性:</p>
+<ol>
+<li>当写一个 volatile 变量时，JMM 会把该线程对应的本地内存中的共享变量刷新到主内存。</li>
+<li>当读一个 volatile 变量时，JMM 会把该线程对应的本地内存置为无效。线程接下来将从主内存中读取共享变量。</li>
+</ol>
+<h3 id="5-long-和-double-型变量的特殊规则"><a class="header-anchor" href="#5-long-和-double-型变量的特殊规则"></a>5 long 和 double 型变量的特殊规则</h3>
+<h4 id="5-1-非原子性协定"><a class="header-anchor" href="#5-1-非原子性协定"></a>5.1 非原子性协定</h4>
+<p>Java 内存模型要求, 变量的读取和写入操作都必须是原子操作, 但对于非 volatile 类型的 long 和 double 变量, JVM 允许将 64 位的读操作或写操作, 分解为两个 32 位的操作。</p>
+<p>当读取一个非 volatile 类型的 long 变量时, 如果对该变量的读操作和写操作在不同的线程中执行, 那么很可能会读取到每个值的高 32 位和另一个值的第 32 位, 这被称为字撕裂。</p>
+<p>通过 volatile 修饰或者用锁保护起来的 long 或 double 可以保证读写原子性。</p>
+<h4 id="5-2-原子性的操作"><a class="header-anchor" href="#5-2-原子性的操作"></a>5.2 原子性的操作</h4>
+<p>但允许虚拟机选择把这些操作实现为具有原子性的操作，目前各种平台下的商用虚拟机几乎都选择把 64 位数据的读写操作作为原子操作来对待；</p>
+<h3 id="6-原子性、可见性与有序性"><a class="header-anchor" href="#6-原子性、可见性与有序性"></a>6 原子性、可见性与有序性</h3>
+<h4 id="6-1-原子性（Atomicity）"><a class="header-anchor" href="#6-1-原子性（Atomicity）"></a>6.1 原子性（Atomicity）</h4>
+<p>由 Java 内存模型来直接保证的原子性变量操作包括 read、load、assign、use、store 和 write；在 synchronized 块之间的操作也具备原子性；</p>
+<h4 id="6-2-可见性（Visibility）"><a class="header-anchor" href="#6-2-可见性（Visibility）"></a>6.2 可见性（Visibility）</h4>
+<p>当一个线程修改了共享变量的值，其他线程能够立即得知这个修改；除了 volatile 之外，Java 还有 synchronized 和 final 关键字能实现可见性；</p>
+<ul>
+<li>加锁可以用于确保某个线程以一种可预测的方式来查看另一个线程执行结果.</li>
+<li>加锁的含义不仅仅局限于互斥行为, 还包括内存可见性。为了确保所有线程都能看到共享变量的最新值, 所有执行读操作和写操作的线程都必须在同一个锁上进行同步。</li>
+</ul>
+<h4 id="6-3-有序性（Ordering）"><a class="header-anchor" href="#6-3-有序性（Ordering）"></a>6.3 有序性（Ordering）</h4>
+<p>如果在本线程内观察，所有的操作都是有序的；如果在一个线程中观察另一个线程，所有的操作都是无序的；Java 语言提供了 volatile 和 synchronized 两个关键字来保证线程之间操作的有序性；</p>
+<h3 id="7-先行发生原则"><a class="header-anchor" href="#7-先行发生原则"></a>7 先行发生原则</h3>
+<p>如果说操作 A 发生操作 B 之前，操作 A 产生的影响能被操作 B 观察到，影响包括了修改了内存中共享变量的值、发送了消息、调用了方法等</p>
+<p>Happens-Before 的规则包括：</p>
+<ul>
+<li>程序顺序规则</li>
+<li>监视器锁规则</li>
+<li>volatile 变量规则</li>
+<li>线程启动规则</li>
+<li>线程终止规则</li>
+<li>线程中断规则</li>
+<li>终结器规则</li>
+<li>传递性</li>
+</ul>
+<blockquote>
+<p>在多线程访问共享数据时, 至少有一条线程执行写入操作时, 如果读操作和写操作之间没有Happen-Before关系, 那么就会存在数据竞争问题.</p>
+</blockquote>
+<p>时间先后顺序与先行发生原则之间基本没有太大的关系，所以我们衡量并发安全问题的时候不要受到时间顺序的干扰，一切必须以先行发生原则为准；</p>
+<h3 id="7-发布与逸出"><a class="header-anchor" href="#7-发布与逸出"></a>7 发布与逸出</h3>
+<h4 id="7-1-发布"><a class="header-anchor" href="#7-1-发布"></a>7.1 发布</h4>
+<ul>
+<li>发布一个对象是指该对象能够在当前作用域之外的代码中使用</li>
+<li>当发布某个对象时, 如果在发布过程中确保线程安全性, 则可能需要使用同步</li>
+<li>发布内部状态可能会破坏封装性, 并使得程序难以维持不变性条件</li>
+</ul>
+<h4 id="7-2-逸出"><a class="header-anchor" href="#7-2-逸出"></a>7.2 逸出</h4>
+<ul>
+<li>当某个不应该被发布的对象被发布时, 这种情况被称为逸出</li>
+<li>发布某个对象时会间接发布其它对象</li>
+<li>不要再构造过程中使 this 引用逸出</li>
+</ul>
+<h4 id="7-3-不安全的发布"><a class="header-anchor" href="#7-3-不安全的发布"></a>7.3 不安全的发布</h4>
+<p>当缺少 Happen-Before 关系时，就可能出现重排序问题。</p>
+<ul>
+<li>如果无法确保发布共享引用的操作Happen-Before另一个线程加载该引用，可能看到一个被部分构造的对象.</li>
+<li>错误的延迟初始化将导致不正确的发布</li>
+</ul>
+<p>除不可变对象以外，使用被另一个线程初始化的对象通常都是不安全的，除非对象的发布操作是在使用该对象的线程开始使用之前执行</p>
+<h4 id="7-4-安全发布"><a class="header-anchor" href="#7-4-安全发布"></a>7.4 安全发布</h4>
+<p>通过使用一个由锁保护共享变量或者使用共享的volatile类型变量，可以确保对该变量的读取操作和写入操作按照Happens-Before关系来排序。</p>
+<p>Happens-Before比安全发布提供了更强可见性与顺序保证。</p>
+<p>Happens-Before排序是在内存访问级别上操作的，它是一种“并发级汇编语言&quot;，而安全发布的运行级别更接近程序设计。</p>
+<h5 id="1）不正确的发布-正确的对象被坏"><a class="header-anchor" href="#1）不正确的发布-正确的对象被坏"></a>1）不正确的发布: 正确的对象被坏</h5>
+<h5 id="2）不可变对象与初始化安全性"><a class="header-anchor" href="#2）不可变对象与初始化安全性"></a>2）不可变对象与初始化安全性</h5>
+<ul>
+<li>任何线程都可以在不需要同步的情况下安全地访问不可变对象, 即使发布对象时没有使用同步</li>
+<li>如果 final 类型的域指向的是可变对象, 那么在访问这些域指向的对象的状态时仍然需要同步</li>
+</ul>
+<h5 id="3）安全发布的常用模式"><a class="header-anchor" href="#3）安全发布的常用模式"></a>3）安全发布的常用模式</h5>
+<ul>
+<li>在静态初始化函数中初始化一个对象引用</li>
+<li>将对象的引用保存到 volatile 类型的域或者 AtomicReferance 对象中</li>
+<li>将对象的引用保存到某个被正确构造对象的 final 类型域中</li>
+<li>将对象的引用保存到一个由锁保护的域中</li>
+</ul>
+<h5 id="4）事实不可变对象"><a class="header-anchor" href="#4）事实不可变对象"></a>4）事实不可变对象</h5>
+<ul>
+<li>如果对象从技术上看是可变的, 但是状态在发布之后不会再改变, 这种对象称之为事实不可变对象</li>
+<li>在没有额外同步的情况下, 任何线程都可以安全地使用被安全发布的事实不可变对象</li>
+</ul>
+<h5 id="5）可变对象"><a class="header-anchor" href="#5）可变对象"></a>5）可变对象</h5>
+<p>对象的发布需求取决于它的可变性</p>
+<ul>
+<li>不可变对象可以通过任意方式来发布</li>
+<li>事实不可变对象必须通过安全发布的方式来发布</li>
+<li>可变对象必须通过安全发布的方式来发布, 并且必须是线程安全的类或者由某个锁保护起来</li>
+</ul>
+<h5 id="5）安全地共享对象"><a class="header-anchor" href="#5）安全地共享对象"></a>5）安全地共享对象</h5>
+<p>在并发程序中使用和共享对象时, 可以使用一些实用的策略</p>
+<ul>
+<li>线程封闭: 线程封闭的对象只能由一个线程访问</li>
+<li>只读共享: 不可变对象和事实不可变对象</li>
+<li>线程安全共享: 线程安全的对象内部实现同步机制, 如 ConcurrentHashMap</li>
+<li>保护对象: 通过持有特定的锁来访问</li>
+</ul>
+<p>造成不正确发布的真正原因, 就是在“发布一个对象”与“另一个线程访问该对象”之间缺少一种 Happen-Before 关系。</p>
+<h4 id="7-5-安全初始化模式"><a class="header-anchor" href="#7-5-安全初始化模式"></a>7.5 安全初始化模式</h4>
+<pre><code class="language-java">@ThreadSafe
+public class ResourceFactory {
+    private static class ResourceHolder {
+        public static Resource resource = new Resource();
+    }
+
+    public static Resource getResource() {
+        return ResourceFactory.ResourceHolder.resource;
+    }
+
+    private static class Resource {}
+}
+</code></pre>
+<p>使用延长初始化占位类模式即可以达到延迟初始化, 又避免同步开销。</p>
+<h4 id="7-6-双重检查加锁"><a class="header-anchor" href="#7-6-双重检查加锁"></a>7.6 双重检查加锁</h4>
+<pre><code class="language-java">@NotThreadSafe
+public class DoubleCheckedLocking {
+    private static Resource resource;
+
+    public static Resource getInstance() {
+        if (resource == null)
+            synchronized (DoubleCheckedLocking.class) {
+                if (resource == null)
+                    resource = new Resource();
+            }
+        return resource;
+    }
+
+    private static class Resource {}
+}
+</code></pre>
+<ul>
+<li>双重检查由于重排序的问题, 线程可能看到一个仅被部分构造的 resource.</li>
+<li>可通过将 resource 声明为 volatile 来修正上述问题</li>
+<li>不建议使用此种方式，较延迟初始化占位类模式相比，DCL 模式代码过于复杂且更脆弱。</li>
+</ul>
+<h3 id="8-初始化过程中的安全性"><a class="header-anchor" href="#8-初始化过程中的安全性"></a>8 初始化过程中的安全性</h3>
+<p>初始化安全性将确保，对于被正确构造的对象，所有线程都能看到由构造函数为对象各个 final 域设置的正确值，而不管采用何种方式来发布对象。而且对于可以通过被正确构造对象中某个 final 域到达的任意变量(例如某个 final 数组中的元素或者由一个 final 域引用的 HashMap 的键值)将同样对于其它线程是可见的。</p>
+<p>初始化安全性只能保证 final 域可达的值从构造过程完成时开始的可见性。对于通过非 final 域可达的值，或者在构造过程完成后，可能改变的值，必须采用同步来确保可见性。</p>
+<h3 id="9-借助同步"><a class="header-anchor" href="#9-借助同步"></a>9 借助同步</h3>
+<p>有一项技术称之为“借助（Piggyback）”，是因为它使用了一种现有的 Happens-Before 顺序来保证 对象 X 的的可见性，而不是专门为了发布 X 而创建的一种 Happens-Before 顺序。</p>
+<p>在类库中提供的其他 Happens-Before 排序包括：</p>
+<ul>
+<li>将一个元素放人一个线程安全容器的操作将在另一个线程从该容器中获得这个元素的操作之前执行</li>
+<li>在 CountDownLatch 上的倒数操作将在线程从闭锁上的await方法中返回之前执行</li>
+<li>释放 Semaphore 许可的操作将在从该 semaphore 上获得一个许可之前执行</li>
+<li>Future 表示的任务的所有操作将在从 Future.get 中返回之前执行</li>
+<li>向 Executor 提交一个 Runnable 或 Callable 的操作将在任务开始执行之前执行。</li>
+<li>一个线程到达 CyclicBarrier 或 Exchanger 的操作将在其他到达该棚栏或交换点的线程被释放之前执行。如果 CyclicBarrier 使用一个栅栏操作，那么到达栅栏的操作将在栅栏操作之前执行，而栅栏操作又会在线程从栅栏中释放之前执行。</li>
+</ul>
+
+</div>
+
+<!-- post-guide -->
+
+    <div class="post-guide">
+        <div class="item left">
+            
+              <a href="/post/wan-qi-yun-xing-qi-you-hua/">
+                  <i class="fa fa-angle-left" aria-hidden="true"></i>
+                  晚期（运行期）优化
+              </a>
+            
+        </div>
+        <div class="item right">
+            
+              <a href="/post/lei-he-jie-kou-15-25-/">
+                类和接口（15-25）
+                <i class="fa fa-angle-right" aria-hidden="true"></i>
+              </a>
+            
+        </div>
+    </div>
+
+
+<!-- comment - giscus -->
+
+  <meta property="og:title" content="Java 内存模型"/>
+
+  <script src="https://giscus.app/client.js"
+          data-repo="wujun234/giscus"
+          data-repo-id="R_kgDOI_qjKQ"
+          data-category="Announcements"
+          data-category-id="DIC_kwDOI_qjKc4CUTeX"
+          data-mapping="og:title"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+  </script>
+
+
+<!-- comment - valine -->
+
+
+<script>
+	
+	
+</script>
+	</div>
+	<div id="footer">
+	<p>
+	©<span id="footerYear-start">2018</span>-<span id="footerYear-end"></span>
+
+	
+        <a href='/' target="_blank">Wu Jun</a>
+	
+	
+	
+	<br>
+	Theme <a href="//github.com/wujun234/hexo-theme-tree" target="_blank">Tree</a>
+	by <a href="//wujun.me" target="_blank">Wu Jun</a>
+	Powered by <a href="//hexo.io" target="_blank">Hexo</a>
+	</p>
+</div>
+
+
+<script type="text/javascript">
+	document.getElementById('footerYear-end').innerHTML = new Date().getFullYear() + '';
+</script>
+
+    <script src='https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js'></script>
+    <script>
+      if (window.mermaid) {
+        mermaid.initialize({theme: 'forest'});
+      }
+    </script>
+
+	<button id="totop-toggle" class="toggle"><i class="fa fa-angle-double-up" aria-hidden="true"></i></button>
+</body>
+</html>

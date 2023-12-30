@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+
+Sitemap: https://wujun234.com/sitemap.xml
+Sitemap: https://wujun234.com/baidusitemap.xml
