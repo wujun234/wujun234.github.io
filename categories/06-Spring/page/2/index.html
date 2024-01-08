@@ -5323,181 +5323,14 @@ public void pointCut() {
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-MVC/">
+			<a href="/post/Spring-Data-JPA/">
 				<h2 class="index-title">
-					Spring MVC
+					Spring Data JPA
 				</h2>
 				<div class="index-brief">
-					1 Spring MVC 概览
-Spring 提供了一个功能齐全的 MVC 框架用于构建 Web 应用程序。Spring 框架可以很容易的和其他的 MVC 框架融合(如 Struts)，该框架使用控制反转(IOC)将控制器逻辑和业务对象分离开来。它也允许以声明的方式绑定请求参数到业务对象上。
-
-Di
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/Spring-MVC-jin-jie/">
-				<h2 class="index-title">
-					Spring MVC 进阶
-				</h2>
-				<div class="index-brief">
-					1 替代配置
-1.1 自定义 DispatcherServlet
-除了三个必须重载的抽象方法，AbstractAnnotationConfigDispatcherServletInitializer 还有很多方法可以重载，以实现额外配置。
-例如，通过对 customizeRegistration()
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/Spring-RestTemplate/">
-				<h2 class="index-title">
-					Spring RestTemplate
-				</h2>
-				<div class="index-brief">
-					RestTemplate 属于 Spring-Web，是 Spring 的同步客户端HTTP访问的中心类。简化了与 HTTP 服务器的通信，并应用了 RESTful 原则。
-RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可切换到使用不同
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/kua-yu/">
-				<h2 class="index-title">
-					跨域
-				</h2>
-				<div class="index-brief">
-					常用的跨域解决方案有 JSONP 和 CORS， spingboot 2.0 开始不推荐使用 JSONP。
-1 CORS
-1.1 属性含义
-
-
-
-属性
-含义
-
-
-
-
-value
-指定所支持域的集合， 表示所有域都支持，默认值为 。这些值对应于 HTTP 请求头中的 Access-Control-Al
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/JdbcTemplate/">
-				<h2 class="index-title">
-					JdbcTemplate
-				</h2>
-				<div class="index-brief">
-					为了避免业务层模块强依赖于某种类型的数据库，Spring 数据库访问层以接口形式对外提供服务。
-使用 Spring JDBC 的异常体系，描述能力强，且平台无关。
-1 数据访问模板化
-数据访问过程中的固定步骤和变量分为两类：
-
-模板（templates）：处理数据访问的固定部分——事务控制、 管理资
+					Java 持久化 API（Java Persistence API， JPA）基于 POJO 的持久化机制，制定了规范，具体由厂商实现。
+只需按照约定好的【方法命名规则】编写 Repository 接口，不需要实现类，就可实现对数据库的访问和操作。
+hibernate 实现了 JPA 规范，Spri
 					...
 				</div>
 			</a>
@@ -5571,15 +5404,17 @@ Spring Data MongoDB 提供了三种方式在 Spring 应用中使用 MongoDB：
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Data-Neo4j/">
+			<a href="/post/JdbcTemplate/">
 				<h2 class="index-title">
-					Spring Data Neo4j
+					JdbcTemplate
 				</h2>
 				<div class="index-brief">
-					1 配置Spring Data Neo4j
-启用 @EnableNeo4jRepositories 注解，扩展 Neo4jConfiguration，声明 GraphDatabaseService bean
-@Configuration
-@EnableNeo4jRepositories(basePa
+					为了避免业务层模块强依赖于某种类型的数据库，Spring 数据库访问层以接口形式对外提供服务。
+使用 Spring JDBC 的异常体系，描述能力强，且平台无关。
+1 数据访问模板化
+数据访问过程中的固定步骤和变量分为两类：
+
+模板（templates）：处理数据访问的固定部分——事务控制、 管理资
 					...
 				</div>
 			</a>
@@ -5610,14 +5445,15 @@ Spring Data MongoDB 提供了三种方式在 Spring 应用中使用 MongoDB：
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Data-JPA/">
+			<a href="/post/Spring-Data-Neo4j/">
 				<h2 class="index-title">
-					Spring Data JPA
+					Spring Data Neo4j
 				</h2>
 				<div class="index-brief">
-					Java 持久化 API（Java Persistence API， JPA）基于 POJO 的持久化机制，制定了规范，具体由厂商实现。
-只需按照约定好的【方法命名规则】编写 Repository 接口，不需要实现类，就可实现对数据库的访问和操作。
-hibernate 实现了 JPA 规范，Spri
+					1 配置Spring Data Neo4j
+启用 @EnableNeo4jRepositories 注解，扩展 Neo4jConfiguration，声明 GraphDatabaseService bean
+@Configuration
+@EnableNeo4jRepositories(basePa
 					...
 				</div>
 			</a>
@@ -5659,6 +5495,181 @@ Spring Data Redis 为四种 Redis 客户端实现提供了连接工厂：
 
 JedisConnectionFactory
 JredisConnectionFacto
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Dynamic-DataSource/">
+				<h2 class="index-title">
+					Dynamic DataSource
+				</h2>
+				<div class="index-brief">
+					一、AOP 实现
+AOP 实现多数据源，可读写分离
+1 配置文件
+dynamic-db.master.driver-class-name = com.mysql.jdbc.Driver
+dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/s
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Transaction/">
+				<h2 class="index-title">
+					Transaction
+				</h2>
+				<div class="index-brief">
+					Spring 事务的本质是数据库对事务的支持。
+@EnableTransactionManagement 开启对事务注解的解析
+1 声明式事务
+1.1 @Transactional 注解
+
+
+
+属性
+类型
+描述
+
+
+
+
+value
+String
+事务管理器
+
+
+propagation
+Propaga
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Spring-Cache/">
+				<h2 class="index-title">
+					Spring Cache
+				</h2>
+				<div class="index-brief">
+					Spring 自身并没有实现缓存解决方案， 但是它对缓存功能提供了声明式的支持， 能够与多种流行的缓存实现进行集成。
+Spring 的缓存抽象在很大程度上是围绕切面构建的。 在 Spring 中启用缓存时，会创建一个切面， 它触发一个或更多的 Spring 的缓存注解。
+1 启用对缓存的支持
+配置类
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Spring-Cache-Caffeine/">
+				<h2 class="index-title">
+					Spring Cache + Caffeine
+				</h2>
+				<div class="index-brief">
+					Caffeine 是使用 Java8 对 Guava 缓存的重写版本，在 Spring Boot 2.0 中取代 Guava。
+1 引入依赖
+&lt;dependency&gt;
+    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
+
 					...
 				</div>
 			</a>

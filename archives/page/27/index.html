@@ -5318,6 +5318,57 @@ $ ssh-keygen -t rsa -C &quot;youremail@example.com&quot
 		</div>	
 	
 		<div class="index-li">
+			<a href="/post/ban-ben-guan-li/">
+				<h2 class="index-title">
+					版本管理
+				</h2>
+				<div class="index-brief">
+					状态查看
+
+git status：查看状态
+git diff：查看修改内容
+
+版本回退
+
+HEAD：指向当前版本
+
+上一个版本就是HEAD^
+上上一个版本就是HEAD^^
+版本数多就写成HEAD~100
+
+
+git reset --hard commit_id：跳转到指定版本
+git log：可以查
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/post/chuang-jian-ban-ben-ku/">
 				<h2 class="index-title">
 					创建版本库
@@ -5360,27 +5411,17 @@ cd exist
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/ban-ben-guan-li/">
+			<a href="/post/biao-qian-guan-li/">
 				<h2 class="index-title">
-					版本管理
+					标签管理
 				</h2>
 				<div class="index-brief">
-					状态查看
+					tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。
+创建标签
 
-git status：查看状态
-git diff：查看修改内容
-
-版本回退
-
-HEAD：指向当前版本
-
-上一个版本就是HEAD^
-上上一个版本就是HEAD^^
-版本数多就写成HEAD~100
-
-
-git reset --hard commit_id：跳转到指定版本
-git log：可以查
+git tag ：新建一个标签，默认为HEAD，也可以指定一个commit id
+git tag -a  -m “blablabla…”：指定标签信息
+git tag -s  -m “blablabla…”：用PG
 					...
 				</div>
 			</a>
@@ -5456,52 +5497,6 @@ git reb
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/ji-ben-cao-zuo/">
-				<h2 class="index-title">
-					基本操作
-				</h2>
-				<div class="index-brief">
-					1 TortoiseSVN 基本操作
-
-浏览版本库（ Repo-browser ）
-检出文件（Checkout）
-更新最新文件（Update）
-增加文件（Add）
-删除文件（Delete）
-提交文件（Commit）
-修改文件（modify&amp;commit）
-放弃修改（Revert）
-导入/导出
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/post/qi-ta/">
 				<h2 class="index-title">
 					其他
@@ -5536,94 +5531,6 @@ GitHub已经为我们准备了各种.gitignore配置文件：https://github.com/
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/09-DevOps/1-Git/">1 Git</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/biao-qian-guan-li/">
-				<h2 class="index-title">
-					标签管理
-				</h2>
-				<div class="index-brief">
-					tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。
-创建标签
-
-git tag ：新建一个标签，默认为HEAD，也可以指定一个commit id
-git tag -a  -m “blablabla…”：指定标签信息
-git tag -s  -m “blablabla…”：用PG
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/ban-ben-guan-li/">
-				<h2 class="index-title">
-					版本管理
-				</h2>
-				<div class="index-brief">
-					1 版本管理类
-
-创建分支/标签（Branch/tag）
-创建补丁（Create patch）
-合并文件（Merge）
-解决冲突（Resolved）
-切换工作区（Switch）
-撤销操作（Revert）
-迁移资源库（Relocate）
-
-2 创建分支
-在版本库中创建(Create branch/ta
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
 										
                                     </span>
                                 
@@ -5677,20 +5584,22 @@ TortoiseSVN 图标
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Maven-bi-ji/">
+			<a href="/post/ji-ben-cao-zuo/">
 				<h2 class="index-title">
-					Maven 笔记
+					基本操作
 				</h2>
 				<div class="index-brief">
-					一、安装和配置
-安装
+					1 TortoiseSVN 基本操作
 
-准备JDK环境
-下载Maven ，解压
-配置环境变量
-3.1 添加 M2_HOME 和 MAVEN_HOME 到环境变量，指向 Maven 文件夹
-3.2 添加 Maven bin 文件夹到 PATH 变量
-3.3 需要时设置MAVEN_OPTS环境变量，-Xms128m -
+浏览版本库（ Repo-browser ）
+检出文件（Checkout）
+更新最新文件（Update）
+增加文件（Add）
+删除文件（Delete）
+提交文件（Commit）
+修改文件（modify&amp;commit）
+放弃修改（Revert）
+导入/导出
 					...
 				</div>
 			</a>
@@ -5711,7 +5620,100 @@ TortoiseSVN 图标
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/4-Maven/">4 Maven</a>
+                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/IDEA-kuai-jie-jian/">
+				<h2 class="index-title">
+					IDEA 快捷键
+				</h2>
+				<div class="index-brief">
+					可以在Settrings–Keymaps中修改快捷键
+快捷操作
+
+psvm：快捷创建main函数
+fori：快捷创建for循环
+sout：快速打出System.out.println()
+St：快速打出String
+todo：快速打出//Todo: 日期
+
+更多的提示可以CTRL + j 可以查看
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/3-IDEA/">3 IDEA</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/ban-ben-guan-li/">
+				<h2 class="index-title">
+					版本管理
+				</h2>
+				<div class="index-brief">
+					1 版本管理类
+
+创建分支/标签（Branch/tag）
+创建补丁（Create patch）
+合并文件（Merge）
+解决冲突（Resolved）
+切换工作区（Switch）
+撤销操作（Revert）
+迁移资源库（Relocate）
+
+2 创建分支
+在版本库中创建(Create branch/ta
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
 										
                                     </span>
                                 

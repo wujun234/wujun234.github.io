@@ -5280,48 +5280,6 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cloud-Ribbon/">
-				<h2 class="index-title">
-					Spring Cloud Ribbon
-				</h2>
-				<div class="index-brief">
-					Spring Cloud Ribbon封装了Netflix Ribbon，是基于HTTP和TCP的客户端负载均衡器。
-它主要包括六个组件：
-
-ServerList：负载均衡使用的服务器列表。
-ServerListFilter：服务器列表过滤器。
-IPing：探测服务实例是否存活的策略。
-IRule：
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/">10 微服务</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/post/Resilience4j/">
 				<h2 class="index-title">
 					Resilience4j
@@ -5399,6 +5357,48 @@ Hystrix官方已经停止开发了，Hystrix官方推荐使用新一代熔断器
 		</div>	
 	
 		<div class="index-li">
+			<a href="/post/Spring-Cloud-Ribbon/">
+				<h2 class="index-title">
+					Spring Cloud Ribbon
+				</h2>
+				<div class="index-brief">
+					Spring Cloud Ribbon封装了Netflix Ribbon，是基于HTTP和TCP的客户端负载均衡器。
+它主要包括六个组件：
+
+ServerList：负载均衡使用的服务器列表。
+ServerListFilter：服务器列表过滤器。
+IPing：探测服务实例是否存活的策略。
+IRule：
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/post/Spring-Cloud-Hystrix/">
 				<h2 class="index-title">
 					Spring Cloud Hystrix
@@ -5438,22 +5438,18 @@ Hystrix官方已经停止开发了，Hystrix官方推荐使用新一代熔断器
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Apache-Thrift-chu-shi-1-jian-jie/">
+			<a href="/post/Apache-Thrift-chu-shi-3-shi-zhan-Demo/">
 				<h2 class="index-title">
-					Apache Thrift 初识 (1) - 简介
+					Apache Thrift 初识 (3) - 实战Demo
 				</h2>
 				<div class="index-brief">
-					【todo】零拷贝
-Thrift 是最初由 Facebook 开发的 RPC 框架，适用于程序对程序静态的数据交换，需要先确定好数据结构。
-1 特性
+					1 下载Thrift编译器
 
+从官网中下载对应的 Window 平台编译器（以 thrift-0.9.2.exe 为例）
 
-静态化
-当数据结构发生变化时，必须重新编辑IDL文件、代码生成再编译载入的流程。
-
-
-跨语言
-Thrift 通过 IDL(接口定义语言) 在.th
+2  创建.thrift脚本
+使用 IDL 描述语言建立 query_media_service.thrift 脚本
+namespace java com.xxxx.auto.
 					...
 				</div>
 			</a>
@@ -5546,18 +5542,22 @@ bool
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Apache-Thrift-chu-shi-3-shi-zhan-Demo/">
+			<a href="/post/Apache-Thrift-chu-shi-1-jian-jie/">
 				<h2 class="index-title">
-					Apache Thrift 初识 (3) - 实战Demo
+					Apache Thrift 初识 (1) - 简介
 				</h2>
 				<div class="index-brief">
-					1 下载Thrift编译器
+					【todo】零拷贝
+Thrift 是最初由 Facebook 开发的 RPC 框架，适用于程序对程序静态的数据交换，需要先确定好数据结构。
+1 特性
 
-从官网中下载对应的 Window 平台编译器（以 thrift-0.9.2.exe 为例）
 
-2  创建.thrift脚本
-使用 IDL 描述语言建立 query_media_service.thrift 脚本
-namespace java com.xxxx.auto.
+静态化
+当数据结构发生变化时，必须重新编辑IDL文件、代码生成再编译载入的流程。
+
+
+跨语言
+Thrift 通过 IDL(接口定义语言) 在.th
 					...
 				</div>
 			</a>

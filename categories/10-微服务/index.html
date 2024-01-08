@@ -5381,18 +5381,13 @@ Spring Cloud Config 分服务端和客户端，服务端负责将 git（svn）�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cloud-Ribbon/">
+			<a href="/post/Spring-Cloud-Eureka/">
 				<h2 class="index-title">
-					Spring Cloud Ribbon
+					Spring Cloud Eureka
 				</h2>
 				<div class="index-brief">
-					Spring Cloud Ribbon封装了Netflix Ribbon，是基于HTTP和TCP的客户端负载均衡器。
-它主要包括六个组件：
-
-ServerList：负载均衡使用的服务器列表。
-ServerListFilter：服务器列表过滤器。
-IPing：探测服务实例是否存活的策略。
-IRule：
+					简介
+Spring Cloud针对服务注册与发现，进行了一层抽象，并提供了三种实现：Eureka、Consul、Zookeeper。目前支持得最好的就是Eureka，其次是Consul，最后是Zookeeper。Eureka 是封装了 Netflix 的 Eureka 模块，采用了 C-S 的设计架
 					...
 				</div>
 			</a>
@@ -5413,7 +5408,50 @@ IRule：
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
+                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Spring-Cloud-Consul/">
+				<h2 class="index-title">
+					Spring Cloud Consul
+				</h2>
+				<div class="index-brief">
+					Spring Cloud Consul是针对Consul的服务治理实现，提供服务发现和服务配置。包含了下面几个特性：
+
+服务发现
+健康检查
+Key/Value存储
+多数据中心
+
+Consul自身提供了服务端，不需要创建服务注册中心，通过命令“$consul agent -dev”启动consul服务
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
 										
                                     </span>
                                 
@@ -5500,15 +5538,18 @@ Hystrix官方已经停止开发了，Hystrix官方推荐使用新一代熔断器
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cloud-Hystrix/">
+			<a href="/post/Spring-Cloud-Ribbon/">
 				<h2 class="index-title">
-					Spring Cloud Hystrix
+					Spring Cloud Ribbon
 				</h2>
 				<div class="index-brief">
-					Hystrix 提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。
-一 熔断
-断路器
-失败次数达到阈值后， 断路器会切换到开路状态。 所有请求快速失败返回备选响应。 熔断时间窗后， 自动切换到半开路状态。判断下次请求，如果请求成功, 断
+					Spring Cloud Ribbon封装了Netflix Ribbon，是基于HTTP和TCP的客户端负载均衡器。
+它主要包括六个组件：
+
+ServerList：负载均衡使用的服务器列表。
+ServerListFilter：服务器列表过滤器。
+IPing：探测服务实例是否存活的策略。
+IRule：
 					...
 				</div>
 			</a>
@@ -5539,13 +5580,15 @@ Hystrix官方已经停止开发了，Hystrix官方推荐使用新一代熔断器
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cloud-Eureka/">
+			<a href="/post/Spring-Cloud-Hystrix/">
 				<h2 class="index-title">
-					Spring Cloud Eureka
+					Spring Cloud Hystrix
 				</h2>
 				<div class="index-brief">
-					简介
-Spring Cloud针对服务注册与发现，进行了一层抽象，并提供了三种实现：Eureka、Consul、Zookeeper。目前支持得最好的就是Eureka，其次是Consul，最后是Zookeeper。Eureka 是封装了 Netflix 的 Eureka 模块，采用了 C-S 的设计架
+					Hystrix 提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。
+一 熔断
+断路器
+失败次数达到阈值后， 断路器会切换到开路状态。 所有请求快速失败返回备选响应。 熔断时间窗后， 自动切换到半开路状态。判断下次请求，如果请求成功, 断
 					...
 				</div>
 			</a>
@@ -5566,50 +5609,7 @@ Spring Cloud针对服务注册与发现，进行了一层抽象，并提供了�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/Spring-Cloud-Consul/">
-				<h2 class="index-title">
-					Spring Cloud Consul
-				</h2>
-				<div class="index-brief">
-					Spring Cloud Consul是针对Consul的服务治理实现，提供服务发现和服务配置。包含了下面几个特性：
-
-服务发现
-健康检查
-Key/Value存储
-多数据中心
-
-Consul自身提供了服务端，不需要创建服务注册中心，通过命令“$consul agent -dev”启动consul服务
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/">10 微服务</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
+                                        <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
 										
                                     </span>
                                 
@@ -5662,14 +5662,13 @@ Consul自身提供了服务端，不需要创建服务注册中心，通过命�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cloud-Bus/">
+			<a href="/post/Spring-Cloud-Gateway/">
 				<h2 class="index-title">
-					Spring Cloud Bus
+					Spring Cloud Gateway
 				</h2>
 				<div class="index-brief">
-					消息总线是一种通信工具，可以在机器之间互相传输消息、文件等。消息总线扮演着一种消息路由的角色，拥有一套完备的路由机制来决定消息传输方向。发送段只需要向消息总线发出消息而不用管消息被如何转发。
-原理
-spring cloud bus整合 java的事件处理机制和消息中间件消息的发送和接受，主要由发送端
+					【todo】
+
 					...
 				</div>
 			</a>
@@ -5690,7 +5689,7 @@ spring cloud bus整合 java的事件处理机制和消息中间件消息的发�
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/4-消息组件/">4 消息组件</a>
+                                        <a href="/categories/10-微服务/3-API网关/">3 API网关</a>
 										
                                     </span>
                                 

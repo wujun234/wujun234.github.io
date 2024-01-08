@@ -5280,16 +5280,15 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/post/zabbix-zhong-wen-luan-ma/">
+			<a href="/post/zabbix-zhu-dong-mo-shi-bei-dong-mo-shi/">
 				<h2 class="index-title">
-					zabbix中文乱码
+					zabbix主动模式、被动模式
 				</h2>
 				<div class="index-brief">
-					Zabbix中文界面下，图形页面会有乱码，是因为字体格式不一致导致
+					zabbix agent检测分为主动（agent active）和被动（agent）两种形式，主动与被动的说法均是相对于agent来讨论的。
 
-
-从C:\Windows\Fonts找到 中文字体上传至zabbix的fonts目录/usr/share/zabbix/fonts
-修改include下的defines.inc.php中字体的配置，将里面关于字体设置从graphf
+主动：agent请求server获取主动的监控项列表，并主动将监控项内需要检测的数据提交给server/proxy
+被动：server向agent请求获取监
 					...
 				</div>
 			</a>
@@ -5359,15 +5358,19 @@ Zabbix能监控各
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/zabbix-zhu-dong-mo-shi-bei-dong-mo-shi/">
+			<a href="/post/maven-qian-yi-dao-gradle/">
 				<h2 class="index-title">
-					zabbix主动模式、被动模式
+					maven迁移到gradle
 				</h2>
 				<div class="index-brief">
-					zabbix agent检测分为主动（agent active）和被动（agent）两种形式，主动与被动的说法均是相对于agent来讨论的。
+					1 生成Maven构建图
 
-主动：agent请求server获取主动的监控项列表，并主动将监控项内需要检测的数据提交给server/proxy
-被动：server向agent请求获取监
+在根项目中 .mvn/extensions.xml 文件声明Gradle扩展
+
+&lt;extensions&gt;
+    &lt;extension&gt;
+        &lt;groupId&gt;com.gradle&lt;/groupId&gt;
+     
 					...
 				</div>
 			</a>
@@ -5388,7 +5391,7 @@ Zabbix能监控各
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/7-Zabbix/">7 Zabbix</a>
+                                        <a href="/categories/09-DevOps/5-Gradle/">5 Gradle</a>
 										
                                     </span>
                                 
@@ -5398,18 +5401,19 @@ Zabbix能监控各
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Zabbix-qian-yi/">
+			<a href="/post/Docker-bi-ji/">
 				<h2 class="index-title">
-					Zabbix迁移
+					Docker 笔记
 				</h2>
 				<div class="index-brief">
-					zabbix的前端所有的操作都存在zabbix数据库里。
-如果迁移要求历史数据不丢失，对zabbix库中相应的表进行导出导入即可。
-若是对历史数据不要求，那么只迁移配置信息即可。
-安装
+					1 Docker 简介
+Docker 是一个虚拟环境容器，可以将开发环境、代码、配置文件等一并打包到这个容器中，并发布和应用到任意平台中。
+2 Docker 架构
+2.1 架构
+Docker 使用 Go 语言进行开发，使用的是客户端/服务器（C/S）架构的模式。
 
-根据zabbix手册新安装zabbix服务端，如果需要保留历史数据，务必使用相同版本。
-安装好后访问/setup
+
+Docker 客户端：是主要的用
 					...
 				</div>
 			</a>
@@ -5430,7 +5434,7 @@ Zabbix能监控各
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/7-Zabbix/">7 Zabbix</a>
+                                        <a href="/categories/09-DevOps/9-Docker/">9 Docker</a>
 										
                                     </span>
                                 
@@ -5480,19 +5484,18 @@ Logstash ：数据收集处理
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Docker-bi-ji/">
+			<a href="/post/Zabbix-qian-yi/">
 				<h2 class="index-title">
-					Docker 笔记
+					Zabbix迁移
 				</h2>
 				<div class="index-brief">
-					1 Docker 简介
-Docker 是一个虚拟环境容器，可以将开发环境、代码、配置文件等一并打包到这个容器中，并发布和应用到任意平台中。
-2 Docker 架构
-2.1 架构
-Docker 使用 Go 语言进行开发，使用的是客户端/服务器（C/S）架构的模式。
+					zabbix的前端所有的操作都存在zabbix数据库里。
+如果迁移要求历史数据不丢失，对zabbix库中相应的表进行导出导入即可。
+若是对历史数据不要求，那么只迁移配置信息即可。
+安装
 
-
-Docker 客户端：是主要的用
+根据zabbix手册新安装zabbix服务端，如果需要保留历史数据，务必使用相同版本。
+安装好后访问/setup
 					...
 				</div>
 			</a>
@@ -5513,7 +5516,7 @@ Docker 客户端：是主要的用
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/9-Docker/">9 Docker</a>
+                                        <a href="/categories/09-DevOps/7-Zabbix/">7 Zabbix</a>
 										
                                     </span>
                                 

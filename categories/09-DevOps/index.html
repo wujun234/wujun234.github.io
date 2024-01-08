@@ -5364,6 +5364,57 @@ $ ssh-keygen -t rsa -C &quot;youremail@example.com&quot
 		</div>	
 	
 		<div class="index-li">
+			<a href="/post/ban-ben-guan-li/">
+				<h2 class="index-title">
+					版本管理
+				</h2>
+				<div class="index-brief">
+					状态查看
+
+git status：查看状态
+git diff：查看修改内容
+
+版本回退
+
+HEAD：指向当前版本
+
+上一个版本就是HEAD^
+上上一个版本就是HEAD^^
+版本数多就写成HEAD~100
+
+
+git reset --hard commit_id：跳转到指定版本
+git log：可以查
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/post/chuang-jian-ban-ben-ku/">
 				<h2 class="index-title">
 					创建版本库
@@ -5406,27 +5457,17 @@ cd exist
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/ban-ben-guan-li/">
+			<a href="/post/biao-qian-guan-li/">
 				<h2 class="index-title">
-					版本管理
+					标签管理
 				</h2>
 				<div class="index-brief">
-					状态查看
+					tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。
+创建标签
 
-git status：查看状态
-git diff：查看修改内容
-
-版本回退
-
-HEAD：指向当前版本
-
-上一个版本就是HEAD^
-上上一个版本就是HEAD^^
-版本数多就写成HEAD~100
-
-
-git reset --hard commit_id：跳转到指定版本
-git log：可以查
+git tag ：新建一个标签，默认为HEAD，也可以指定一个commit id
+git tag -a  -m “blablabla…”：指定标签信息
+git tag -s  -m “blablabla…”：用PG
 					...
 				</div>
 			</a>
@@ -5502,6 +5543,93 @@ git reb
 		</div>	
 	
 		<div class="index-li">
+			<a href="/post/qi-ta/">
+				<h2 class="index-title">
+					其他
+				</h2>
+				<div class="index-brief">
+					忽略特殊文件
+
+忽略某些文件时，需要编写.gitignore；
+.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！
+
+GitHub已经为我们准备了各种.gitignore配置文件：https://github.com/github/gitignore
+配置别名
+给
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/ji-chu-jie-shao/">
+				<h2 class="index-title">
+					基础介绍
+				</h2>
+				<div class="index-brief">
+					工作副本
+check out-在本地创建特定版本的工作副本
+
+SVN版本号
+全局版本号
+每提交一次就会产生一个唯一的版本号
+TortoiseSVN 图标
+
+
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/post/ji-ben-cao-zuo/">
 				<h2 class="index-title">
 					基本操作
@@ -5548,150 +5676,21 @@ git reb
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/qi-ta/">
+			<a href="/post/IDEA-kuai-jie-jian/">
 				<h2 class="index-title">
-					其他
+					IDEA 快捷键
 				</h2>
 				<div class="index-brief">
-					忽略特殊文件
+					可以在Settrings–Keymaps中修改快捷键
+快捷操作
 
-忽略某些文件时，需要编写.gitignore；
-.gitignore文件本身要放到版本库里，并且可以对.gitignore做版本管理！
+psvm：快捷创建main函数
+fori：快捷创建for循环
+sout：快速打出System.out.println()
+St：快速打出String
+todo：快速打出//Todo: 日期
 
-GitHub已经为我们准备了各种.gitignore配置文件：https://github.com/github/gitignore
-配置别名
-给
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/biao-qian-guan-li/">
-				<h2 class="index-title">
-					标签管理
-				</h2>
-				<div class="index-brief">
-					tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。
-创建标签
-
-git tag ：新建一个标签，默认为HEAD，也可以指定一个commit id
-git tag -a  -m “blablabla…”：指定标签信息
-git tag -s  -m “blablabla…”：用PG
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/ban-ben-guan-li/">
-				<h2 class="index-title">
-					版本管理
-				</h2>
-				<div class="index-brief">
-					1 版本管理类
-
-创建分支/标签（Branch/tag）
-创建补丁（Create patch）
-合并文件（Merge）
-解决冲突（Resolved）
-切换工作区（Switch）
-撤销操作（Revert）
-迁移资源库（Relocate）
-
-2 创建分支
-在版本库中创建(Create branch/ta
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/ji-chu-jie-shao/">
-				<h2 class="index-title">
-					基础介绍
-				</h2>
-				<div class="index-brief">
-					工作副本
-check out-在本地创建特定版本的工作副本
-
-SVN版本号
-全局版本号
-每提交一次就会产生一个唯一的版本号
-TortoiseSVN 图标
-
+更多的提示可以CTRL + j 可以查看
 
 					...
 				</div>
@@ -5713,7 +5712,7 @@ TortoiseSVN 图标
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/2-SVN/">2 SVN</a>
+                                        <a href="/categories/09-DevOps/3-IDEA/">3 IDEA</a>
 										
                                     </span>
                                 

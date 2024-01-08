@@ -5280,14 +5280,14 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/post/Spring-Security/">
+			<a href="/post/mo-ren-ri-zhi/">
 				<h2 class="index-title">
-					Spring Security
+					默认日志
 				</h2>
 				<div class="index-brief">
-					1 保护 Web
-配置 Spring Security，在扩展 WebSecurityConfigurerAdapter 的 bean 上，添加 @EnableWebSecurity 注解，启用 Web 安全功能，并在类中重写 configure 的 3 个方法。
-@EnableWebSecurit
+					Spring Boot 在所有内部日志中使用 Commons Logging，但是默认配置也提供了对常用日志的支持
+1 格式化日志
+2016-04-13 08:23:50.120  INFO 37397 --- [main] org.hibernate.Version: HHH000412: Hib
 					...
 				</div>
 			</a>
@@ -5308,7 +5308,7 @@
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/06-Security/">06 Security</a>
+                                        <a href="/categories/06-Spring/08-Log/">08 Log</a>
 										
                                     </span>
                                 
@@ -5402,44 +5402,6 @@ public cla
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/mo-ren-ri-zhi/">
-				<h2 class="index-title">
-					默认日志
-				</h2>
-				<div class="index-brief">
-					Spring Boot 在所有内部日志中使用 Commons Logging，但是默认配置也提供了对常用日志的支持
-1 格式化日志
-2016-04-13 08:23:50.120  INFO 37397 --- [main] org.hibernate.Version: HHH000412: Hib
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/08-Log/">08 Log</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/post/Spring-Retry/">
 				<h2 class="index-title">
 					Spring Retry
@@ -5470,6 +5432,51 @@ public cla
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/06-Spring/10-Retry/">10 Retry</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Scheduled/">
+				<h2 class="index-title">
+					Scheduled
+				</h2>
+				<div class="index-brief">
+					1 @Scheduled
+@EnableScheduling 注解，启用定时任务的配置
+@SpringBootApplication
+@EnableScheduling
+public class Application {
+}
+
+创建定时任务实现类
+@Component
+public class S
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/07-Async/">07 Async</a>
 										
                                     </span>
                                 
@@ -5563,48 +5570,6 @@ $ ssh-keygen -t rsa -C &quot;youremail@example.com&quot
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/chuang-jian-ban-ben-ku/">
-				<h2 class="index-title">
-					创建版本库
-				</h2>
-				<div class="index-brief">
-					Git全局设置
-git config --global user.name &quot;wujun234&quot;
-git config --global user.email &quot;wujun234@gmail.com&quot;
-
-一、创建本地版本库
-1 进入项目文件夹
-cd exist
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/post/ban-ben-guan-li/">
 				<h2 class="index-title">
 					版本管理
@@ -5656,21 +5621,59 @@ git log：可以查
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/fen-zhi-guan-li/">
+			<a href="/post/chuang-jian-ban-ben-ku/">
 				<h2 class="index-title">
-					分支管理
+					创建版本库
 				</h2>
 				<div class="index-brief">
-					创建与合并分支
-Git鼓励大量使用分支：
+					Git全局设置
+git config --global user.name &quot;wujun234&quot;
+git config --global user.email &quot;wujun234@gmail.com&quot;
 
-git branch：查看分支
-git branch ：创建分支
-git checkout ：切换分支
-git checkout -b ：创建+切换分支
-git branch -d ：删除本地分支
-git merge ：合并某分支到当前分支
-git reb
+一、创建本地版本库
+1 进入项目文件夹
+cd exist
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/1-Git/">1 Git</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/biao-qian-guan-li/">
+				<h2 class="index-title">
+					标签管理
+				</h2>
+				<div class="index-brief">
+					tag就是一个让人容易记住的有意义的名字，它跟某个commit绑在一起。
+创建标签
+
+git tag ：新建一个标签，默认为HEAD，也可以指定一个commit id
+git tag -a  -m “blablabla…”：指定标签信息
+git tag -s  -m “blablabla…”：用PG
 					...
 				</div>
 			</a>

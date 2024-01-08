@@ -5280,15 +5280,15 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cache/">
+			<a href="/post/Spring-MVC/">
 				<h2 class="index-title">
-					Spring Cache
+					Spring MVC
 				</h2>
 				<div class="index-brief">
-					Spring 自身并没有实现缓存解决方案， 但是它对缓存功能提供了声明式的支持， 能够与多种流行的缓存实现进行集成。
-Spring 的缓存抽象在很大程度上是围绕切面构建的。 在 Spring 中启用缓存时，会创建一个切面， 它触发一个或更多的 Spring 的缓存注解。
-1 启用对缓存的支持
-配置类
+					1 Spring MVC 概览
+Spring 提供了一个功能齐全的 MVC 框架用于构建 Web 应用程序。Spring 框架可以很容易的和其他的 MVC 框架融合(如 Struts)，该框架使用控制反转(IOC)将控制器逻辑和业务对象分离开来。它也允许以声明的方式绑定请求参数到业务对象上。
+
+Di
 					...
 				</div>
 			</a>
@@ -5309,7 +5309,7 @@ Spring 的缓存抽象在很大程度上是围绕切面构建的。 在 Spring �
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
 										
                                     </span>
                                 
@@ -5319,16 +5319,15 @@ Spring 的缓存抽象在很大程度上是围绕切面构建的。 在 Spring �
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Dynamic-DataSource/">
+			<a href="/post/Spring-MVC-jin-jie/">
 				<h2 class="index-title">
-					Dynamic DataSource
+					Spring MVC 进阶
 				</h2>
 				<div class="index-brief">
-					一、AOP 实现
-AOP 实现多数据源，可读写分离
-1 配置文件
-dynamic-db.master.driver-class-name = com.mysql.jdbc.Driver
-dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/s
+					1 替代配置
+1.1 自定义 DispatcherServlet
+除了三个必须重载的抽象方法，AbstractAnnotationConfigDispatcherServletInitializer 还有很多方法可以重载，以实现额外配置。
+例如，通过对 customizeRegistration()
 					...
 				</div>
 			</a>
@@ -5349,7 +5348,7 @@ dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/s
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
 										
                                     </span>
                                 
@@ -5359,32 +5358,25 @@ dynamic-db.master.jdbc-url = jdbc:mysql://somehost:3306/s
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Transaction/">
+			<a href="/post/kua-yu/">
 				<h2 class="index-title">
-					Transaction
+					跨域
 				</h2>
 				<div class="index-brief">
-					Spring 事务的本质是数据库对事务的支持。
-@EnableTransactionManagement 开启对事务注解的解析
-1 声明式事务
-1.1 @Transactional 注解
+					常用的跨域解决方案有 JSONP 和 CORS， spingboot 2.0 开始不推荐使用 JSONP。
+1 CORS
+1.1 属性含义
 
 
 
 属性
-类型
-描述
+含义
 
 
 
 
 value
-String
-事务管理器
-
-
-propagation
-Propaga
+指定所支持域的集合， 表示所有域都支持，默认值为 。这些值对应于 HTTP 请求头中的 Access-Control-Al
 					...
 				</div>
 			</a>
@@ -5405,7 +5397,7 @@ Propaga
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
+                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
 										
                                     </span>
                                 
@@ -5415,16 +5407,13 @@ Propaga
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cache-Caffeine/">
+			<a href="/post/Spring-RestTemplate/">
 				<h2 class="index-title">
-					Spring Cache + Caffeine
+					Spring RestTemplate
 				</h2>
 				<div class="index-brief">
-					Caffeine 是使用 Java8 对 Guava 缓存的重写版本，在 Spring Boot 2.0 中取代 Guava。
-1 引入依赖
-&lt;dependency&gt;
-    &lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-
+					RestTemplate 属于 Spring-Web，是 Spring 的同步客户端HTTP访问的中心类。简化了与 HTTP 服务器的通信，并应用了 RESTful 原则。
+RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可切换到使用不同
 					...
 				</div>
 			</a>
@@ -5445,52 +5434,7 @@ Propaga
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/Scheduled/">
-				<h2 class="index-title">
-					Scheduled
-				</h2>
-				<div class="index-brief">
-					1 @Scheduled
-@EnableScheduling 注解，启用定时任务的配置
-@SpringBootApplication
-@EnableScheduling
-public class Application {
-}
-
-创建定时任务实现类
-@Component
-public class S
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/07-Async/">07 Async</a>
+                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
 										
                                     </span>
                                 
@@ -5529,6 +5473,44 @@ public class S
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/06-Spring/06-Security/">06 Security</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/mo-ren-ri-zhi/">
+				<h2 class="index-title">
+					默认日志
+				</h2>
+				<div class="index-brief">
+					Spring Boot 在所有内部日志中使用 Commons Logging，但是默认配置也提供了对常用日志的支持
+1 格式化日志
+2016-04-13 08:23:50.120  INFO 37397 --- [main] org.hibernate.Version: HHH000412: Hib
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/08-Log/">08 Log</a>
 										
                                     </span>
                                 
@@ -5622,44 +5604,6 @@ public cla
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/mo-ren-ri-zhi/">
-				<h2 class="index-title">
-					默认日志
-				</h2>
-				<div class="index-brief">
-					Spring Boot 在所有内部日志中使用 Commons Logging，但是默认配置也提供了对常用日志的支持
-1 格式化日志
-2016-04-13 08:23:50.120  INFO 37397 --- [main] org.hibernate.Version: HHH000412: Hib
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/08-Log/">08 Log</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/post/Spring-Retry/">
 				<h2 class="index-title">
 					Spring Retry
@@ -5690,6 +5634,51 @@ public cla
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/06-Spring/10-Retry/">10 Retry</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Scheduled/">
+				<h2 class="index-title">
+					Scheduled
+				</h2>
+				<div class="index-brief">
+					1 @Scheduled
+@EnableScheduling 注解，启用定时任务的配置
+@SpringBootApplication
+@EnableScheduling
+public class Application {
+}
+
+创建定时任务实现类
+@Component
+public class S
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/07-Async/">07 Async</a>
 										
                                     </span>
                                 

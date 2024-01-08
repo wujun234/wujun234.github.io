@@ -5358,13 +5358,25 @@ Di
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-RestTemplate/">
+			<a href="/post/kua-yu/">
 				<h2 class="index-title">
-					Spring RestTemplate
+					跨域
 				</h2>
 				<div class="index-brief">
-					RestTemplate 属于 Spring-Web，是 Spring 的同步客户端HTTP访问的中心类。简化了与 HTTP 服务器的通信，并应用了 RESTful 原则。
-RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可切换到使用不同
+					常用的跨域解决方案有 JSONP 和 CORS， spingboot 2.0 开始不推荐使用 JSONP。
+1 CORS
+1.1 属性含义
+
+
+
+属性
+含义
+
+
+
+
+value
+指定所支持域的集合， 表示所有域都支持，默认值为 。这些值对应于 HTTP 请求头中的 Access-Control-Al
 					...
 				</div>
 			</a>
@@ -5395,25 +5407,13 @@ RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/kua-yu/">
+			<a href="/post/Spring-RestTemplate/">
 				<h2 class="index-title">
-					跨域
+					Spring RestTemplate
 				</h2>
 				<div class="index-brief">
-					常用的跨域解决方案有 JSONP 和 CORS， spingboot 2.0 开始不推荐使用 JSONP。
-1 CORS
-1.1 属性含义
-
-
-
-属性
-含义
-
-
-
-
-value
-指定所支持域的集合， 表示所有域都支持，默认值为 。这些值对应于 HTTP 请求头中的 Access-Control-Al
+					RestTemplate 属于 Spring-Web，是 Spring 的同步客户端HTTP访问的中心类。简化了与 HTTP 服务器的通信，并应用了 RESTful 原则。
+RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可切换到使用不同
 					...
 				</div>
 			</a>

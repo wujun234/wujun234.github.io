@@ -5280,21 +5280,21 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/post/Scheduled/">
+			<a href="/post/Async/">
 				<h2 class="index-title">
-					Scheduled
+					Async
 				</h2>
 				<div class="index-brief">
-					1 @Scheduled
-@EnableScheduling 注解，启用定时任务的配置
+					1 异步
+1.1 异步调用
+@EnableAsync 启用 @Async 注解
 @SpringBootApplication
-@EnableScheduling
-public class Application {
-}
+@EnableAsync
+public class Application {}
 
-创建定时任务实现类
+使用 @Async 注解将同步函数变为异步函数
 @Component
-public class S
+public cla
 					...
 				</div>
 			</a>
@@ -5325,21 +5325,21 @@ public class S
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Async/">
+			<a href="/post/Scheduled/">
 				<h2 class="index-title">
-					Async
+					Scheduled
 				</h2>
 				<div class="index-brief">
-					1 异步
-1.1 异步调用
-@EnableAsync 启用 @Async 注解
+					1 @Scheduled
+@EnableScheduling 注解，启用定时任务的配置
 @SpringBootApplication
-@EnableAsync
-public class Application {}
+@EnableScheduling
+public class Application {
+}
 
-使用 @Async 注解将同步函数变为异步函数
+创建定时任务实现类
 @Component
-public cla
+public class S
 					...
 				</div>
 			</a>

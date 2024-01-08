@@ -5320,15 +5320,14 @@ public class StdOutErrConfig {
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/slf4j-he-log4j-logback-guan-xi/">
+			<a href="/post/mo-ren-ri-zhi/">
 				<h2 class="index-title">
-					slf4j 和 log4j、logback 关系
+					默认日志
 				</h2>
 				<div class="index-brief">
-					slf4j（The Simple Logging Facade for Java）是日志框架的抽象，而 log4j logback 是具体实现了的日志框架。
-
-log4j：是 apache 实现的一个开源日志组件。（Wrapped implementations）
-logback：同样是由 log4
+					Spring Boot 在所有内部日志中使用 Commons Logging，但是默认配置也提供了对常用日志的支持
+1 格式化日志
+2016-04-13 08:23:50.120  INFO 37397 --- [main] org.hibernate.Version: HHH000412: Hib
 					...
 				</div>
 			</a>
@@ -5359,14 +5358,15 @@ logback：同样是由 log4
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/mo-ren-ri-zhi/">
+			<a href="/post/slf4j-he-log4j-logback-guan-xi/">
 				<h2 class="index-title">
-					默认日志
+					slf4j 和 log4j、logback 关系
 				</h2>
 				<div class="index-brief">
-					Spring Boot 在所有内部日志中使用 Commons Logging，但是默认配置也提供了对常用日志的支持
-1 格式化日志
-2016-04-13 08:23:50.120  INFO 37397 --- [main] org.hibernate.Version: HHH000412: Hib
+					slf4j（The Simple Logging Facade for Java）是日志框架的抽象，而 log4j logback 是具体实现了的日志框架。
+
+log4j：是 apache 实现的一个开源日志组件。（Wrapped implementations）
+logback：同样是由 log4
 					...
 				</div>
 			</a>

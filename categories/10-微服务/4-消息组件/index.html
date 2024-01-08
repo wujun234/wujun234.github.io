@@ -5280,14 +5280,19 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cloud-Bus/">
+			<a href="/post/Spring-Cloud-Stream/">
 				<h2 class="index-title">
-					Spring Cloud Bus
+					Spring Cloud Stream
 				</h2>
 				<div class="index-brief">
-					消息总线是一种通信工具，可以在机器之间互相传输消息、文件等。消息总线扮演着一种消息路由的角色，拥有一套完备的路由机制来决定消息传输方向。发送段只需要向消息总线发出消息而不用管消息被如何转发。
-原理
-spring cloud bus整合 java的事件处理机制和消息中间件消息的发送和接受，主要由发送端
+					Spring Cloud Stream整合了Spring Boot和Spring Integration，实现了一套轻量级的消息驱动的微服务框架。目前为止只支持RabbitMQ和Kafka的自动化配置。
+快速入门
+以RabbitMQ为例
+
+引入依赖
+
+    &lt;dependency&gt;
+ 
 					...
 				</div>
 			</a>
@@ -5318,19 +5323,14 @@ spring cloud bus整合 java的事件处理机制和消息中间件消息的发�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cloud-Stream/">
+			<a href="/post/Spring-Cloud-Bus/">
 				<h2 class="index-title">
-					Spring Cloud Stream
+					Spring Cloud Bus
 				</h2>
 				<div class="index-brief">
-					Spring Cloud Stream整合了Spring Boot和Spring Integration，实现了一套轻量级的消息驱动的微服务框架。目前为止只支持RabbitMQ和Kafka的自动化配置。
-快速入门
-以RabbitMQ为例
-
-引入依赖
-
-    &lt;dependency&gt;
- 
+					消息总线是一种通信工具，可以在机器之间互相传输消息、文件等。消息总线扮演着一种消息路由的角色，拥有一套完备的路由机制来决定消息传输方向。发送段只需要向消息总线发出消息而不用管消息被如何转发。
+原理
+spring cloud bus整合 java的事件处理机制和消息中间件消息的发送和接受，主要由发送端
 					...
 				</div>
 			</a>

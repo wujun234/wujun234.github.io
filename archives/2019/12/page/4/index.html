@@ -5280,57 +5280,17 @@
 		<div id="index">
 	
 		<div class="index-li">
-			<a href="/post/IoC-rong-qi-yu-Bean/">
+			<a href="/post/gao-ji-zhuang-pei/">
 				<h2 class="index-title">
-					IoC 容器与 Bean
+					高级装配
 				</h2>
 				<div class="index-brief">
-					1 容器
-容器（container）是 Spring 框架的核心，它管理着 Spring 应用中 bean 的创建、 配置和管理，负责对象的整个生命周期。
-1.1 容器实现
-Spring 自带两种不同类型容器实现，主要使用 ApplicationContext
-1）BeanFactory
-最简单的容
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/">06 Spring</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/01-Core/">01 Core</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/yi-lai-zhu-ru/">
-				<h2 class="index-title">
-					依赖注入
-				</h2>
-				<div class="index-brief">
-					
-IoC（Inversion of Control，控制反转 ）：控制权由应用代码中转到了外部容器，控制权的转移，所谓控制反转。
-依赖注入：依赖注入是控制反转(IOC)的一个层面，用创建对象而只需要描述如何创建它们。
-
-IoC 负责装配 Bean，即创建应用对象之间协作关系，是依赖注入（DI，Dep
+					1 环境与 profile
+1.1 配置 profile
+@Profile 注解
+指定某个 bean 属于哪一个 profile，运行时做出环境决策。
+没有指定 profile 的 bean 始终都会被创建， 与激活哪个 profile 没有关系。
+@Profile(&quot;dev&quot;)
 					...
 				</div>
 			</a>
@@ -5361,17 +5321,17 @@ IoC 负责装配 Bean，即创建应用对象之间协作关系，是依赖注�
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/gao-ji-zhuang-pei/">
+			<a href="/post/dong-tai-zhu-ce-Bean/">
 				<h2 class="index-title">
-					高级装配
+					动态注册 Bean
 				</h2>
 				<div class="index-brief">
-					1 环境与 profile
-1.1 配置 profile
-@Profile 注解
-指定某个 bean 属于哪一个 profile，运行时做出环境决策。
-没有指定 profile 的 bean 始终都会被创建， 与激活哪个 profile 没有关系。
-@Profile(&quot;dev&quot;)
+					1 注册接口
+有两种接口可动态注册 bean
+
+BeanDefinitionRegistry
+注册 Bean 定义，使用BeanDefinitionRegistry 接口 registerBeanDefinition() 方法，根据BeanDefinition实例化 bean 实例
+Singleto
 					...
 				</div>
 			</a>
@@ -5487,6 +5447,45 @@ public class LogAspect {
 		</div>	
 	
 		<div class="index-li">
+			<a href="/post/SpringBoot-qi-dong-liu-cheng/">
+				<h2 class="index-title">
+					SpringBoot 启动流程
+				</h2>
+				<div class="index-brief">
+					1 自启动使用实例
+1.1 配置 spring.factories
+在 resources 下自定义 META-INF/spring.factories，里面填写需要自动化配置的类
+org.springframework.boot.autoconfigure.EnableAutoConfigurat
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/">06 Spring</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/06-Spring/01-Core/">01 Core</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
 			<a href="/post/qie-dian/">
 				<h2 class="index-title">
 					切点
@@ -5530,15 +5529,14 @@ public void pointCut() {
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-MVC/">
+			<a href="/post/Spring-Data-JPA/">
 				<h2 class="index-title">
-					Spring MVC
+					Spring Data JPA
 				</h2>
 				<div class="index-brief">
-					1 Spring MVC 概览
-Spring 提供了一个功能齐全的 MVC 框架用于构建 Web 应用程序。Spring 框架可以很容易的和其他的 MVC 框架融合(如 Struts)，该框架使用控制反转(IOC)将控制器逻辑和业务对象分离开来。它也允许以声明的方式绑定请求参数到业务对象上。
-
-Di
+					Java 持久化 API（Java Persistence API， JPA）基于 POJO 的持久化机制，制定了规范，具体由厂商实现。
+只需按照约定好的【方法命名规则】编写 Repository 接口，不需要实现类，就可实现对数据库的访问和操作。
+hibernate 实现了 JPA 规范，Spri
 					...
 				</div>
 			</a>
@@ -5559,7 +5557,7 @@ Di
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
 										
                                     </span>
                                 
@@ -5569,15 +5567,19 @@ Di
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-MVC-jin-jie/">
+			<a href="/post/Spring-Data-MongoDB/">
 				<h2 class="index-title">
-					Spring MVC 进阶
+					Spring Data MongoDB
 				</h2>
 				<div class="index-brief">
-					1 替代配置
-1.1 自定义 DispatcherServlet
-除了三个必须重载的抽象方法，AbstractAnnotationConfigDispatcherServletInitializer 还有很多方法可以重载，以实现额外配置。
-例如，通过对 customizeRegistration()
+					文档数据库适合处理没什么关联关系的独立实体
+Spring Data MongoDB 提供了三种方式在 Spring 应用中使用 MongoDB：
+
+通过注解实现对象-文档映射；
+使用 MongoTemplate 实现基于模板的数据库访问；
+自动化的运行时 Repository 生成功能。
+
+1 启用
 					...
 				</div>
 			</a>
@@ -5598,7 +5600,7 @@ Di
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
 										
                                     </span>
                                 
@@ -5608,13 +5610,17 @@ Di
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-RestTemplate/">
+			<a href="/post/JdbcTemplate/">
 				<h2 class="index-title">
-					Spring RestTemplate
+					JdbcTemplate
 				</h2>
 				<div class="index-brief">
-					RestTemplate 属于 Spring-Web，是 Spring 的同步客户端HTTP访问的中心类。简化了与 HTTP 服务器的通信，并应用了 RESTful 原则。
-RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可切换到使用不同
+					为了避免业务层模块强依赖于某种类型的数据库，Spring 数据库访问层以接口形式对外提供服务。
+使用 Spring JDBC 的异常体系，描述能力强，且平台无关。
+1 数据访问模板化
+数据访问过程中的固定步骤和变量分为两类：
+
+模板（templates）：处理数据访问的固定部分——事务控制、 管理资
 					...
 				</div>
 			</a>
@@ -5635,7 +5641,7 @@ RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
 										
                                     </span>
                                 
@@ -5645,25 +5651,15 @@ RestTemplate 默认依赖 JDK 的 HttpURLConnection 来建立 HTTP 连接。 可
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/kua-yu/">
+			<a href="/post/Spring-Data-Neo4j/">
 				<h2 class="index-title">
-					跨域
+					Spring Data Neo4j
 				</h2>
 				<div class="index-brief">
-					常用的跨域解决方案有 JSONP 和 CORS， spingboot 2.0 开始不推荐使用 JSONP。
-1 CORS
-1.1 属性含义
-
-
-
-属性
-含义
-
-
-
-
-value
-指定所支持域的集合， 表示所有域都支持，默认值为 。这些值对应于 HTTP 请求头中的 Access-Control-Al
+					1 配置Spring Data Neo4j
+启用 @EnableNeo4jRepositories 注解，扩展 Neo4jConfiguration，声明 GraphDatabaseService bean
+@Configuration
+@EnableNeo4jRepositories(basePa
 					...
 				</div>
 			</a>
@@ -5684,7 +5680,7 @@ value
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/06-Spring/04-Web/">04 Web</a>
+                                        <a href="/categories/06-Spring/05-Data/">05 Data</a>
 										
                                     </span>
                                 

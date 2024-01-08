@@ -5319,15 +5319,19 @@ Zabbix能监控各
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/zabbix-zhu-dong-mo-shi-bei-dong-mo-shi/">
+			<a href="/post/maven-qian-yi-dao-gradle/">
 				<h2 class="index-title">
-					zabbix主动模式、被动模式
+					maven迁移到gradle
 				</h2>
 				<div class="index-brief">
-					zabbix agent检测分为主动（agent active）和被动（agent）两种形式，主动与被动的说法均是相对于agent来讨论的。
+					1 生成Maven构建图
 
-主动：agent请求server获取主动的监控项列表，并主动将监控项内需要检测的数据提交给server/proxy
-被动：server向agent请求获取监
+在根项目中 .mvn/extensions.xml 文件声明Gradle扩展
+
+&lt;extensions&gt;
+    &lt;extension&gt;
+        &lt;groupId&gt;com.gradle&lt;/groupId&gt;
+     
 					...
 				</div>
 			</a>
@@ -5348,7 +5352,127 @@ Zabbix能监控各
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/7-Zabbix/">7 Zabbix</a>
+                                        <a href="/categories/09-DevOps/5-Gradle/">5 Gradle</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Spring-Cloud-Eureka/">
+				<h2 class="index-title">
+					Spring Cloud Eureka
+				</h2>
+				<div class="index-brief">
+					简介
+Spring Cloud针对服务注册与发现，进行了一层抽象，并提供了三种实现：Eureka、Consul、Zookeeper。目前支持得最好的就是Eureka，其次是Consul，最后是Zookeeper。Eureka 是封装了 Netflix 的 Eureka 模块，采用了 C-S 的设计架
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/">10 微服务</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/Docker-bi-ji/">
+				<h2 class="index-title">
+					Docker 笔记
+				</h2>
+				<div class="index-brief">
+					1 Docker 简介
+Docker 是一个虚拟环境容器，可以将开发环境、代码、配置文件等一并打包到这个容器中，并发布和应用到任意平台中。
+2 Docker 架构
+2.1 架构
+Docker 使用 Go 语言进行开发，使用的是客户端/服务器（C/S）架构的模式。
+
+
+Docker 客户端：是主要的用
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/9-Docker/">9 Docker</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/ElasticStack/">
+				<h2 class="index-title">
+					ElasticStack
+				</h2>
+				<div class="index-brief">
+					ElasticStack 最初的核心是 ELK (Elasticsearch, Logstash, Kibana) ，后又新增了一个FileBeat。
+ELK架构
+
+Elasticsearch ：分布式搜索引擎。基于 Lucene，可用于全文检索、结构化检索和分析。
+Logstash ：数据收集处理
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/">09 DevOps</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/09-DevOps/8-ELK/">8 ELK</a>
 										
                                     </span>
                                 
@@ -5400,58 +5524,19 @@ Zabbix能监控各
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/ElasticStack/">
+			<a href="/post/Spring-Cloud-Consul/">
 				<h2 class="index-title">
-					ElasticStack
+					Spring Cloud Consul
 				</h2>
 				<div class="index-brief">
-					ElasticStack 最初的核心是 ELK (Elasticsearch, Logstash, Kibana) ，后又新增了一个FileBeat。
-ELK架构
+					Spring Cloud Consul是针对Consul的服务治理实现，提供服务发现和服务配置。包含了下面几个特性：
 
-Elasticsearch ：分布式搜索引擎。基于 Lucene，可用于全文检索、结构化检索和分析。
-Logstash ：数据收集处理
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/8-ELK/">8 ELK</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/Spring-Cloud-Ribbon/">
-				<h2 class="index-title">
-					Spring Cloud Ribbon
-				</h2>
-				<div class="index-brief">
-					Spring Cloud Ribbon封装了Netflix Ribbon，是基于HTTP和TCP的客户端负载均衡器。
-它主要包括六个组件：
+服务发现
+健康检查
+Key/Value存储
+多数据中心
 
-ServerList：负载均衡使用的服务器列表。
-ServerListFilter：服务器列表过滤器。
-IPing：探测服务实例是否存活的策略。
-IRule：
+Consul自身提供了服务端，不需要创建服务注册中心，通过命令“$consul agent -dev”启动consul服务
 					...
 				</div>
 			</a>
@@ -5472,50 +5557,7 @@ IRule：
                                 
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/Docker-bi-ji/">
-				<h2 class="index-title">
-					Docker 笔记
-				</h2>
-				<div class="index-brief">
-					1 Docker 简介
-Docker 是一个虚拟环境容器，可以将开发环境、代码、配置文件等一并打包到这个容器中，并发布和应用到任意平台中。
-2 Docker 架构
-2.1 架构
-Docker 使用 Go 语言进行开发，使用的是客户端/服务器（C/S）架构的模式。
-
-
-Docker 客户端：是主要的用
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/">09 DevOps</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/09-DevOps/9-Docker/">9 Docker</a>
+                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
 										
                                     </span>
                                 
@@ -5602,15 +5644,18 @@ Hystrix官方已经停止开发了，Hystrix官方推荐使用新一代熔断器
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/Spring-Cloud-Hystrix/">
+			<a href="/post/Spring-Cloud-Ribbon/">
 				<h2 class="index-title">
-					Spring Cloud Hystrix
+					Spring Cloud Ribbon
 				</h2>
 				<div class="index-brief">
-					Hystrix 提供了熔断、隔离、Fallback、cache、监控等功能，能够在一个、或多个依赖同时出现问题时保证系统依然可用。
-一 熔断
-断路器
-失败次数达到阈值后， 断路器会切换到开路状态。 所有请求快速失败返回备选响应。 熔断时间窗后， 自动切换到半开路状态。判断下次请求，如果请求成功, 断
+					Spring Cloud Ribbon封装了Netflix Ribbon，是基于HTTP和TCP的客户端负载均衡器。
+它主要包括六个组件：
+
+ServerList：负载均衡使用的服务器列表。
+ServerListFilter：服务器列表过滤器。
+IPing：探测服务实例是否存活的策略。
+IRule：
 					...
 				</div>
 			</a>
@@ -5632,43 +5677,6 @@ Hystrix官方已经停止开发了，Hystrix官方推荐使用新一代熔断器
                                     <span>
                                         <i class="fa fa-folder" aria-hidden="true"></i>
                                         <a href="/categories/10-微服务/1-服务调用/">1 服务调用</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
-			<a href="/post/Spring-Cloud-Eureka/">
-				<h2 class="index-title">
-					Spring Cloud Eureka
-				</h2>
-				<div class="index-brief">
-					简介
-Spring Cloud针对服务注册与发现，进行了一层抽象，并提供了三种实现：Eureka、Consul、Zookeeper。目前支持得最好的就是Eureka，其次是Consul，最后是Zookeeper。Eureka 是封装了 Netflix 的 Eureka 模块，采用了 C-S 的设计架
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/">10 微服务</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/10-微服务/0-服务注册与发现/">0 服务注册与发现</a>
 										
                                     </span>
                                 

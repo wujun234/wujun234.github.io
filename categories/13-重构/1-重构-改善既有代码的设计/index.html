@@ -5329,26 +5329,19 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/zhong-gou-de-yuan-ze/">
+			<a href="/post/gou-zhu-ce-shi-ti-xi/">
 				<h2 class="index-title">
-					重构的原则
+					构筑测试体系
 				</h2>
 				<div class="index-brief">
-					1 何为重构
-重构: 在不改变软件可观察行为的前提下改善其内部结构
-2 为何重构
-重构可以提高代码质量
-3 何时重构
-事不过三，三则重构。
-重构应该是在开发过程中实时的、渐进的演化过程：
+					编写优良的测试程序，可以极大地提高变成速度，即使不进行重构也一样如此。
+1 自测试代码的价值
 
-添加新功能时重构
-修补错误时重构
-复审代码时重构
+程序员时间消耗：编写代码占据很少一部分，大部分时间用来调试。
+确保所有测试都完全自动化，让它们检查自己的测试结果。
+撰写测试代码的最有用时机是在开始编程之前。当需要添加新特性得时候，先写测试代码。
 
-4 怎么对经理说
-为了质量 or 不要告诉
-5 重构的难题
+2 
 					...
 				</div>
 			</a>
@@ -5379,19 +5372,26 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/gou-zhu-ce-shi-ti-xi/">
+			<a href="/post/zhong-gou-de-yuan-ze/">
 				<h2 class="index-title">
-					构筑测试体系
+					重构的原则
 				</h2>
 				<div class="index-brief">
-					编写优良的测试程序，可以极大地提高变成速度，即使不进行重构也一样如此。
-1 自测试代码的价值
+					1 何为重构
+重构: 在不改变软件可观察行为的前提下改善其内部结构
+2 为何重构
+重构可以提高代码质量
+3 何时重构
+事不过三，三则重构。
+重构应该是在开发过程中实时的、渐进的演化过程：
 
-程序员时间消耗：编写代码占据很少一部分，大部分时间用来调试。
-确保所有测试都完全自动化，让它们检查自己的测试结果。
-撰写测试代码的最有用时机是在开始编程之前。当需要添加新特性得时候，先写测试代码。
+添加新功能时重构
+修补错误时重构
+复审代码时重构
 
-2 
+4 怎么对经理说
+为了质量 or 不要告诉
+5 重构的难题
 					...
 				</div>
 			</a>
@@ -5474,17 +5474,20 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/zhong-xin-zu-zhi-shu-ju/">
+			<a href="/post/zai-dui-xiang-zhi-jian-ban-yi-te-xing/">
 				<h2 class="index-title">
-					重新组织数据
+					在对象之间搬移特性
 				</h2>
 				<div class="index-brief">
 					
 
-1 Self Encapsulate Filed 自封装字段
-2 Replace Data Value with Object 以对象取代数据值
-3 Change Value to Reference 将值对象改为引用对象
-4 Change Reference to Value 将引用对象改为值
+1 Move Method （搬移函数）
+2 Move Field （搬移字段）
+3 Extract Class （提炼类）
+4 Inline Class （将类内联化）
+5 Hide Delegate （隐藏“委托关系”）
+6 Remove Middle Man （移除中间人）
+7 Intro
 					...
 				</div>
 			</a>
@@ -5527,6 +5530,47 @@
 3 Inline Temp （内联临时变量）
 4 Replace Temp with Query （以查询取代临时变量）
 5 Introduce Explaining Variable （引入解释性变量
+					...
+				</div>
+			</a>
+                <div class="article-meta">
+				    <span>2019-12-25</span>
+                    
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/">13 重构</a>
+										
+											>
+										
+                                    </span>
+                                
+                            
+                                
+                                    <span>
+                                        <i class="fa fa-folder" aria-hidden="true"></i>
+                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
+										
+                                    </span>
+                                
+                            
+                    
+                </div>
+		</div>	
+	
+		<div class="index-li">
+			<a href="/post/zhong-xin-zu-zhi-shu-ju/">
+				<h2 class="index-title">
+					重新组织数据
+				</h2>
+				<div class="index-brief">
+					
+
+1 Self Encapsulate Filed 自封装字段
+2 Replace Data Value with Object 以对象取代数据值
+3 Change Value to Reference 将值对象改为引用对象
+4 Change Reference to Value 将引用对象改为值
 					...
 				</div>
 			</a>
@@ -5609,50 +5653,6 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/zai-dui-xiang-zhi-jian-ban-yi-te-xing/">
-				<h2 class="index-title">
-					在对象之间搬移特性
-				</h2>
-				<div class="index-brief">
-					
-
-1 Move Method （搬移函数）
-2 Move Field （搬移字段）
-3 Extract Class （提炼类）
-4 Inline Class （将类内联化）
-5 Hide Delegate （隐藏“委托关系”）
-6 Remove Middle Man （移除中间人）
-7 Intro
-					...
-				</div>
-			</a>
-                <div class="article-meta">
-				    <span>2019-12-25</span>
-                    
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/">13 重构</a>
-										
-											>
-										
-                                    </span>
-                                
-                            
-                                
-                                    <span>
-                                        <i class="fa fa-folder" aria-hidden="true"></i>
-                                        <a href="/categories/13-重构/1-重构-改善既有代码的设计/">1 重构-改善既有代码的设计</a>
-										
-                                    </span>
-                                
-                            
-                    
-                </div>
-		</div>	
-	
-		<div class="index-li">
 			<a href="/post/jian-hua-tiao-jian-biao-da-shi/">
 				<h2 class="index-title">
 					简化条件表达式
@@ -5694,18 +5694,19 @@
 		</div>	
 	
 		<div class="index-li">
-			<a href="/post/jian-hua-han-shu-diao-yong/">
+			<a href="/post/chu-li-gai-kuo-guan-xi/">
 				<h2 class="index-title">
-					简化函数调用
+					处理概括关系
 				</h2>
 				<div class="index-brief">
 					
 
-1 Rename Method （函数改名）
-2 Add Parameter （添加参数）
-3 Remove Parameter （移除参数）
-4 Separate Query from Modifier （将查询函数和修改函数分离）
-5 Parameterize Method （令函数携带参数
+1 Pull Up Field （字段上移）
+2 Pull Up Method （函数上移）
+3 Pull Up Constructor Body （构造函数本体上移）
+4 Push Down Method （函数下移）
+5 Push Down Field （字段下移）
+6 Extract Su
 					...
 				</div>
 			</a>
